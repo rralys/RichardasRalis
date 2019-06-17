@@ -14,6 +14,14 @@
         <testng.version>6.8</testng.version>
     </properties>
 
+    <!-- TODO
+            1. .gitignore is missed
+            2. project does not compiled
+            3. Maven profiles is missed
+            4. Suites is missed
+            5. IDE related files and folders should not being under the git
+    -->
+
     <dependencies>
         <dependency>
             <groupId>com.epam.tat.module4</groupId>
