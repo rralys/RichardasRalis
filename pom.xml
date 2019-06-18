@@ -12,6 +12,7 @@
         <calculator.version>1.0</calculator.version>
         <sure.fire.version>2.22.2</sure.fire.version>
         <testng.version>6.8</testng.version>
+        <selenium.java>3.141.59</selenium.java>
     </properties>
 
     <dependencies>
@@ -25,6 +26,11 @@
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.java}</version>
         </dependency>
     </dependencies>
 
