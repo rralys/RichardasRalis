@@ -1,38 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 25, Failures: 1, Errors: 0, Skipped: 24, Time elapsed: 2.312 s <<< FAILURE! - in TestSuite
-createDriver(hw2.TestForExercise1)  Time elapsed: 2.062 s  <<< FAILURE!
-org.openqa.selenium.SessionNotCreatedException: 
-session not created: This version of ChromeDriver only supports Chrome version 76
+Tests run: 25, Failures: 1, Errors: 0, Skipped: 24, Time elapsed: 63.929 s <<< FAILURE! - in TestSuite
+createDriver(hw2.TestForExercise1)  Time elapsed: 63.703 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: unable to discover open pages
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.95 seconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'EPRUPETW6152', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_71'
 Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00C57B13+1473299]
-	Ordinal0 [0x00BDAC61+961633]
-	Ordinal0 [0x00B641A3+475555]
-	Ordinal0 [0x00AFF365+62309]
-	Ordinal0 [0x00AFBC77+48247]
-	Ordinal0 [0x00B18FD9+167897]
-	Ordinal0 [0x00B18BAD+166829]
-	Ordinal0 [0x00B172BB+160443]
-	Ordinal0 [0x00B00AE6+68326]
-	Ordinal0 [0x00B01A80+72320]
-	Ordinal0 [0x00B01A19+72217]
-	Ordinal0 [0x00BF4A27+1067559]
-	GetHandleVerifier [0x00CF66F5+506677]
-	GetHandleVerifier [0x00CF6490+506064]
-	GetHandleVerifier [0x00CFD038+533624]
-	GetHandleVerifier [0x00CF6ECA+508682]
-	Ordinal0 [0x00BEC116+1032470]
-	Ordinal0 [0x00BEBF8F+1032079]
-	Ordinal0 [0x00BF693B+1075515]
-	Ordinal0 [0x00BF6AA3+1075875]
-	Ordinal0 [0x00BF5A55+1071701]
-	BaseThreadInitThunk [0x769E6A14+36]
-	RtlInitializeExceptionChain [0x7707AD8F+143]
-	RtlInitializeExceptionChain [0x7707AD5A+90]
-
-	at hw2.TestForExercise1.createDriver(TestForExercise1.java:17)
+	at hw2.TestForExercise1.createDriver(TestForExercise1.java:44)
 

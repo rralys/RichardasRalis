@@ -2,133 +2,87 @@
 <testng-results skipped="23" failed="0" total="23" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="1821" started-at="2019-06-18T20:43:23Z" finished-at="2019-06-18T20:43:25Z">
+  <suite name="Surefire suite" duration-ms="63427" started-at="2019-06-20T08:39:41Z" finished-at="2019-06-20T08:40:45Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="1821" started-at="2019-06-18T20:43:23Z" finished-at="2019-06-18T20:43:25Z">
+    <test name="Surefire test" duration-ms="63427" started-at="2019-06-20T08:39:41Z" finished-at="2019-06-20T08:40:45Z">
       <class name="hw1.TestDivisionReturnsCorrectResults">
-        <test-method status="SKIP" signature="DivisionALongByZeroThrowsException()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionALongByZeroThrowsException" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="DivisionALongByZeroThrowsException()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionALongByZeroThrowsException" duration-ms="1" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DivisionALongByZeroThrowsException -->
-        <test-method status="SKIP" signature="DivisionOfLongByLongReturnsCorrectResult()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfLongByLongReturnsCorrectResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DivisionOfLongByLongReturnsCorrectResult -->
-        <test-method status="SKIP" signature="DivisionOfADoubleByUnityReturnsItself()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfADoubleByUnityReturnsItself" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DivisionOfADoubleByUnityReturnsItself -->
-        <test-method status="SKIP" signature="DivisionOfDoubleByDoubleReturnsCorrectResult()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfDoubleByDoubleReturnsCorrectResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DivisionOfDoubleByDoubleReturnsCorrectResult -->
-        <test-method status="SKIP" signature="DivisionOfADoubleByZeroReturnsInfitnity()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfADoubleByZeroReturnsInfitnity" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DivisionOfADoubleByZeroReturnsInfitnity -->
-        <test-method status="SKIP" signature="DivisionOfANongByUnityReturnsItself()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfANongByUnityReturnsItself" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="DivisionOfANongByUnityReturnsItself()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfANongByUnityReturnsItself" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DivisionOfANongByUnityReturnsItself -->
+        <test-method status="SKIP" signature="DivisionOfDoubleByDoubleReturnsCorrectResult()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfDoubleByDoubleReturnsCorrectResult" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DivisionOfDoubleByDoubleReturnsCorrectResult -->
+        <test-method status="SKIP" signature="DivisionOfADoubleByZeroReturnsInfitnity()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfADoubleByZeroReturnsInfitnity" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DivisionOfADoubleByZeroReturnsInfitnity -->
+        <test-method status="SKIP" signature="DivisionOfADoubleByUnityReturnsItself()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfADoubleByUnityReturnsItself" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DivisionOfADoubleByUnityReturnsItself -->
+        <test-method status="SKIP" signature="DivisionOfLongByLongReturnsCorrectResult()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="DivisionOfLongByLongReturnsCorrectResult" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DivisionOfLongByLongReturnsCorrectResult -->
       </class> <!-- hw1.TestDivisionReturnsCorrectResults -->
       <class name="hw1.TestSubtractionReturnsCorrectResults">
-        <test-method status="SKIP" signature="SubtractingLongNegativeMakesAPositive()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingLongNegativeMakesAPositive" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SubtractingLongNegativeMakesAPositive -->
-        <test-method status="SKIP" signature="SubtractingZeroFromALongValueDoesNotChangeResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingZeroFromALongValueDoesNotChangeResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SubtractingZeroFromALongValueDoesNotChangeResult -->
-        <test-method status="SKIP" signature="SubtractingDoubleValuesReturnsCorrectResults()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingDoubleValuesReturnsCorrectResults" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SubtractingDoubleValuesReturnsCorrectResults -->
-        <test-method status="SKIP" signature="SubtractingZeroFromADoubleValueDoesNotChangeResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingZeroFromADoubleValueDoesNotChangeResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SubtractingZeroFromADoubleValueDoesNotChangeResult -->
-        <test-method status="SKIP" signature="SubtractingDoubleNegativeMakesAPositive()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingDoubleNegativeMakesAPositive" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="SubtractingDoubleNegativeMakesAPositive()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingDoubleNegativeMakesAPositive" duration-ms="1" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubtractingDoubleNegativeMakesAPositive -->
-        <test-method status="SKIP" signature="SubtractionLongValuesReturnsCorrectResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractionLongValuesReturnsCorrectResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="SubtractingLongNegativeMakesAPositive()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingLongNegativeMakesAPositive" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SubtractingLongNegativeMakesAPositive -->
+        <test-method status="SKIP" signature="SubtractionLongValuesReturnsCorrectResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractionLongValuesReturnsCorrectResult" duration-ms="1" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubtractionLongValuesReturnsCorrectResult -->
+        <test-method status="SKIP" signature="SubtractingZeroFromALongValueDoesNotChangeResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingZeroFromALongValueDoesNotChangeResult" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SubtractingZeroFromALongValueDoesNotChangeResult -->
+        <test-method status="SKIP" signature="SubtractingZeroFromADoubleValueDoesNotChangeResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingZeroFromADoubleValueDoesNotChangeResult" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SubtractingZeroFromADoubleValueDoesNotChangeResult -->
+        <test-method status="SKIP" signature="SubtractingDoubleValuesReturnsCorrectResults()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="SubtractingDoubleValuesReturnsCorrectResults" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SubtractingDoubleValuesReturnsCorrectResults -->
       </class> <!-- hw1.TestSubtractionReturnsCorrectResults -->
       <class name="hw2.TestForExercise1">
-        <test-method status="FAIL" signature="createDriver()[pri:0, instance:hw2.TestForExercise1@47f6473]" name="createDriver" is-config="true" duration-ms="0" started-at="2019-06-18T23:43:23Z" finished-at="2019-06-18T23:43:23Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
+        <test-method status="FAIL" signature="createDriver()[pri:0, instance:hw2.TestForExercise1@6615435c]" name="createDriver" is-config="true" duration-ms="0" started-at="2019-06-20T11:39:41Z" finished-at="2019-06-20T11:39:41Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[session not created: This version of ChromeDriver only supports Chrome version 76
+              <![CDATA[unknown error: unable to discover open pages
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.95 seconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'EPRUPETW6152', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_71'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00C57B13+1473299]
-	Ordinal0 [0x00BDAC61+961633]
-	Ordinal0 [0x00B641A3+475555]
-	Ordinal0 [0x00AFF365+62309]
-	Ordinal0 [0x00AFBC77+48247]
-	Ordinal0 [0x00B18FD9+167897]
-	Ordinal0 [0x00B18BAD+166829]
-	Ordinal0 [0x00B172BB+160443]
-	Ordinal0 [0x00B00AE6+68326]
-	Ordinal0 [0x00B01A80+72320]
-	Ordinal0 [0x00B01A19+72217]
-	Ordinal0 [0x00BF4A27+1067559]
-	GetHandleVerifier [0x00CF66F5+506677]
-	GetHandleVerifier [0x00CF6490+506064]
-	GetHandleVerifier [0x00CFD038+533624]
-	GetHandleVerifier [0x00CF6ECA+508682]
-	Ordinal0 [0x00BEC116+1032470]
-	Ordinal0 [0x00BEBF8F+1032079]
-	Ordinal0 [0x00BF693B+1075515]
-	Ordinal0 [0x00BF6AA3+1075875]
-	Ordinal0 [0x00BF5A55+1071701]
-	BaseThreadInitThunk [0x769E6A14+36]
-	RtlInitializeExceptionChain [0x7707AD8F+143]
-	RtlInitializeExceptionChain [0x7707AD5A+90]
-]]>
+Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 76
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.95 seconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'EPRUPETW6152', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_71'
 Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00C57B13+1473299]
-	Ordinal0 [0x00BDAC61+961633]
-	Ordinal0 [0x00B641A3+475555]
-	Ordinal0 [0x00AFF365+62309]
-	Ordinal0 [0x00AFBC77+48247]
-	Ordinal0 [0x00B18FD9+167897]
-	Ordinal0 [0x00B18BAD+166829]
-	Ordinal0 [0x00B172BB+160443]
-	Ordinal0 [0x00B00AE6+68326]
-	Ordinal0 [0x00B01A80+72320]
-	Ordinal0 [0x00B01A19+72217]
-	Ordinal0 [0x00BF4A27+1067559]
-	GetHandleVerifier [0x00CF66F5+506677]
-	GetHandleVerifier [0x00CF6490+506064]
-	GetHandleVerifier [0x00CFD038+533624]
-	GetHandleVerifier [0x00CF6ECA+508682]
-	Ordinal0 [0x00BEC116+1032470]
-	Ordinal0 [0x00BEBF8F+1032079]
-	Ordinal0 [0x00BF693B+1075515]
-	Ordinal0 [0x00BF6AA3+1075875]
-	Ordinal0 [0x00BF5A55+1071701]
-	BaseThreadInitThunk [0x769E6A14+36]
-	RtlInitializeExceptionChain [0x7707AD8F+143]
-	RtlInitializeExceptionChain [0x7707AD5A+90]
-
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
 	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
@@ -150,7 +104,7 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
-	at hw2.TestForExercise1.createDriver(TestForExercise1.java:17)
+	at hw2.TestForExercise1.createDriver(TestForExercise1.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -180,78 +134,78 @@ remote stacktrace: Backtrace:
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method status="SKIP" signature="destroyDriver()[pri:0, instance:hw2.TestForExercise1@47f6473]" name="destroyDriver" is-config="true" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="destroyDriver()[pri:0, instance:hw2.TestForExercise1@6615435c]" name="destroyDriver" is-config="true" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->
-        <test-method status="SKIP" signature="TestScenario1()[pri:0, instance:hw2.TestForExercise1@47f6473]" name="TestScenario1" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="TestScenario1()[pri:0, instance:hw2.TestForExercise1@6615435c]" name="TestScenario1" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestScenario1 -->
       </class> <!-- hw2.TestForExercise1 -->
       <class name="hw1.TestMultiplicationReturnsCorrectResults">
-        <test-method status="SKIP" signature="MultiplicationOfLongsReturnsCorrectResult()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@15975490]" name="MultiplicationOfLongsReturnsCorrectResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MultiplicationOfLongsReturnsCorrectResult -->
-        <test-method status="SKIP" signature="MultiplicationOfADoubleByZeroReturnsZero()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@15975490]" name="MultiplicationOfADoubleByZeroReturnsZero" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MultiplicationOfADoubleByZeroReturnsZero -->
-        <test-method status="SKIP" signature="MultiplicationOfDoublesReturnsCorrectResult()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@15975490]" name="MultiplicationOfDoublesReturnsCorrectResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MultiplicationOfDoublesReturnsCorrectResult -->
-        <test-method status="SKIP" signature="MultiplicationOfALongByZeroReturnsZero()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@15975490]" name="MultiplicationOfALongByZeroReturnsZero" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="MultiplicationOfALongByZeroReturnsZero()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@4909b8da]" name="MultiplicationOfALongByZeroReturnsZero" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultiplicationOfALongByZeroReturnsZero -->
+        <test-method status="SKIP" signature="MultiplicationOfADoubleByZeroReturnsZero()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@4909b8da]" name="MultiplicationOfADoubleByZeroReturnsZero" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MultiplicationOfADoubleByZeroReturnsZero -->
+        <test-method status="SKIP" signature="MultiplicationOfDoublesReturnsCorrectResult()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@4909b8da]" name="MultiplicationOfDoublesReturnsCorrectResult" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MultiplicationOfDoublesReturnsCorrectResult -->
+        <test-method status="SKIP" signature="MultiplicationOfLongsReturnsCorrectResult()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@4909b8da]" name="MultiplicationOfLongsReturnsCorrectResult" duration-ms="1" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MultiplicationOfLongsReturnsCorrectResult -->
       </class> <!-- hw1.TestMultiplicationReturnsCorrectResults -->
       <class name="hw1.TestAddingReturnsCorrectSum">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@15975490]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-18T23:43:23Z" finished-at="2019-06-18T23:43:23Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="setUp" is-config="true" duration-ms="6" started-at="2019-06-20T11:39:41Z" finished-at="2019-06-20T11:39:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-18T23:43:23Z" finished-at="2019-06-18T23:43:23Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4157f54e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-20T11:39:41Z" finished-at="2019-06-20T11:39:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-18T23:43:23Z" finished-at="2019-06-18T23:43:23Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@783e6358]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-20T11:39:41Z" finished-at="2019-06-20T11:39:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-18T23:43:23Z" finished-at="2019-06-18T23:43:23Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@4909b8da]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-20T11:39:41Z" finished-at="2019-06-20T11:39:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="AddingZeroToADoubleValueDoesNotChangeTheSum()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingZeroToADoubleValueDoesNotChangeTheSum" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddingZeroToADoubleValueDoesNotChangeTheSum -->
-        <test-method status="SKIP" signature="AddingDoubleVariablesReturnsCorrecrtResults()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingDoubleVariablesReturnsCorrecrtResults" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="AddingDoubleVariablesReturnsCorrecrtResults()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingDoubleVariablesReturnsCorrecrtResults" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingDoubleVariablesReturnsCorrecrtResults -->
-        <test-method status="SKIP" signature="AddingTwoDoubleNegativesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingTwoDoubleNegativesReturnsCorrectResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddingTwoDoubleNegativesReturnsCorrectResult -->
-        <test-method status="SKIP" signature="AddingTwoLongNegativesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingTwoLongNegativesReturnsCorrectResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="AddingTwoLongNegativesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingTwoLongNegativesReturnsCorrectResult" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingTwoLongNegativesReturnsCorrectResult -->
-        <test-method status="SKIP" signature="AddingLongVariablesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingLongVariablesReturnsCorrectResult" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="AddingLongVariablesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingLongVariablesReturnsCorrectResult" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingLongVariablesReturnsCorrectResult -->
-        <test-method status="SKIP" signature="AddingZeroToALongValueDoesNotChangeTheSum()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingZeroToALongValueDoesNotChangeTheSum" duration-ms="0" started-at="2019-06-18T23:43:25Z" finished-at="2019-06-18T23:43:25Z">
+        <test-method status="SKIP" signature="AddingZeroToALongValueDoesNotChangeTheSum()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingZeroToALongValueDoesNotChangeTheSum" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingZeroToALongValueDoesNotChangeTheSum -->
+        <test-method status="SKIP" signature="AddingTwoDoubleNegativesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingTwoDoubleNegativesReturnsCorrectResult" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddingTwoDoubleNegativesReturnsCorrectResult -->
+        <test-method status="SKIP" signature="AddingZeroToADoubleValueDoesNotChangeTheSum()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@90f6bfd]" name="AddingZeroToADoubleValueDoesNotChangeTheSum" duration-ms="0" started-at="2019-06-20T11:40:45Z" finished-at="2019-06-20T11:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddingZeroToADoubleValueDoesNotChangeTheSum -->
       </class> <!-- hw1.TestAddingReturnsCorrectSum -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->

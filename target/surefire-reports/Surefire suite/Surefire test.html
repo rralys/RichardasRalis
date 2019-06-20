@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/23</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 18 23:43:23 MSK 2019</td>
+<td>Started on:</td><td>Thu Jun 20 11:39:41 MSK 2019</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1821 ms)</td>
+<tr><td>Total time:</td><td>63 seconds (63427 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,37 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='hw2.TestForExercise1.createDriver()'><b>createDriver</b><br>Test class: hw2.TestForExercise1</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 76
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.95 seconds
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;EPRUPETW6152&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_71&apos;
 Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00C57B13+1473299]
-	Ordinal0 [0x00BDAC61+961633]
-	Ordinal0 [0x00B641A3+475555]
-	Ordinal0 [0x00AFF365+62309]
-	Ordinal0 [0x00AFBC77+48247]
-	Ordinal0 [0x00B18FD9+167897]
-	Ordinal0 [0x00B18BAD+166829]
-	Ordinal0 [0x00B172BB+160443]
-	Ordinal0 [0x00B00AE6+68326]
-	Ordinal0 [0x00B01A80+72320]
-	Ordinal0 [0x00B01A19+72217]
-	Ordinal0 [0x00BF4A27+1067559]
-	GetHandleVerifier [0x00CF66F5+506677]
-	GetHandleVerifier [0x00CF6490+506064]
-	GetHandleVerifier [0x00CFD038+533624]
-	GetHandleVerifier [0x00CF6ECA+508682]
-	Ordinal0 [0x00BEC116+1032470]
-	Ordinal0 [0x00BEBF8F+1032079]
-	Ordinal0 [0x00BF693B+1075515]
-	Ordinal0 [0x00BF6AA3+1075875]
-	Ordinal0 [0x00BF5A55+1071701]
-	BaseThreadInitThunk [0x769E6A14+36]
-	RtlInitializeExceptionChain [0x7707AD8F+143]
-	RtlInitializeExceptionChain [0x7707AD5A+90]
-
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
 	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
@@ -128,7 +106,7 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at hw2.TestForExercise1.createDriver(TestForExercise1.java:17)
+	at hw2.TestForExercise1.createDriver(TestForExercise1.java:44)
 	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
 	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
 	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
@@ -137,42 +115,20 @@ remote stacktrace: Backtrace:
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1107217291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1107217291'><pre>org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 76
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace204684384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace204684384'><pre>org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.95 seconds
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;EPRUPETW6152&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_71&apos;
 Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x00C57B13+1473299]
-	Ordinal0 [0x00BDAC61+961633]
-	Ordinal0 [0x00B641A3+475555]
-	Ordinal0 [0x00AFF365+62309]
-	Ordinal0 [0x00AFBC77+48247]
-	Ordinal0 [0x00B18FD9+167897]
-	Ordinal0 [0x00B18BAD+166829]
-	Ordinal0 [0x00B172BB+160443]
-	Ordinal0 [0x00B00AE6+68326]
-	Ordinal0 [0x00B01A80+72320]
-	Ordinal0 [0x00B01A19+72217]
-	Ordinal0 [0x00BF4A27+1067559]
-	GetHandleVerifier [0x00CF66F5+506677]
-	GetHandleVerifier [0x00CF6490+506064]
-	GetHandleVerifier [0x00CFD038+533624]
-	GetHandleVerifier [0x00CF6ECA+508682]
-	Ordinal0 [0x00BEC116+1032470]
-	Ordinal0 [0x00BEBF8F+1032079]
-	Ordinal0 [0x00BF693B+1075515]
-	Ordinal0 [0x00BF6AA3+1075875]
-	Ordinal0 [0x00BF5A55+1071701]
-	BaseThreadInitThunk [0x769E6A14+36]
-	RtlInitializeExceptionChain [0x7707AD8F+143]
-	RtlInitializeExceptionChain [0x7707AD5A+90]
-
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
 	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
@@ -194,7 +150,7 @@ remote stacktrace: Backtrace:
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
 	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at hw2.TestForExercise1.createDriver(TestForExercise1.java:17)
+	at hw2.TestForExercise1.createDriver(TestForExercise1.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -310,22 +266,22 @@ remote stacktrace: Backtrace:
 <td title='hw1.TestMultiplicationReturnsCorrectResults.MultiplicationOfADoubleByZeroReturnsZero()'><b>MultiplicationOfADoubleByZeroReturnsZero</b><br>Test class: hw1.TestMultiplicationReturnsCorrectResults</td>
 <td></td>
 <td>0</td>
-<td>hw1.TestMultiplicationReturnsCorrectResults@15975490</td></tr>
+<td>hw1.TestMultiplicationReturnsCorrectResults@4909b8da</td></tr>
 <tr>
 <td title='hw1.TestMultiplicationReturnsCorrectResults.MultiplicationOfALongByZeroReturnsZero()'><b>MultiplicationOfALongByZeroReturnsZero</b><br>Test class: hw1.TestMultiplicationReturnsCorrectResults</td>
 <td></td>
 <td>0</td>
-<td>hw1.TestMultiplicationReturnsCorrectResults@15975490</td></tr>
+<td>hw1.TestMultiplicationReturnsCorrectResults@4909b8da</td></tr>
 <tr>
 <td title='hw1.TestMultiplicationReturnsCorrectResults.MultiplicationOfDoublesReturnsCorrectResult()'><b>MultiplicationOfDoublesReturnsCorrectResult</b><br>Test class: hw1.TestMultiplicationReturnsCorrectResults</td>
 <td></td>
 <td>0</td>
-<td>hw1.TestMultiplicationReturnsCorrectResults@15975490</td></tr>
+<td>hw1.TestMultiplicationReturnsCorrectResults@4909b8da</td></tr>
 <tr>
 <td title='hw1.TestMultiplicationReturnsCorrectResults.MultiplicationOfLongsReturnsCorrectResult()'><b>MultiplicationOfLongsReturnsCorrectResult</b><br>Test class: hw1.TestMultiplicationReturnsCorrectResults</td>
 <td></td>
 <td>0</td>
-<td>hw1.TestMultiplicationReturnsCorrectResults@15975490</td></tr>
+<td>hw1.TestMultiplicationReturnsCorrectResults@4909b8da</td></tr>
 <tr>
 <td title='hw1.TestSubtractionReturnsCorrectResults.SubtractingDoubleNegativeMakesAPositive()'><b>SubtractingDoubleNegativeMakesAPositive</b><br>Test class: hw1.TestSubtractionReturnsCorrectResults</td>
 <td></td>
@@ -360,7 +316,7 @@ remote stacktrace: Backtrace:
 <td title='hw2.TestForExercise1.TestScenario1()'><b>TestScenario1</b><br>Test class: hw2.TestForExercise1</td>
 <td></td>
 <td>0</td>
-<td>hw2.TestForExercise1@47f6473</td></tr>
+<td>hw2.TestForExercise1@6615435c</td></tr>
 </table><p>
 </body>
 </html>
