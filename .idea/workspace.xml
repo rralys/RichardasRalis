@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c84def7-c298-488f-8de5-ac23a0f80295" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1c84def7-c298-488f-8de5-ac23a0f80295" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/homework1/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,6 +83,11 @@
             <path>
               <item name="RichardasRalis" type="b2602c69:ProjectViewProjectNode" />
               <item name="RichardasRalis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RichardasRalis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RichardasRalis" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RichardasRalis" type="b2602c69:ProjectViewProjectNode" />
@@ -405,7 +407,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1014" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
