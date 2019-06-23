@@ -1,0 +1,80 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite for the homework1">
+
+    <test name="homework1">
+        <classes>
+            <class name="hw1.TestAddingReturnsCorrectSum">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="AddingLongVariablesReturnsCorrectResult"/>
+                    <include name="AddingDoubleVariablesReturnsCorrecrtResults"/>
+                    <include name="AddingZeroToALongValueDoesNotChangeTheSum"/>
+                    <include name="AddingZeroToADoubleValueDoesNotChangeTheSum"/>
+                    <include name="AddingTwoLongNegativesReturnsCorrectResult"/>
+                    <include name="AddingTwoDoubleNegativesReturnsCorrectResult"/>
+                </methods>
+            </class>
+            <class name="hw1.TestDivisionReturnsCorrectResults">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="DivisionOfLongByLongReturnsCorrectResult"/>
+                    <include name="DivisionOfDoubleByDoubleReturnsCorrectResult"/>
+                    <include name="DivisionOfANongByUnityReturnsItself"/>
+                    <include name="DivisionOfADoubleByUnityReturnsItself"/>
+                    <include name="DivisionALongByZeroThrowsException"/>
+                    <include name="DivisionOfADoubleByZeroReturnsInfitnity"/>
+                </methods>
+            </class>
+            <class name="hw1.TestMultiplicationReturnsCorrectResults">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="MultiplicationOfLongsReturnsCorrectResult"/>
+                    <include name="MultiplicationOfDoublesReturnsCorrectResult"/>
+                    <include name="MultiplicationOfALongByZeroReturnsZero"/>
+                    <include name="MultiplicationOfADoubleByZeroReturnsZero"/>
+                </methods>
+            </class>
+            <class name="hw1.TestSubtractionReturnsCorrectResults">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="SubtractionLongValuesReturnsCorrectResult"/>
+                    <include name="SubtractingDoubleValuesReturnsCorrectResults"/>
+                    <include name="SubtractingZeroFromALongValueDoesNotChangeResult"/>
+                    <include name="SubtractingZeroFromADoubleValueDoesNotChangeResult"/>
+                    <include name="SubtractingLongNegativeMakesAPositive"/>
+                    <include name="SubtractingDoubleNegativeMakesAPositive"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
+
+<suite name="Suite for the homework2">
+
+<test name="homework2">
+    <classes>
+        <class name="hw2.RunTestsForHomework2">
+            <methods>
+                <include name="createDriver"/>
+                <include name="destroyDriver"/>
+            </methods>
+        </class>
+        <class name="hw2.TestForExcercise1">
+            <methods>
+                <include name="createDriver"/>
+                <include name="destroyDriver"/>
+                <include name="TestScenario1"/>
+            </methods>
+        </class>
+        <class name="hw2.TestForExcercise2">
+            <methods>
+                <include name="createDriver"/>
+                <include name="destroyDriver"/>
+                <include name="TestScenario2"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+
+</suite>
