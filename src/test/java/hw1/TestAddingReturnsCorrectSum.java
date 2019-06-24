@@ -1,6 +1,5 @@
 package hw1;
 
-// TODO Import does not found
 import com.epam.tat.module4.Calculator;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -12,7 +11,6 @@ public class TestAddingReturnsCorrectSum {
 
     private Calculator calc;
 
-    // TODO What is the purpose of these fields?
     private long firstL;
     private long secondL;
     private long expResultL;
@@ -21,7 +19,6 @@ public class TestAddingReturnsCorrectSum {
     private double secondD;
     private double expResultD;
 
-    // TODO Why do you decide use @BeforeSuite hook?
     @BeforeSuite
     public void setUp() {
 

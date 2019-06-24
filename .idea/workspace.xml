@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1c84def7-c298-488f-8de5-ac23a0f80295" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/RunTestsForHomework2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/RunTestsForHomework2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw2/TestForExcercise1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw2/TestForExcercise1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/hw2_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hw2_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hw2/RunTestsForHomework2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw2/RunTestsForHomework2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw1/TestAddingReturnsCorrectSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw1/TestAddingReturnsCorrectSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw1/TestDivisionReturnsCorrectResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw1/TestDivisionReturnsCorrectResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw1/TestMultiplicationReturnsCorrectResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw1/TestMultiplicationReturnsCorrectResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw1/TestSubtractionReturnsCorrectResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw1/TestSubtractionReturnsCorrectResults.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/homework1/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestForExcercise1.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestForExcercise1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/hw2/TestForExcercise1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="35">
@@ -66,8 +66,56 @@
       <file leaf-file-name="TestForExcercise2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/hw2/TestForExcercise2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="-17">
               <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestAddingReturnsCorrectSum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestAddingReturnsCorrectSum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-765">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestDivisionReturnsCorrectResults.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestDivisionReturnsCorrectResults.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-527">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestMultiplicationReturnsCorrectResults.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestMultiplicationReturnsCorrectResults.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestSubtractionReturnsCorrectResults.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestSubtractionReturnsCorrectResults.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,13 +141,16 @@
         <option value="$PROJECT_DIR$/src/test/java/hw2/TestForExercise1.java" />
         <option value="$PROJECT_DIR$/src/test/java/hw2/TestForExcercise2.java" />
         <option value="$PROJECT_DIR$/src/test/resources/testprofiles.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/hw1/TestDivisionReturnsCorrectResults.java" />
         <option value="$PROJECT_DIR$/src/test/resources/hw1_profile.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/resources/hw2_profile.xml" />
         <option value="$PROJECT_DIR$/src/test/java/hw2/RunTestsForHomework2.java" />
         <option value="$PROJECT_DIR$/src/test/java/hw2/TestForExcercise1.java" />
+        <option value="$PROJECT_DIR$/src/test/java/hw1/TestAddingReturnsCorrectSum.java" />
+        <option value="$PROJECT_DIR$/src/test/java/hw1/TestDivisionReturnsCorrectResults.java" />
+        <option value="$PROJECT_DIR$/src/test/java/hw1/TestMultiplicationReturnsCorrectResults.java" />
+        <option value="$PROJECT_DIR$/src/test/java/hw1/TestSubtractionReturnsCorrectResults.java" />
       </list>
     </option>
   </component>
@@ -479,10 +530,10 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32945284" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.32945284" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.32945284" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18603411" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18603411" />
       <window_info anchor="bottom" id="Inspection Results" weight="0.32945284" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -532,7 +583,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -867,34 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestMultiplicationReturnsCorrectResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="62" column="56" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestSubtractionReturnsCorrectResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="83" column="55" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestAddingReturnsCorrectSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestDivisionReturnsCorrectResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/hw1_profile.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -912,23 +935,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/hw2_profile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/hw2/TestForExcercise2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/hw2/RunTestsForHomework2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -945,6 +951,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
           <caret line="39" column="97" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/hw2_profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/hw2/TestForExcercise2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestAddingReturnsCorrectSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestDivisionReturnsCorrectResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestMultiplicationReturnsCorrectResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/hw1/TestSubtractionReturnsCorrectResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
