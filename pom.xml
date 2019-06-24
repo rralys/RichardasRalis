@@ -9,10 +9,13 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <java.version>1.8</java.version>
         <calculator.version>1.0</calculator.version>
         <sure.fire.version>2.22.2</sure.fire.version>
         <testng.version>6.8</testng.version>
         <selenium.java>3.141.59</selenium.java>
+        <maven.compiler>3.8.1</maven.compiler>
+        <web.driver.manager>3.6.1</web.driver.manager>
     </properties>
 
     <profiles>
@@ -50,8 +53,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>3.6.1</version>
-            <scope>test</scope>
+            <version>${web.driver.manager}</version>
         </dependency>
     </dependencies>
 
@@ -62,6 +64,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${sure.fire.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
             </plugin>
         </plugins>
     </build>
