@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
+              <span class="suite-name border-passed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Surefire_suite">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Surefire_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Surefire_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Surefire_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Surefire_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Surefire_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">24 methods,   24 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestAddingReturnsCorrectSum" hash-for-method="AddingDoubleVariablesReturnsCorrecrtResults">AddingDoubleVariablesReturnsCorrecrtResults</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestAddingReturnsCorrectSum" hash-for-method="AddingLongVariablesReturnsCorrectResult">AddingLongVariablesReturnsCorrectResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestAddingReturnsCorrectSum" hash-for-method="AddingTwoDoubleNegativesReturnsCorrectResult">AddingTwoDoubleNegativesReturnsCorrectResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestAddingReturnsCorrectSum" hash-for-method="AddingTwoLongNegativesReturnsCorrectResult">AddingTwoLongNegativesReturnsCorrectResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestAddingReturnsCorrectSum" hash-for-method="AddingZeroToADoubleValueDoesNotChangeTheSum">AddingZeroToADoubleValueDoesNotChangeTheSum</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestAddingReturnsCorrectSum" hash-for-method="AddingZeroToALongValueDoesNotChangeTheSum">AddingZeroToALongValueDoesNotChangeTheSum</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestDivisionReturnsCorrectResults" hash-for-method="DivisionALongByZeroThrowsException">DivisionALongByZeroThrowsException</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestDivisionReturnsCorrectResults" hash-for-method="DivisionOfADoubleByUnityReturnsItself">DivisionOfADoubleByUnityReturnsItself</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestDivisionReturnsCorrectResults" hash-for-method="DivisionOfADoubleByZeroReturnsInfinity">DivisionOfADoubleByZeroReturnsInfinity</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestDivisionReturnsCorrectResults" hash-for-method="DivisionOfANongByUnityReturnsItself">DivisionOfANongByUnityReturnsItself</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestDivisionReturnsCorrectResults" hash-for-method="DivisionOfDoubleByDoubleReturnsCorrectResult">DivisionOfDoubleByDoubleReturnsCorrectResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestDivisionReturnsCorrectResults" hash-for-method="DivisionOfLongByLongReturnsCorrectResult">DivisionOfLongByLongReturnsCorrectResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestMultiplicationReturnsCorrectResults" hash-for-method="MultiplicationOfADoubleByZeroReturnsZero">MultiplicationOfADoubleByZeroReturnsZero</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestMultiplicationReturnsCorrectResults" hash-for-method="MultiplicationOfALongByZeroReturnsZero">MultiplicationOfALongByZeroReturnsZero</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestMultiplicationReturnsCorrectResults" hash-for-method="MultiplicationOfDoublesReturnsCorrectResult">MultiplicationOfDoublesReturnsCorrectResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestMultiplicationReturnsCorrectResults" hash-for-method="MultiplicationOfLongsReturnsCorrectResult">MultiplicationOfLongsReturnsCorrectResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestSubtractionReturnsCorrectResults" hash-for-method="SubtractingDoubleNegativeMakesAPositive">SubtractingDoubleNegativeMakesAPositive</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestSubtractionReturnsCorrectResults" hash-for-method="SubtractingDoubleValuesReturnsCorrectResults">SubtractingDoubleValuesReturnsCorrectResults</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestSubtractionReturnsCorrectResults" hash-for-method="SubtractingLongNegativeMakesAPositive">SubtractingLongNegativeMakesAPositive</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestSubtractionReturnsCorrectResults" hash-for-method="SubtractingZeroFromADoubleValueDoesNotChangeResult">SubtractingZeroFromADoubleValueDoesNotChangeResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestSubtractionReturnsCorrectResults" hash-for-method="SubtractingZeroFromALongValueDoesNotChangeResult">SubtractingZeroFromALongValueDoesNotChangeResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw1.TestSubtractionReturnsCorrectResults" hash-for-method="SubtractionLongValuesReturnsCorrectResult">SubtractionLongValuesReturnsCorrectResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw2.TestForExcercise1" hash-for-method="TestScenario1">TestScenario1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="hw2.TestForExcercise2" hash-for-method="TestScenario2">TestScenario2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hw2.TestForExcercise2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestScenario2">
+                  </a> <!-- TestScenario2 -->
+                  <span class="method-name">TestScenario2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hw1.TestSubtractionReturnsCorrectResults</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SubtractingDoubleNegativeMakesAPositive">
+                  </a> <!-- SubtractingDoubleNegativeMakesAPositive -->
+                  <span class="method-name">SubtractingDoubleNegativeMakesAPositive</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SubtractingDoubleValuesReturnsCorrectResults">
+                  </a> <!-- SubtractingDoubleValuesReturnsCorrectResults -->
+                  <span class="method-name">SubtractingDoubleValuesReturnsCorrectResults</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SubtractingLongNegativeMakesAPositive">
+                  </a> <!-- SubtractingLongNegativeMakesAPositive -->
+                  <span class="method-name">SubtractingLongNegativeMakesAPositive</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SubtractingZeroFromADoubleValueDoesNotChangeResult">
+                  </a> <!-- SubtractingZeroFromADoubleValueDoesNotChangeResult -->
+                  <span class="method-name">SubtractingZeroFromADoubleValueDoesNotChangeResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SubtractingZeroFromALongValueDoesNotChangeResult">
+                  </a> <!-- SubtractingZeroFromALongValueDoesNotChangeResult -->
+                  <span class="method-name">SubtractingZeroFromALongValueDoesNotChangeResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SubtractionLongValuesReturnsCorrectResult">
+                  </a> <!-- SubtractionLongValuesReturnsCorrectResult -->
+                  <span class="method-name">SubtractionLongValuesReturnsCorrectResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hw1.TestDivisionReturnsCorrectResults</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DivisionALongByZeroThrowsException">
+                  </a> <!-- DivisionALongByZeroThrowsException -->
+                  <span class="method-name">DivisionALongByZeroThrowsException</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DivisionOfADoubleByUnityReturnsItself">
+                  </a> <!-- DivisionOfADoubleByUnityReturnsItself -->
+                  <span class="method-name">DivisionOfADoubleByUnityReturnsItself</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DivisionOfADoubleByZeroReturnsInfinity">
+                  </a> <!-- DivisionOfADoubleByZeroReturnsInfinity -->
+                  <span class="method-name">DivisionOfADoubleByZeroReturnsInfinity</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DivisionOfANongByUnityReturnsItself">
+                  </a> <!-- DivisionOfANongByUnityReturnsItself -->
+                  <span class="method-name">DivisionOfANongByUnityReturnsItself</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DivisionOfDoubleByDoubleReturnsCorrectResult">
+                  </a> <!-- DivisionOfDoubleByDoubleReturnsCorrectResult -->
+                  <span class="method-name">DivisionOfDoubleByDoubleReturnsCorrectResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DivisionOfLongByLongReturnsCorrectResult">
+                  </a> <!-- DivisionOfLongByLongReturnsCorrectResult -->
+                  <span class="method-name">DivisionOfLongByLongReturnsCorrectResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hw1.TestAddingReturnsCorrectSum</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingDoubleVariablesReturnsCorrecrtResults">
+                  </a> <!-- AddingDoubleVariablesReturnsCorrecrtResults -->
+                  <span class="method-name">AddingDoubleVariablesReturnsCorrecrtResults</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingLongVariablesReturnsCorrectResult">
+                  </a> <!-- AddingLongVariablesReturnsCorrectResult -->
+                  <span class="method-name">AddingLongVariablesReturnsCorrectResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingTwoDoubleNegativesReturnsCorrectResult">
+                  </a> <!-- AddingTwoDoubleNegativesReturnsCorrectResult -->
+                  <span class="method-name">AddingTwoDoubleNegativesReturnsCorrectResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingTwoLongNegativesReturnsCorrectResult">
+                  </a> <!-- AddingTwoLongNegativesReturnsCorrectResult -->
+                  <span class="method-name">AddingTwoLongNegativesReturnsCorrectResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingZeroToADoubleValueDoesNotChangeTheSum">
+                  </a> <!-- AddingZeroToADoubleValueDoesNotChangeTheSum -->
+                  <span class="method-name">AddingZeroToADoubleValueDoesNotChangeTheSum</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingZeroToALongValueDoesNotChangeTheSum">
+                  </a> <!-- AddingZeroToALongValueDoesNotChangeTheSum -->
+                  <span class="method-name">AddingZeroToALongValueDoesNotChangeTheSum</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hw2.TestForExcercise1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestScenario1">
+                  </a> <!-- TestScenario1 -->
+                  <span class="method-name">TestScenario1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">hw1.TestMultiplicationReturnsCorrectResults</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="MultiplicationOfADoubleByZeroReturnsZero">
+                  </a> <!-- MultiplicationOfADoubleByZeroReturnsZero -->
+                  <span class="method-name">MultiplicationOfADoubleByZeroReturnsZero</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="MultiplicationOfALongByZeroReturnsZero">
+                  </a> <!-- MultiplicationOfALongByZeroReturnsZero -->
+                  <span class="method-name">MultiplicationOfALongByZeroReturnsZero</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="MultiplicationOfDoublesReturnsCorrectResult">
+                  </a> <!-- MultiplicationOfDoublesReturnsCorrectResult -->
+                  <span class="method-name">MultiplicationOfDoublesReturnsCorrectResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="MultiplicationOfLongsReturnsCorrectResult">
+                  </a> <!-- MultiplicationOfLongsReturnsCorrectResult -->
+                  <span class="method-name">MultiplicationOfLongsReturnsCorrectResult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Surefire suite&quot;&gt;
+  &lt;test name=&quot;Surefire test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;hw1.TestAddingReturnsCorrectSum&quot;/&gt;
+      &lt;class name=&quot;hw1.TestDivisionReturnsCorrectResults&quot;/&gt;
+      &lt;class name=&quot;hw1.TestMultiplicationReturnsCorrectResults&quot;/&gt;
+      &lt;class name=&quot;hw1.TestSubtractionReturnsCorrectResults&quot;/&gt;
+      &lt;class name=&quot;hw2.TestForExcercise1&quot;/&gt;
+      &lt;class name=&quot;hw2.TestForExcercise2&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (6 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(24);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TestScenario2')
+data.setCell(0, 2, 'hw2.TestForExcercise2')
+data.setCell(0, 3, 5730);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TestScenario1')
+data.setCell(1, 2, 'hw2.TestForExcercise1')
+data.setCell(1, 3, 3898);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'AddingDoubleVariablesReturnsCorrecrtResults')
+data.setCell(2, 2, 'hw1.TestAddingReturnsCorrectSum')
+data.setCell(2, 3, 2);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'MultiplicationOfALongByZeroReturnsZero')
+data.setCell(3, 2, 'hw1.TestMultiplicationReturnsCorrectResults')
+data.setCell(3, 3, 1);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'SubtractingDoubleValuesReturnsCorrectResults')
+data.setCell(4, 2, 'hw1.TestSubtractionReturnsCorrectResults')
+data.setCell(4, 3, 1);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'DivisionOfLongByLongReturnsCorrectResult')
+data.setCell(5, 2, 'hw1.TestDivisionReturnsCorrectResults')
+data.setCell(5, 3, 1);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'DivisionOfADoubleByZeroReturnsInfinity')
+data.setCell(6, 2, 'hw1.TestDivisionReturnsCorrectResults')
+data.setCell(6, 3, 1);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'AddingLongVariablesReturnsCorrectResult')
+data.setCell(7, 2, 'hw1.TestAddingReturnsCorrectSum')
+data.setCell(7, 3, 1);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'DivisionOfADoubleByUnityReturnsItself')
+data.setCell(8, 2, 'hw1.TestDivisionReturnsCorrectResults')
+data.setCell(8, 3, 0);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'DivisionOfANongByUnityReturnsItself')
+data.setCell(9, 2, 'hw1.TestDivisionReturnsCorrectResults')
+data.setCell(9, 3, 0);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'DivisionALongByZeroThrowsException')
+data.setCell(10, 2, 'hw1.TestDivisionReturnsCorrectResults')
+data.setCell(10, 3, 0);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'SubtractingZeroFromALongValueDoesNotChangeResult')
+data.setCell(11, 2, 'hw1.TestSubtractionReturnsCorrectResults')
+data.setCell(11, 3, 0);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'MultiplicationOfDoublesReturnsCorrectResult')
+data.setCell(12, 2, 'hw1.TestMultiplicationReturnsCorrectResults')
+data.setCell(12, 3, 0);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'DivisionOfDoubleByDoubleReturnsCorrectResult')
+data.setCell(13, 2, 'hw1.TestDivisionReturnsCorrectResults')
+data.setCell(13, 3, 0);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'SubtractingLongNegativeMakesAPositive')
+data.setCell(14, 2, 'hw1.TestSubtractionReturnsCorrectResults')
+data.setCell(14, 3, 0);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'AddingZeroToADoubleValueDoesNotChangeTheSum')
+data.setCell(15, 2, 'hw1.TestAddingReturnsCorrectSum')
+data.setCell(15, 3, 0);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'AddingTwoDoubleNegativesReturnsCorrectResult')
+data.setCell(16, 2, 'hw1.TestAddingReturnsCorrectSum')
+data.setCell(16, 3, 0);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'SubtractingZeroFromADoubleValueDoesNotChangeResult')
+data.setCell(17, 2, 'hw1.TestSubtractionReturnsCorrectResults')
+data.setCell(17, 3, 0);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'MultiplicationOfADoubleByZeroReturnsZero')
+data.setCell(18, 2, 'hw1.TestMultiplicationReturnsCorrectResults')
+data.setCell(18, 3, 0);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'AddingZeroToALongValueDoesNotChangeTheSum')
+data.setCell(19, 2, 'hw1.TestAddingReturnsCorrectSum')
+data.setCell(19, 3, 0);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'MultiplicationOfLongsReturnsCorrectResult')
+data.setCell(20, 2, 'hw1.TestMultiplicationReturnsCorrectResults')
+data.setCell(20, 3, 0);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'SubtractionLongValuesReturnsCorrectResult')
+data.setCell(21, 2, 'hw1.TestSubtractionReturnsCorrectResults')
+data.setCell(21, 3, 0);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'AddingTwoLongNegativesReturnsCorrectResult')
+data.setCell(22, 2, 'hw1.TestAddingReturnsCorrectSum')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'SubtractingDoubleNegativeMakesAPositive')
+data.setCell(23, 2, 'hw1.TestSubtractionReturnsCorrectResults')
+data.setCell(23, 3, 0);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">1 ignored method</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">hw2.TestForExcercise1</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUpDriverPath</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw2.TestForExcercise2</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUpDriverPath</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw1.TestAddingReturnsCorrectSum</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">7 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw1.TestDivisionReturnsCorrectResults</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">8 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw1.TestMultiplicationReturnsCorrectResults</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">8 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw1.TestSubtractionReturnsCorrectResults</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">8 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw1.TestAddingReturnsCorrectSum</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">AddingDoubleVariablesReturnsCorrecrtResults</span>
+                <span class="method-start">13 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddingLongVariablesReturnsCorrectResult</span>
+                <span class="method-start">15 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddingTwoDoubleNegativesReturnsCorrectResult</span>
+                <span class="method-start">16 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddingTwoLongNegativesReturnsCorrectResult</span>
+                <span class="method-start">16 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddingZeroToADoubleValueDoesNotChangeTheSum</span>
+                <span class="method-start">17 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddingZeroToALongValueDoesNotChangeTheSum</span>
+                <span class="method-start">17 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw1.TestDivisionReturnsCorrectResults</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">DivisionALongByZeroThrowsException</span>
+                <span class="method-start">19 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DivisionOfADoubleByUnityReturnsItself</span>
+                <span class="method-start">19 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DivisionOfADoubleByZeroReturnsInfinity</span>
+                <span class="method-start">19 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DivisionOfANongByUnityReturnsItself</span>
+                <span class="method-start">20 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DivisionOfDoubleByDoubleReturnsCorrectResult</span>
+                <span class="method-start">20 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DivisionOfLongByLongReturnsCorrectResult</span>
+                <span class="method-start">20 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw1.TestMultiplicationReturnsCorrectResults</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">MultiplicationOfADoubleByZeroReturnsZero</span>
+                <span class="method-start">21 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">MultiplicationOfALongByZeroReturnsZero</span>
+                <span class="method-start">21 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">MultiplicationOfDoublesReturnsCorrectResult</span>
+                <span class="method-start">22 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">MultiplicationOfLongsReturnsCorrectResult</span>
+                <span class="method-start">22 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw1.TestSubtractionReturnsCorrectResults</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">SubtractingDoubleNegativeMakesAPositive</span>
+                <span class="method-start">22 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SubtractingDoubleValuesReturnsCorrectResults</span>
+                <span class="method-start">22 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SubtractingLongNegativeMakesAPositive</span>
+                <span class="method-start">23 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SubtractingZeroFromADoubleValueDoesNotChangeResult</span>
+                <span class="method-start">23 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SubtractingZeroFromALongValueDoesNotChangeResult</span>
+                <span class="method-start">23 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SubtractionLongValuesReturnsCorrectResult</span>
+                <span class="method-start">23 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw2.TestForExcercise1</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">createDriver</span>
+                <span class="method-start">23 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestScenario1</span>
+                <span class="method-start">2612 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">destroyDriver</span>
+                <span class="method-start">6510 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">hw2.TestForExcercise2</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">createDriver</span>
+                <span class="method-start">6576 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TestScenario2</span>
+                <span class="method-start">8823 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">destroyDriver</span>
+                <span class="method-start">14553 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
