@@ -14,8 +14,8 @@
         <testng.version>6.8</testng.version>
         <selenium.java>3.141.59</selenium.java>
     </properties>
-  
-  <profiles>
+
+    <profiles>
         <profile>
             <id>hw1</id>
             <activation>
@@ -26,9 +26,9 @@
                 <suite.xml>src/test/resources/hw2_profile.xml</suite.xml>
             </properties>
         </profile>
-  </profiles>
+    </profiles>
 
-  <dependencies>
+    <dependencies>
         <dependency>
             <groupId>com.epam.tat.module4</groupId>
             <artifactId>calculator</artifactId>
@@ -47,6 +47,12 @@
             <artifactId>selenium-java</artifactId>
             <version>${selenium.java}</version>
         </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>3.6.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -58,5 +64,5 @@
             </plugin>
         </plugins>
     </build>
-    
+
 </project>
