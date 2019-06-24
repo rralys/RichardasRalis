@@ -55,6 +55,7 @@
         </dependency>
     </dependencies>
 
+    <!-- TODO Where is maven compiler plugin ??? -->
     <build>
         <plugins>
             <plugin>
