@@ -26,10 +26,10 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
         assertEquals(getTextFromElementAndTrim(barPrefix.concat("//a[@href='metals-colors.html']")), "METALS & COLORS");
         // 7. Verify that index page has four images present and displayed.
         assertEquals(driver.findElements(By.xpath("//div[@class='benefit']")).size(), 4);
-        assertNotNull(returnElementByXpath("//div[@class='benefit']//span[@class='icons-benefit icon-practise']"));
-        assertNotNull(returnElementByXpath("//div[@class='benefit']//span[@class='icons-benefit icon-custom']"));
-        assertNotNull(returnElementByXpath("//div[@class='benefit']//span[@class='icons-benefit icon-multi']"));
-        assertNotNull(returnElementByXpath("//div[@class='benefit']//span[@class='icons-benefit icon-base']"));
+        assertTrue(returnElementByXpath("//div[@class='benefit']//span[@class='icons-benefit icon-practise']").isDisplayed());
+        assertTrue(returnElementByXpath("//div[@class='benefit']//span[@class='icons-benefit icon-custom']").isDisplayed());
+        assertTrue(returnElementByXpath("//div[@class='benefit']//span[@class='icons-benefit icon-multi']").isDisplayed());
+        assertTrue(returnElementByXpath("//div[@class='benefit']//span[@class='icons-benefit icon-base']").isDisplayed());
         // 8. Verify that index page contains four text elements below the images and the text content is correct.
         assertEquals(driver.findElements(By.xpath("//ancestor::div[@class='benefit-icon']//following-sibling::span[@class='benefit-txt']")).size(), 4);
         assertEquals(getTextFromElementAndTrim("//span[@class='icons-benefit icon-practise']//ancestor::div[@class='benefit']//following-sibling::span[@class='benefit-txt']"), "To include good practices\nand ideas from successful\nEPAM project");
