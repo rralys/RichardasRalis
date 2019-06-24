@@ -37,7 +37,7 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
         assertEquals(getTextFromElementAndTrim("//span[@class='icons-benefit icon-multi']//ancestor::div[@class='benefit']//following-sibling::span[@class='benefit-txt']"), "To be multiplatform");
         assertEquals(getTextFromElementAndTrim("//span[@class='icons-benefit icon-base']//ancestor::div[@class='benefit']//following-sibling::span[@class='benefit-txt']"), "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more\u2026");
         // 9. Verify text in headers.
-        assertEquals(getTextFromElementAndTrim("//h3[@ui='title']"), "EPAM FRAMEWORK WISHES…");
+        assertEquals(getTextFromElementAndTrim("//h3[@ui='title']"), "EPAM FRAMEWORK WISHES\u2026");
         assertEquals(getTextFromElementAndTrim("//p[@ui='text']"), "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.");
         // 10. Verify that there is a frame element.
         assertEquals(driver.findElements(By.tagName("iframe")).size(), 1);

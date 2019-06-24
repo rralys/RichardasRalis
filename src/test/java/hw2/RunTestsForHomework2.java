@@ -28,9 +28,13 @@ public class RunTestsForHomework2 {
         returnElementByXpath("//button[@type='submit']").click();
     }
 
-    @BeforeClass
-    public void createDriver() {
+    @BeforeSuite
+    public void setUpDriverPath() {
         System.setProperty("webdriver.chrome.driver", driverPath);
+    }
+
+    @BeforeMethod
+    public void createDriver() {
         options = new ChromeOptions();
         options.addArguments("--no-sandbox",  "start-maximized");
         driver = new ChromeDriver(options);
@@ -38,7 +42,7 @@ public class RunTestsForHomework2 {
         System.out.println("Driver is ready.");
     }
 
-    @AfterClass
+    @AfterMethod
     public void destroyDriver() {
         driver.close();
     }

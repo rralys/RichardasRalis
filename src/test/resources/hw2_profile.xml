@@ -6,12 +6,14 @@
     <classes>
         <class name="hw2.RunTestsForHomework2">
             <methods>
+                <include name="setUpDriverPath"/>
                 <include name="createDriver"/>
                 <include name="destroyDriver"/>
             </methods>
         </class>
         <class name="hw2.TestForExcercise1">
             <methods>
+                <include name="setUpDriverPath"/>
                 <include name="createDriver"/>
                 <include name="destroyDriver"/>
                 <include name="TestScenario1"/>
@@ -19,6 +21,7 @@
         </class>
         <class name="hw2.TestForExcercise2">
             <methods>
+                <include name="setUpDriverPath"/>
                 <include name="createDriver"/>
                 <include name="destroyDriver"/>
                 <include name="TestScenario2"/>
