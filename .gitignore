@@ -1,2 +1,6 @@
 .idea
-# TODO Where is other folder and files which should be here?
+target/classes
+target/generated-sources
+target/generated-test-sources
+target/surefire-reports
+target/test-classes
