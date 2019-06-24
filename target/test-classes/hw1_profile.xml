@@ -22,7 +22,7 @@
                     <include name="DivisionOfANongByUnityReturnsItself"/>
                     <include name="DivisionOfADoubleByUnityReturnsItself"/>
                     <include name="DivisionALongByZeroThrowsException"/>
-                    <include name="DivisionOfADoubleByZeroReturnsInfitnity"/>
+                    <include name="DivisionOfADoubleByZeroReturnsInfinity"/>
                 </methods>
             </class>
             <class name="hw1.TestMultiplicationReturnsCorrectResults">

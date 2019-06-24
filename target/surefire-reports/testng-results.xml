@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="24" passed="24">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="20382" started-at="2019-06-24T06:12:06Z" finished-at="2019-06-24T06:12:27Z">
+  <suite name="Surefire suite" duration-ms="13530" started-at="2019-06-24T07:03:07Z" finished-at="2019-06-24T07:03:21Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="20382" started-at="2019-06-24T06:12:06Z" finished-at="2019-06-24T06:12:27Z">
+    <test name="Surefire test" duration-ms="13530" started-at="2019-06-24T07:03:07Z" finished-at="2019-06-24T07:03:21Z">
       <class name="hw1.TestDivisionReturnsCorrectResults">
-        <test-method status="PASS" signature="DivisionALongByZeroThrowsException()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionALongByZeroThrowsException" duration-ms="1" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="DivisionALongByZeroThrowsException()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionALongByZeroThrowsException" duration-ms="2" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <exception class="java.lang.NumberFormatException">
             <message>
               <![CDATA[Attempt to divide by zero]]>
@@ -51,137 +51,137 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DivisionALongByZeroThrowsException -->
-        <test-method status="PASS" signature="DivisionOfADoubleByUnityReturnsItself()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfADoubleByUnityReturnsItself" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="DivisionOfADoubleByUnityReturnsItself()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfADoubleByUnityReturnsItself" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DivisionOfADoubleByUnityReturnsItself -->
-        <test-method status="PASS" signature="DivisionOfADoubleByZeroReturnsInfitnity()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfADoubleByZeroReturnsInfitnity" duration-ms="1" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DivisionOfADoubleByZeroReturnsInfitnity -->
-        <test-method status="PASS" signature="DivisionOfDoubleByDoubleReturnsCorrectResult()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfDoubleByDoubleReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DivisionOfDoubleByDoubleReturnsCorrectResult -->
-        <test-method status="PASS" signature="DivisionOfANongByUnityReturnsItself()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfANongByUnityReturnsItself" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="DivisionOfANongByUnityReturnsItself()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfANongByUnityReturnsItself" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DivisionOfANongByUnityReturnsItself -->
-        <test-method status="PASS" signature="DivisionOfLongByLongReturnsCorrectResult()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfLongByLongReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="DivisionOfADoubleByZeroReturnsInfinity()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfADoubleByZeroReturnsInfinity" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DivisionOfADoubleByZeroReturnsInfinity -->
+        <test-method status="PASS" signature="DivisionOfDoubleByDoubleReturnsCorrectResult()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfDoubleByDoubleReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DivisionOfDoubleByDoubleReturnsCorrectResult -->
+        <test-method status="PASS" signature="DivisionOfLongByLongReturnsCorrectResult()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="DivisionOfLongByLongReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DivisionOfLongByLongReturnsCorrectResult -->
       </class> <!-- hw1.TestDivisionReturnsCorrectResults -->
       <class name="hw2.TestForExcercise2">
-        <test-method status="PASS" signature="createDriver()[pri:0, instance:hw2.TestForExcercise2@1e67b872]" name="createDriver" is-config="true" duration-ms="2145" started-at="2019-06-24T09:12:18Z" finished-at="2019-06-24T09:12:20Z">
+        <test-method status="PASS" signature="createDriver()[pri:0, instance:hw2.TestForExcercise2@1e67b872]" name="createDriver" is-config="true" duration-ms="2165" started-at="2019-06-24T10:03:13Z" finished-at="2019-06-24T10:03:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method status="PASS" signature="TestScenario2()[pri:0, instance:hw2.TestForExcercise2@1e67b872]" name="TestScenario2" duration-ms="6221" started-at="2019-06-24T09:12:20Z" finished-at="2019-06-24T09:12:26Z">
+        <test-method status="PASS" signature="TestScenario2()[pri:0, instance:hw2.TestForExcercise2@1e67b872]" name="TestScenario2" duration-ms="4995" started-at="2019-06-24T10:03:16Z" finished-at="2019-06-24T10:03:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestScenario2 -->
-        <test-method status="PASS" signature="destroyDriver()[pri:0, instance:hw2.TestForExcercise2@1e67b872]" name="destroyDriver" is-config="true" duration-ms="151" started-at="2019-06-24T09:12:26Z" finished-at="2019-06-24T09:12:27Z">
+        <test-method status="PASS" signature="destroyDriver()[pri:0, instance:hw2.TestForExcercise2@1e67b872]" name="destroyDriver" is-config="true" duration-ms="59" started-at="2019-06-24T10:03:20Z" finished-at="2019-06-24T10:03:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->
       </class> <!-- hw2.TestForExcercise2 -->
       <class name="hw2.TestForExcercise1">
-        <test-method status="PASS" signature="createDriver()[pri:0, instance:hw2.TestForExcercise1@2d3fcdbd]" name="createDriver" is-config="true" duration-ms="5104" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:11Z">
+        <test-method status="PASS" signature="createDriver()[pri:0, instance:hw2.TestForExcercise1@2d3fcdbd]" name="createDriver" is-config="true" duration-ms="2722" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method status="PASS" signature="TestScenario1()[pri:0, instance:hw2.TestForExcercise1@2d3fcdbd]" name="TestScenario1" duration-ms="6595" started-at="2019-06-24T09:12:11Z" finished-at="2019-06-24T09:12:18Z">
+        <test-method status="PASS" signature="TestScenario1()[pri:0, instance:hw2.TestForExcercise1@2d3fcdbd]" name="TestScenario1" duration-ms="3500" started-at="2019-06-24T10:03:10Z" finished-at="2019-06-24T10:03:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestScenario1 -->
-        <test-method status="PASS" signature="destroyDriver()[pri:0, instance:hw2.TestForExcercise1@2d3fcdbd]" name="destroyDriver" is-config="true" duration-ms="148" started-at="2019-06-24T09:12:18Z" finished-at="2019-06-24T09:12:18Z">
+        <test-method status="PASS" signature="destroyDriver()[pri:0, instance:hw2.TestForExcercise1@2d3fcdbd]" name="destroyDriver" is-config="true" duration-ms="52" started-at="2019-06-24T10:03:13Z" finished-at="2019-06-24T10:03:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- destroyDriver -->
       </class> <!-- hw2.TestForExcercise1 -->
       <class name="hw1.TestSubtractionReturnsCorrectResults">
-        <test-method status="PASS" signature="SubtractingDoubleNegativeMakesAPositive()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingDoubleNegativeMakesAPositive" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="SubtractingDoubleNegativeMakesAPositive()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingDoubleNegativeMakesAPositive" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubtractingDoubleNegativeMakesAPositive -->
-        <test-method status="PASS" signature="SubtractingZeroFromALongValueDoesNotChangeResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingZeroFromALongValueDoesNotChangeResult" duration-ms="1" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SubtractingZeroFromALongValueDoesNotChangeResult -->
-        <test-method status="PASS" signature="SubtractingDoubleValuesReturnsCorrectResults()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingDoubleValuesReturnsCorrectResults" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="SubtractingDoubleValuesReturnsCorrectResults()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingDoubleValuesReturnsCorrectResults" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubtractingDoubleValuesReturnsCorrectResults -->
-        <test-method status="PASS" signature="SubtractingLongNegativeMakesAPositive()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingLongNegativeMakesAPositive" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="SubtractingLongNegativeMakesAPositive()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingLongNegativeMakesAPositive" duration-ms="1" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubtractingLongNegativeMakesAPositive -->
-        <test-method status="PASS" signature="SubtractingZeroFromADoubleValueDoesNotChangeResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingZeroFromADoubleValueDoesNotChangeResult" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="SubtractingZeroFromALongValueDoesNotChangeResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingZeroFromALongValueDoesNotChangeResult" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SubtractingZeroFromADoubleValueDoesNotChangeResult -->
-        <test-method status="PASS" signature="SubtractionLongValuesReturnsCorrectResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractionLongValuesReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        </test-method> <!-- SubtractingZeroFromALongValueDoesNotChangeResult -->
+        <test-method status="PASS" signature="SubtractionLongValuesReturnsCorrectResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractionLongValuesReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubtractionLongValuesReturnsCorrectResult -->
+        <test-method status="PASS" signature="SubtractingZeroFromADoubleValueDoesNotChangeResult()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="SubtractingZeroFromADoubleValueDoesNotChangeResult" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SubtractingZeroFromADoubleValueDoesNotChangeResult -->
       </class> <!-- hw1.TestSubtractionReturnsCorrectResults -->
       <class name="hw1.TestMultiplicationReturnsCorrectResults">
-        <test-method status="PASS" signature="MultiplicationOfADoubleByZeroReturnsZero()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="MultiplicationOfADoubleByZeroReturnsZero" duration-ms="1" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="MultiplicationOfADoubleByZeroReturnsZero()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="MultiplicationOfADoubleByZeroReturnsZero" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultiplicationOfADoubleByZeroReturnsZero -->
-        <test-method status="PASS" signature="MultiplicationOfALongByZeroReturnsZero()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="MultiplicationOfALongByZeroReturnsZero" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="MultiplicationOfALongByZeroReturnsZero()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="MultiplicationOfALongByZeroReturnsZero" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultiplicationOfALongByZeroReturnsZero -->
-        <test-method status="PASS" signature="MultiplicationOfDoublesReturnsCorrectResult()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="MultiplicationOfDoublesReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="MultiplicationOfDoublesReturnsCorrectResult()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="MultiplicationOfDoublesReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultiplicationOfDoublesReturnsCorrectResult -->
-        <test-method status="PASS" signature="MultiplicationOfLongsReturnsCorrectResult()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="MultiplicationOfLongsReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="MultiplicationOfLongsReturnsCorrectResult()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="MultiplicationOfLongsReturnsCorrectResult" duration-ms="1" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MultiplicationOfLongsReturnsCorrectResult -->
       </class> <!-- hw1.TestMultiplicationReturnsCorrectResults -->
       <class name="hw1.TestAddingReturnsCorrectSum">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="setUp" is-config="true" duration-ms="6" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="setUp" is-config="true" duration-ms="8" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="setUp" is-config="true" duration-ms="1" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestSubtractionReturnsCorrectResults@1936f0f5]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestDivisionReturnsCorrectResults@4909b8da]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:hw1.TestMultiplicationReturnsCorrectResults@617c74e5]" name="setUp" is-config="true" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="AddingDoubleVariablesReturnsCorrecrtResults()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingDoubleVariablesReturnsCorrecrtResults" duration-ms="2" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="AddingDoubleVariablesReturnsCorrecrtResults()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingDoubleVariablesReturnsCorrecrtResults" duration-ms="7" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingDoubleVariablesReturnsCorrecrtResults -->
-        <test-method status="PASS" signature="AddingLongVariablesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingLongVariablesReturnsCorrectResult" duration-ms="1" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="AddingLongVariablesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingLongVariablesReturnsCorrectResult" duration-ms="1" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingLongVariablesReturnsCorrectResult -->
-        <test-method status="PASS" signature="AddingTwoLongNegativesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingTwoLongNegativesReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="AddingTwoLongNegativesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingTwoLongNegativesReturnsCorrectResult" duration-ms="1" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingTwoLongNegativesReturnsCorrectResult -->
-        <test-method status="PASS" signature="AddingTwoDoubleNegativesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingTwoDoubleNegativesReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="AddingTwoDoubleNegativesReturnsCorrectResult()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingTwoDoubleNegativesReturnsCorrectResult" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingTwoDoubleNegativesReturnsCorrectResult -->
-        <test-method status="PASS" signature="AddingZeroToADoubleValueDoesNotChangeTheSum()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingZeroToADoubleValueDoesNotChangeTheSum" duration-ms="1" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="AddingZeroToADoubleValueDoesNotChangeTheSum()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingZeroToADoubleValueDoesNotChangeTheSum" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingZeroToADoubleValueDoesNotChangeTheSum -->
-        <test-method status="PASS" signature="AddingZeroToALongValueDoesNotChangeTheSum()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingZeroToALongValueDoesNotChangeTheSum" duration-ms="0" started-at="2019-06-24T09:12:06Z" finished-at="2019-06-24T09:12:06Z">
+        <test-method status="PASS" signature="AddingZeroToALongValueDoesNotChangeTheSum()[pri:0, instance:hw1.TestAddingReturnsCorrectSum@3a03464]" name="AddingZeroToALongValueDoesNotChangeTheSum" duration-ms="0" started-at="2019-06-24T10:03:07Z" finished-at="2019-06-24T10:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingZeroToALongValueDoesNotChangeTheSum -->
