@@ -5,33 +5,51 @@
     <classes>
       <class name="hw2.TestForExcercise2">
         <methods>
-          <include name="createDriver"/>
-          <include name="destroyDriver"/>
+          <include name="TestScenario2"/>
         </methods>
       </class> <!-- hw2.TestForExcercise2 -->
       <class name="hw1.TestSubtractionReturnsCorrectResults">
         <methods>
-          <include name="setUp"/>
+          <include name="SubtractingDoubleNegativeMakesAPositive"/>
+          <include name="SubtractingZeroFromADoubleValueDoesNotChangeResult"/>
+          <include name="SubtractingZeroFromALongValueDoesNotChangeResult"/>
+          <include name="SubtractingDoubleValuesReturnsCorrectResults"/>
+          <include name="SubtractingLongNegativeMakesAPositive"/>
+          <include name="SubtractionLongValuesReturnsCorrectResult"/>
         </methods>
       </class> <!-- hw1.TestSubtractionReturnsCorrectResults -->
       <class name="hw1.TestDivisionReturnsCorrectResults">
         <methods>
-          <include name="setUp"/>
+          <include name="DivisionALongByZeroThrowsException"/>
+          <include name="DivisionOfANongByUnityReturnsItself"/>
+          <include name="DivisionOfADoubleByZeroReturnsInfitnity"/>
+          <include name="DivisionOfADoubleByUnityReturnsItself"/>
+          <include name="DivisionOfDoubleByDoubleReturnsCorrectResult"/>
+          <include name="DivisionOfLongByLongReturnsCorrectResult"/>
         </methods>
       </class> <!-- hw1.TestDivisionReturnsCorrectResults -->
+      <class name="hw1.TestAddingReturnsCorrectSum">
+        <methods>
+          <include name="AddingLongVariablesReturnsCorrectResult"/>
+          <include name="AddingDoubleVariablesReturnsCorrecrtResults"/>
+          <include name="setUp"/>
+          <include name="AddingZeroToALongValueDoesNotChangeTheSum"/>
+          <include name="AddingTwoDoubleNegativesReturnsCorrectResult"/>
+          <include name="AddingTwoLongNegativesReturnsCorrectResult"/>
+          <include name="AddingZeroToADoubleValueDoesNotChangeTheSum"/>
+        </methods>
+      </class> <!-- hw1.TestAddingReturnsCorrectSum -->
       <class name="hw2.TestForExcercise1">
         <methods>
           <include name="TestScenario1"/>
         </methods>
       </class> <!-- hw2.TestForExcercise1 -->
-      <class name="hw1.TestAddingReturnsCorrectSum">
-        <methods>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- hw1.TestAddingReturnsCorrectSum -->
       <class name="hw1.TestMultiplicationReturnsCorrectResults">
         <methods>
-          <include name="setUp"/>
+          <include name="MultiplicationOfLongsReturnsCorrectResult"/>
+          <include name="MultiplicationOfADoubleByZeroReturnsZero"/>
+          <include name="MultiplicationOfDoublesReturnsCorrectResult"/>
+          <include name="MultiplicationOfALongByZeroReturnsZero"/>
         </methods>
       </class> <!-- hw1.TestMultiplicationReturnsCorrectResults -->
     </classes>

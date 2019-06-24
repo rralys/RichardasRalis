@@ -81,7 +81,7 @@ public class TestDivisionReturnsCorrectResults {
     }
 
     @Test
-    public void DivisionOfADoubleByZeroReturnsInfitnity() {
+    public void DivisionOfADoubleByZeroReturnsInfinity() {
 
         firstD = Double.MAX_VALUE;
         secondD = 0.0D;

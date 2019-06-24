@@ -22,7 +22,7 @@
                     <include name="DivisionOfANongByUnityReturnsItself"/>
                     <include name="DivisionOfADoubleByUnityReturnsItself"/>
                     <include name="DivisionALongByZeroThrowsException"/>
-                    <include name="DivisionOfADoubleByZeroReturnsInfitnity"/>
+                    <include name="DivisionOfADoubleByZeroReturnsInfinity"/>
                 </methods>
             </class>
             <class name="hw1.TestMultiplicationReturnsCorrectResults">
@@ -47,34 +47,5 @@
             </class>
         </classes>
     </test>
-
-</suite>
-
-<suite name="Suite for the homework2">
-
-<test name="homework2">
-    <classes>
-        <class name="hw2.RunTestsForHomework2">
-            <methods>
-                <include name="createDriver"/>
-                <include name="destroyDriver"/>
-            </methods>
-        </class>
-        <class name="hw2.TestForExcercise1">
-            <methods>
-                <include name="createDriver"/>
-                <include name="destroyDriver"/>
-                <include name="TestScenario1"/>
-            </methods>
-        </class>
-        <class name="hw2.TestForExcercise2">
-            <methods>
-                <include name="createDriver"/>
-                <include name="destroyDriver"/>
-                <include name="TestScenario2"/>
-            </methods>
-        </class>
-    </classes>
-</test>
 
 </suite>

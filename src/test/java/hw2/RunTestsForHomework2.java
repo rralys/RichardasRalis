@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 public class RunTestsForHomework2 {
     protected WebDriver driver;
+    protected ChromeOptions options;
     protected String driverPath = this.getClass().getClassLoader().getResource("driver/chromedriver.exe").getPath();
     protected String barPrefix = "//ul[@class='uui-navigation nav navbar-nav m-l8']";
 
@@ -28,17 +28,17 @@ public class RunTestsForHomework2 {
         returnElementByXpath("//button[@type='submit']").click();
     }
 
-    @BeforeTest
+    @BeforeClass
     public void createDriver() {
         System.setProperty("webdriver.chrome.driver", driverPath);
-        ChromeOptions options = new ChromeOptions();
+        options = new ChromeOptions();
         options.addArguments("--no-sandbox",  "start-maximized");
         driver = new ChromeDriver(options);
 
         System.out.println("Driver is ready.");
     }
 
-    @AfterTest
+    @AfterClass
     public void destroyDriver() {
         driver.close();
     }
