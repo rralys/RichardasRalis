@@ -14,8 +14,8 @@
         <testng.version>6.8</testng.version>
         <selenium.java>3.141.59</selenium.java>
     </properties>
-
-    <profiles>
+  
+  <profiles>
         <profile>
             <id>hw1</id>
             <activation>
@@ -26,9 +26,9 @@
                 <suite.xml>src/test/resources/hw2_profile.xml</suite.xml>
             </properties>
         </profile>
-    </profiles>
+  </profiles>
 
-    <dependencies>
+  <dependencies>
         <dependency>
             <groupId>com.epam.tat.module4</groupId>
             <artifactId>calculator</artifactId>
