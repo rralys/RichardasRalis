@@ -26,8 +26,8 @@ public class RunTestsForHomework2 {
         return driver.findElement(By.xpath(xpathStr));
     }
 
-    // TODO Number is unused parameter
-    protected String getTextFromElementAndTrim(String xpathStr, int... number) {
+    // TODO Number is unused parameter — Fixed.
+    protected String getTextFromElementAndTrim(String xpathStr) {
         return returnElementByXpath(xpathStr).getText().trim();
     }
 
