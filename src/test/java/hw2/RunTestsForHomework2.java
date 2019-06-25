@@ -29,8 +29,9 @@ public class RunTestsForHomework2 {
     }
 
     // TODO Number is unused parameter
-    // TODO What was changed?
-    protected String getTextFromElementAndTrim(String xpathStr, int... number) {
+    // TODO What was changed? — Updated a bit later :-(.
+    // TODO Number is unused parameter — Fixed.
+    protected String getTextFromElementAndTrim(String xpathStr) {
         return returnElementByXpath(xpathStr).getText().trim();
     }
 
