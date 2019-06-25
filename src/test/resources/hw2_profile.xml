@@ -4,8 +4,11 @@
 
 <test name="homework2">
     <classes>
+<!--        TODO Why is this class here?-->
+
         <class name="hw2.RunTestsForHomework2">
             <methods>
+<!--                TODO Why all these method declared here?-->
                 <include name="setUpDriverPath"/>
                 <include name="createDriver"/>
                 <include name="destroyDriver"/>
@@ -13,6 +16,7 @@
         </class>
         <class name="hw2.TestForExcercise1">
             <methods>
+                <!--                TODO Why all these method declared here?-->
                 <include name="setUpDriverPath"/>
                 <include name="createDriver"/>
                 <include name="destroyDriver"/>
@@ -21,6 +25,7 @@
         </class>
         <class name="hw2.TestForExcercise2">
             <methods>
+                <!--                TODO Why all these method declared here?-->
                 <include name="setUpDriverPath"/>
                 <include name="createDriver"/>
                 <include name="destroyDriver"/>

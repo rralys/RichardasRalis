@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 
+// TODO Unused imports
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,12 +21,15 @@ public class RunTestsForHomework2 {
     protected WebDriver driver;
     protected ChromeOptions options;
     protected String driverPath = this.getClass().getClassLoader().getResource("driver/chromedriver.exe").getPath();
+    // TODO Unused field
     protected String barPrefix = "//ul[@class='uui-navigation nav navbar-nav m-l8']";
 
     protected WebElement returnElementByXpath(String xpathStr) {
         return driver.findElement(By.xpath(xpathStr));
     }
 
+    // TODO Number is unused parameter
+    // TODO What was changed? — Updated a bit later :-(.
     // TODO Number is unused parameter — Fixed.
     protected String getTextFromElementAndTrim(String xpathStr) {
         return returnElementByXpath(xpathStr).getText().trim();
