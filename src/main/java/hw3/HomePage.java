@@ -16,26 +16,33 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy (xpath = "//img[@id='user-icon']")
+    @FindBy (id = "user-icon")
     private WebElement userIcon;
 
-    @FindBy (xpath = "//input[@id='name']")
+    @FindBy (id = "name")
     private WebElement userNameInput;
 
-    @FindBy (xpath = "//input[@id='password']")
+    @FindBy (id = "password")
     private WebElement userPasswordInput;
 
     @FindBy (xpath = "//button[@type='submit']")
     private WebElement submitLoginButton;
 
-    @FindBy (xpath = "//span[@id='user-name']")
+    @FindBy (id = "user-name")
     private WebElement userNameLabel;
+
+    @FindBy (xpath = "//span[text()='Service']")
+    private WebElement serviceMenu;
 
     public void login(String uName, String uPass) {
         userIcon.click();
         userNameInput.sendKeys(uName);
         userPasswordInput.sendKeys(uPass);
         submitLoginButton.click();
+    }
+
+    public void clickServiceMenu() {
+     serviceMenu.click();
     }
 
     public void clickLeftSideServicesMenuItem(ServicesLeftSidePanelMenu item) {

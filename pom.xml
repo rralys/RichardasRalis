@@ -16,6 +16,9 @@
         <selenium.java>3.141.59</selenium.java>
         <maven.compiler>3.8.1</maven.compiler>
         <web.driver.manager>3.6.1</web.driver.manager>
+        <maven.compiler.forceJavacCompilerUse>true</maven.compiler.forceJavacCompilerUse>
+        <maven.compiler.fork>true</maven.compiler.fork>
+        <encoding>UTF-8</encoding>
     </properties>
 
     <profiles>
@@ -70,6 +73,18 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${encoding}</encoding>
+                    <fork>${maven.compiler.fork}</fork>
+                    <forceJavacCompilerUse>${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${sure.fire.version}</version>
                 <configuration>
@@ -79,16 +94,6 @@
                     </suiteXmlFiles>
                 </configuration>
                 <!-- TODO Where is configuration block ??? — Added the block.-->
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
             </plugin>
         </plugins>
     </build>
