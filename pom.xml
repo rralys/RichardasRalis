@@ -19,15 +19,23 @@
     </properties>
 
     <profiles>
-        <!-- TODO What is the requirements to the profiles -->
+        <!-- TODO What is the requirements to the profiles — added profile for hw2.-->
         <profile>
             <id>hw1</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suite.xml>src/test/resources/hw1_profile.xml</suite.xml>
-                <suite.xml>src/test/resources/hw2_profile.xml</suite.xml>
+                <suite1.xml>src/test/resources/hw1_profile.xml</suite1.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw2</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite2.xml>src/test/resources/hw2_profile.xml</suite2.xml>
             </properties>
         </profile>
     </profiles>
@@ -64,7 +72,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${sure.fire.version}</version>
-                <!-- TODO Where is configuration block ???-->
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suite1.xml}</suiteXmlFile>
+                        <suiteXmlFile>${suite2.xml}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+                <!-- TODO Where is configuration block ??? — Added the block.-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -81,40 +95,8 @@
 
 </project>
 
-<!-- TODO Project does not compiled
+<!-- TODO Project does not compiled — Removed the stack trace as it did not allow to install locally :-(.
 
-[?[1;34mINFO?[m] Scanning for projects...
-[?[1;33mWARNING?[m]
-[?[1;33mWARNING?[m] Some problems were encountered while building the effective model for homework:homework:jar:1.0-SNAPSHOT
-[?[1;33mWARNING?[m] 'dependencies.dependency.systemPath' for com.epam.tat.module4:calculator:jar should not point at files within the project directory, ${project.
-basedir}/src/test/resources/calculator-1.0.jar will be unresolvable by dependent projects @ line 41, column 25
-[?[1;33mWARNING?[m]
-[?[1;33mWARNING?[m] It is highly recommended to fix these problems because they threaten the stability of your build.
-[?[1;33mWARNING?[m]
-[?[1;33mWARNING?[m] For this reason, future Maven versions might no longer support building such malformed projects.
-[?[1;33mWARNING?[m]
-[?[1;34mINFO?[m]
-[?[1;34mINFO?[m] ?[1m-------------------------< ?[0;36mhomework:homework?[0;1m >--------------------------?[m
-[?[1;34mINFO?[m] ?[1mBuilding homework 1.0-SNAPSHOT?[m
-[?[1;34mINFO?[m] ?[1m--------------------------------[ jar ]---------------------------------?[m
-[?[1;34mINFO?[m]
-[?[1;34mINFO?[m] ?[1m--- ?[0;32mmaven-clean-plugin:2.5:clean?[m ?[1m(default-clean)?[m @ ?[36mhomework?[0;1m ---?[m
-[?[1;34mINFO?[m] Deleting C:\Users\Dmitry_Khodakovsky\EPAM-Projects\training_center\summer-automation-2019\RichardasRalis\target
-[?[1;34mINFO?[m] ?[1m------------------------------------------------------------------------?[m
-[?[1;34mINFO?[m] ?[1;31mBUILD FAILURE?[m
-[?[1;34mINFO?[m] ?[1m------------------------------------------------------------------------?[m
-[?[1;34mINFO?[m] Total time: 2.291 s
-[?[1;34mINFO?[m] Finished at: 2019-06-25T11:15:29+03:00
-[?[1;34mINFO?[m] ?[1m------------------------------------------------------------------------?[m
-[?[1;31mERROR?[m] Failed to execute goal ?[32morg.apache.maven.plugins:maven-clean-plugin:2.5:clean?[m ?[1m(default-clean)?[m on project ?[36mhomework?[m: ?[1;31mF
-ailed to clean project: Failed to delete C:\Users\Dmitry_Khodakovsky\EPAM-Projects\training_center\summer-automation-2019\RichardasRalis\target\test-classes\driver
-\chromedriver.exe?[m -> ?[1m[Help 1]?[m
-[?[1;31mERROR?[m]
-[?[1;31mERROR?[m] To see the full stack trace of the errors, re-run Maven with the ?[1m-e?[m switch.
-[?[1;31mERROR?[m] Re-run Maven using the ?[1m-X?[m switch to enable full debug logging.
-[?[1;31mERROR?[m]
-[?[1;31mERROR?[m] For more information about the errors and possible solutions, please read the following articles:
-[?[1;31mERROR?[m] ?[1m[Help 1]?[m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
 
 
 -->

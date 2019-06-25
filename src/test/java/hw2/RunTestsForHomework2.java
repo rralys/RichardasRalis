@@ -9,20 +9,17 @@ import org.testng.annotations.*;
 
 // TODO Unused imports
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNotNull;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class RunTestsForHomework2 {
     protected WebDriver driver;
     protected ChromeOptions options;
     protected String driverPath = this.getClass().getClassLoader().getResource("driver/chromedriver.exe").getPath();
-    // TODO Unused field
-    protected String barPrefix = "//ul[@class='uui-navigation nav navbar-nav m-l8']";
+    // TODO Unused field — Removed.
 
     protected WebElement returnElementByXpath(String xpathStr) {
         return driver.findElement(By.xpath(xpathStr));

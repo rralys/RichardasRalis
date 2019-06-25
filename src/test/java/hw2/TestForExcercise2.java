@@ -59,10 +59,12 @@ public class TestForExcercise2 extends RunTestsForHomework2 {
         clickElementByXpath("//span[text()='Service']");
         verifyLeftSectionMenuItems();
         // 7. Open the "Different Elements" page from the header menu by clicking "Services" menu item.
-        clickElementByXpath("//li[@class='dropdown']//a[@class='dropdown-toggle']");
+        driver.findElement(By.className("dropdown-toggle")).click();
+        //clickElementByXpath("//li[@class='dropdown']//a[@class='dropdown-toggle']");
         // TODO Is xpath required here? — I guess so, the method requires xpath here.
         // TODO Is it possible do not use xpath here?
-        clickElementByXpath("//a[@href='different-elements.html']");
+        driver.findElement(By.linkText("Different elements")).click();
+        //clickElementByXpath("//a[@href='different-elements.html']");
         verifyPageTitle("Different Elements");
         // 8. Verify the presence of the necessary web elements.
         assertEquals(driver.findElements(By.xpath("//label[@class='label-checkbox']")).size(), 4);
@@ -71,12 +73,12 @@ public class TestForExcercise2 extends RunTestsForHomework2 {
         assertEquals(driver.findElements(By.xpath("//*[contains(@value, 'Button')]")).size(), 2);
         // 9. Verify there is the right section.
         // TODO Is xpath required here? — I think so, the method returning the element requires xpath.
-        // TODO Please read requirements for the HW
-        assertTrue(returnElementByXpath("//div[@name='log-sidebar']").isDisplayed());
+        // TODO Please read requirements for the HW — Changed to name.
+        assertTrue(driver.findElement(By.name("log-sidebar")).isDisplayed());
         // 10. Verify there is the left section. //div[@name='navigation-sidebar']
         // TODO Is xpath required here? — As above
-        //          // TODO Please read requirements for the HW.
-        assertTrue(returnElementByXpath("//div[@name='navigation-sidebar']").isDisplayed());
+        //          // TODO Please read requirements for the HW. — Changed to name.
+        assertTrue(driver.findElement(By.name("navigation-sidebar")).isDisplayed());
         // 11. Select check-boxes "Water" and "Wind" and verify they are selected.
         clickCheckBoxAndVerifyChecked("Water");
         clickCheckBoxAndVerifyChecked("Wind");
@@ -89,10 +91,12 @@ public class TestForExcercise2 extends RunTestsForHomework2 {
         verifyLogStateAfterCheckBoxClick("Fire", true);
         // 13. Select the "Selen" radiobutton and verify its state, and the log state change is according.
         returnElementByXpath("//label[text()[contains(.,'Selen')]]").click();
-        // TODO Locator is too complicated
-        assertTrue(returnElementByXpath("//label[text()[contains(.,'Selen')]]//descendant-or-self::input[@type='radio']").isSelected());
+        // TODO Locator is too complicated — I cannot use just "//label[contains(.,'Selen')]"
+        // because it is not input and its state cannot be checked by isSelected() method.
+        // And task requires that we check that radio button is selected.
+        assertTrue(returnElementByXpath("//label[contains(.,'Selen')]//self::input[@type='radio']").isSelected());
         // 14. Verify that the log state changes according to the radiobuttons selection.
-        // TODO Why do you check all parameters? Do you read task?
+        // TODO Why do you check all parameters? Do you read task? — Not all anymore.
         assertNotNull(returnElementByXpath("//li[text()[contains(.,'metal: value changed to  Selen')]]"));
         // 15. Select the "Yellow" dropdown value.
         Select colorDrp = new Select(returnElementByXpath("//select[@class='uui-form-element']"));

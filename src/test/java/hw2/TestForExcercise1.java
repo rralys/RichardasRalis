@@ -42,13 +42,8 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
                 "To be multiplatform",
                 "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
 
-        // TODO Xpath is too complicated. Could be improved
-        List<String> labelsBelowImagesXpathes = Arrays.asList("//span[contains(@class,'practise')]/../following-sibling::span[@class='benefit-txt']",
-                "//span[contains(@class,'custom')]/../following-sibling::span[@class='benefit-txt']",
-                "//span[contains(@class,'multi')]/../following-sibling::span[@class='benefit-txt']",
-                "//span[contains(@class,'base')]/../following-sibling::span[@class='benefit-txt']");
-
-        verifyListOfLabelsFromListOfXpathes(labelsBelowImagesXpathes, expectedTextLabels);
+        // TODO Xpath is too complicated. Could be improved — Reduced to //span[@class='benefit-txt']
+        verifyListOfLabelsFromXpath("//span[@class='benefit-txt']", expectedTextLabels);
     }
 
     public void verifyTextInHeaders() {
@@ -77,8 +72,8 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
         // TODO Is it required using xpath here? — I prefer to always search using xpath,
         // I do not get dependent on attributes names, whether they are id, class, href and so on.
         // I can describe elements as unique as possible. Besides, the method here requires xpath.
-        // TODO Please read requirements for the HW
-        assertEquals(getTextFromElementAndTrim("//span[@id='user-name']"), "PITER CHAILOVSKII");
+        // TODO Please read requirements for the HW — Changed to id.
+        assertEquals(driver.findElement(By.id("user-name")).getText(), "PITER CHAILOVSKII");
         // 5. Verify page title after login.
         verifyPageTitle("Home Page");
         // 6. Verify that header has the correct four items.
@@ -87,8 +82,8 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
         assertEquals(driver.findElements(By.xpath("//div[@class='benefit']")).size(), 4);
         verifyIndexImagesDisplay();
         // 8. Verify that index page contains four text elements below the images and the text content is correct.
-        // TODO Locator could be improved
-        assertEquals(driver.findElements(By.xpath("//div[@class='benefit-icon']//following::span[@class='benefit-txt']")).size(), 4);
+        // TODO Locator could be improved — Done.
+        assertEquals(driver.findElements(By.xpath("//span[@class='benefit-txt']")).size(), 4);
         verifyTextLabelsBelowImages();
         // 9. Verify text in headers.
         verifyTextInHeaders();
@@ -107,12 +102,12 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
         assertEquals(ref, "https://github.com/epam/JDI");
         // 15. Verify there is left section.
         // TODO Why do you use xpath here? — To shorten code I use the returnElementByXpath, which requires xpath.
-        // TODO Please read requirements for the HW
-        assertTrue(returnElementByXpath("//div[@name='navigation-sidebar']").isDisplayed());
+        // TODO Please read requirements for the HW — Changed to name.
+        assertTrue(driver.findElement(By.name("navigation-sidebar")).isDisplayed());
         // 16. Verify there is footer.
         // TODO Why do you use xpath here? — Same as above.
-        // TODO Please read requirements for the HW
-        assertTrue(returnElementByXpath("//div[@class='footer-content overflow']").isDisplayed());
+        // TODO Please read requirements for the HW — Changed to tagName.
+        assertTrue(driver.findElement(By.tagName("footer")).isDisplayed());
         // 17. Close browser. — see test teardown.
     }
 }
