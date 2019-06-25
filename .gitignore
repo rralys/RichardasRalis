@@ -1,6 +1,7 @@
 .idea
 target
-# TODO Why do you not include iml file?
+*.iml
+# TODO Why do you not include iml file? — Done.
 
 
 
