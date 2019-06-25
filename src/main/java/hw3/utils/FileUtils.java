@@ -1,0 +1,57 @@
+package hw3.utils;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class FileUtils {
+
+    public Properties readUserPropertiesFromFile() {
+        Properties userProperties = new Properties();
+
+        try (InputStream input = this.getClass().getClassLoader()
+                .getResourceAsStream("properties/user.properties")) {
+            if (input == null) {
+                System.out.println("Sorry, unable to find config.properties");
+            }
+            userProperties.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return userProperties;
+    }
+
+    public Properties readPageTitleFromFile() {
+        Properties pageTitles = new Properties();
+
+        try (InputStream input = this.getClass().getClassLoader()
+                .getResourceAsStream("properties/pageTitles.properties")) {
+            if (input == null) {
+                System.out.println("Sorry, unable to find config.properties");
+            }
+            pageTitles.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return pageTitles;
+    }
+
+    public Properties readElementsCountsFromFile() {
+        Properties pageCounts = new Properties();
+
+        try (InputStream input = this.getClass().getClassLoader()
+                .getResourceAsStream("properties/elements.properties")) {
+            if (input == null) {
+                System.out.println("Sorry, unable to find config.properties");
+            }
+            pageCounts.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return pageCounts;
+
+    }
+}

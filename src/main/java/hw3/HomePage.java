@@ -1,6 +1,8 @@
 package hw3;
 
+import hw3.enums.HeaderSectionImagesXpathes;
 import hw3.enums.ServicesLeftSidePanelMenu;
+import hw3.enums.TopPanelMenuXpathes;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,22 +18,22 @@ public class HomePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy (id = "user-icon")
+    @FindBy(id = "user-icon")
     private WebElement userIcon;
 
-    @FindBy (id = "name")
+    @FindBy(id = "name")
     private WebElement userNameInput;
 
-    @FindBy (id = "password")
+    @FindBy(id = "password")
     private WebElement userPasswordInput;
 
-    @FindBy (xpath = "//button[@type='submit']")
+    @FindBy(xpath = "//button[@type='submit']")
     private WebElement submitLoginButton;
 
-    @FindBy (id = "user-name")
+    @FindBy(id = "user-name")
     private WebElement userNameLabel;
 
-    @FindBy (xpath = "//span[text()='Service']")
+    @FindBy(xpath = "//span[text()='Service']")
     private WebElement serviceMenu;
 
     public void login(String uName, String uPass) {
@@ -41,8 +43,21 @@ public class HomePage {
         submitLoginButton.click();
     }
 
+    public String getUserName() {
+        return userNameLabel.getText().trim();
+    }
+
     public void clickServiceMenu() {
-     serviceMenu.click();
+        serviceMenu.click();
+    }
+
+    public String getTopPanelMenuItemElementLabel(TopPanelMenuXpathes topPanelItem) {
+        return driver.findElement(By.xpath(topPanelItem.getTopPanelMenuItemXpath())).getText().trim();
+    }
+
+
+    public boolean isHeaderSectionImageVisible(HeaderSectionImagesXpathes imageItem) {
+        return driver.findElement(By.xpath(imageItem.getHeaderSectionImageXpath())).isDisplayed();
     }
 
     public void clickLeftSideServicesMenuItem(ServicesLeftSidePanelMenu item) {
