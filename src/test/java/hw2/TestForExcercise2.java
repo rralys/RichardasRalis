@@ -13,10 +13,8 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotNull;
 
-// TODO What is the length line of code in Java Code Convention? — Fixed too lengthy code lines.
 public class TestForExcercise2 extends RunTestsForHomework2 {
 
-    // TODO Code duplication with verifyLeftSectionMenuItems — Created verifyListOfLabelsFromXpath which re-uses code.
     public void verifyHeaderMenuItems() {
         List<String> headerMenuItemsTextListExpected = Arrays.asList("SUPPORT",
                 "DATES",
@@ -63,8 +61,8 @@ public class TestForExcercise2 extends RunTestsForHomework2 {
         // 7. Open the "Different Elements" page from the header menu by clicking "Services" menu item.
         clickElementByXpath("//li[@class='dropdown']//a[@class='dropdown-toggle']");
         // TODO Is xpath required here? — I guess so, the method requires xpath here.
+        // TODO Is it possible do not use xpath here?
         clickElementByXpath("//a[@href='different-elements.html']");
-        // TODO Could be extracted as separate method. Please look at the ex1 code — Done.
         verifyPageTitle("Different Elements");
         // 8. Verify the presence of the necessary web elements.
         assertEquals(driver.findElements(By.xpath("//label[@class='label-checkbox']")).size(), 4);
@@ -73,21 +71,17 @@ public class TestForExcercise2 extends RunTestsForHomework2 {
         assertEquals(driver.findElements(By.xpath("//*[contains(@value, 'Button')]")).size(), 2);
         // 9. Verify there is the right section.
         // TODO Is xpath required here? — I think so, the method returning the element requires xpath.
+        // TODO Please read requirements for the HW
         assertTrue(returnElementByXpath("//div[@name='log-sidebar']").isDisplayed());
         // 10. Verify there is the left section. //div[@name='navigation-sidebar']
-        // TODO Is xpath required here? — As above.
+        // TODO Is xpath required here? — As above
+        //          // TODO Please read requirements for the HW.
         assertTrue(returnElementByXpath("//div[@name='navigation-sidebar']").isDisplayed());
         // 11. Select check-boxes "Water" and "Wind" and verify they are selected.
-        // TODO IS it possible made checkbox name as method parameter? — separated out check-box click and state check.
         clickCheckBoxAndVerifyChecked("Water");
-        // TODO IS it possible made checkbox name as method parameter? — see above.
-        // TODO IS it possible made checkbox name as method parameter? — separated out check-box click and state check.
         clickCheckBoxAndVerifyChecked("Wind");
-        // TODO IS it possible made checkbox name as method parameter? — see above.
         // 12. Verify that checking and un-checking the checkboxes updates the "Log" section accordingly.
-        // TODO IS it possible made checkbox name as method parameter? — Done.
         verifyLogStateAfterCheckBoxClick("Water", true);
-        // TODO IS it possible made checkbox name as method parameter? — Done.
         verifyLogStateAfterCheckBoxClick("Wind", true);
         clickCheckBoxAndVerifyChecked("Earth");
         verifyLogStateAfterCheckBoxClick("Earth", true);
@@ -95,6 +89,7 @@ public class TestForExcercise2 extends RunTestsForHomework2 {
         verifyLogStateAfterCheckBoxClick("Fire", true);
         // 13. Select the "Selen" radiobutton and verify its state, and the log state change is according.
         returnElementByXpath("//label[text()[contains(.,'Selen')]]").click();
+        // TODO Locator is too complicated
         assertTrue(returnElementByXpath("//label[text()[contains(.,'Selen')]]//descendant-or-self::input[@type='radio']").isSelected());
         // 14. Verify that the log state changes according to the radiobuttons selection.
         // TODO Why do you check all parameters? Do you read task?
@@ -105,29 +100,11 @@ public class TestForExcercise2 extends RunTestsForHomework2 {
         // 16. Verify that the log state changed according to the selected value.
         assertNotNull(returnElementByXpath("//li[text()[contains(.,'Colors: value changed to Yellow')]]"));
         // 17. Un-select check-boxes and verify their state changed accordingly.
-        // TODO IS it possible made checkbox name as method parameter? — Separated out into a method.
         clickCheckBoxAndVerifyUnchecked("Water");
-        // TODO IS it possible made checkbox name as method parameter? — see above.
-        // TODO IS it possible made checkbox name as method parameter? — see above.
         clickCheckBoxAndVerifyUnchecked("Wind");
-        // TODO IS it possible made checkbox name as method parameter?
-        // TODO IS it possible made checkbox name as method parameter?
-        // TODO Why do you click here Earth? — Removed the check.
-        // TODO IS it possible made checkbox name as method parameter?
-        // TODO Why do you check here Earth? — Removed check.
-        // TODO IS it possible made checkbox name as method parameter?
-        // TODO Why do you click here Fire? — Removed check.
-        // TODO IS it possible made checkbox name as method parameter?
-        // TODO Why do you check here Fire? — Removed check.
         // 18. Verify that log state updated according to the new states of the check-boxes.
-        // TODO IS it possible made checkbox name as method parameter? — Fixed.
         verifyLogStateAfterCheckBoxClick("Water", false);
-        // TODO IS it possible made checkbox name as method parameter? — Fixed.
         verifyLogStateAfterCheckBoxClick("Wind", false);
-        // TODO IS it possible made checkbox name as method parameter? — Fixed.
-        // TODO Why do you check here Earth? — Removed check.
-        // TODO IS it possible made checkbox name as method parameter? — Removed check.
-        // TODO Why do you check here Fire? — Removed check.
     }
 
 }

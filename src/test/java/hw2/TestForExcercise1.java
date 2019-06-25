@@ -8,7 +8,6 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-// TODO What is the length line of code in Java Code Convention? — 80 characters. I'll update the code.
 public class TestForExcercise1 extends RunTestsForHomework2 {
 
     public void verifyHeaderItems() {
@@ -43,6 +42,7 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
                 "To be multiplatform",
                 "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
 
+        // TODO Xpath is too complicated. Could be improved
         List<String> labelsBelowImagesXpathes = Arrays.asList("//span[contains(@class,'practise')]/../following-sibling::span[@class='benefit-txt']",
                 "//span[contains(@class,'custom')]/../following-sibling::span[@class='benefit-txt']",
                 "//span[contains(@class,'multi')]/../following-sibling::span[@class='benefit-txt']",
@@ -70,7 +70,6 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
         // 1. Open the page.
         driver.get("https://epam.github.io/JDI/");
         // 2. Check page title.
-        // TODO It could be extracted to the separate method — Done.
         verifyPageTitle("Home Page");
         // 3. Login.
         login("epam", "1234");
@@ -78,34 +77,25 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
         // TODO Is it required using xpath here? — I prefer to always search using xpath,
         // I do not get dependent on attributes names, whether they are id, class, href and so on.
         // I can describe elements as unique as possible. Besides, the method here requires xpath.
+        // TODO Please read requirements for the HW
         assertEquals(getTextFromElementAndTrim("//span[@id='user-name']"), "PITER CHAILOVSKII");
         // 5. Verify page title after login.
-        // TODO It could be extracted to the separate method — Done.
         verifyPageTitle("Home Page");
         // 6. Verify that header has the correct four items.
-        // TODO Please try to avoid getting each element from the menu — Fixed.
-        // TODO Loop could be used here — Fixed.
         verifyHeaderItems();
         // 7. Verify that index page has four images present and displayed.
         assertEquals(driver.findElements(By.xpath("//div[@class='benefit']")).size(), 4);
-        // TODO Please try to avoid getting each element of the images — Fixed.
-        // TODO Loop could be used here — Done.
-        // TODO Too long locators, could be improved — Fixed.
         verifyIndexImagesDisplay();
         // 8. Verify that index page contains four text elements below the images and the text content is correct.
+        // TODO Locator could be improved
         assertEquals(driver.findElements(By.xpath("//div[@class='benefit-icon']//following::span[@class='benefit-txt']")).size(), 4);
-        // TODO Too long locators, could be improved — Tried to fix.
-        // TODO Please try to avoid getting each element of the images — Done.
-        // TODO Loop could be used here — Done.
         verifyTextLabelsBelowImages();
         // 9. Verify text in headers.
-        // TODO What does \u2026 mean? — This is ellipsis. Had issues with encoding. looks like it is fixed by encoding specification in pom.xml.
         verifyTextInHeaders();
         // 10. Verify that there is a frame element.
         assertEquals(driver.findElements(By.tagName("iframe")).size(), 1);
         // 11. Switch to that frame and verify there is the EPAM logo in the frame.
         driver.switchTo().frame("iframe");
-        // TODO Why do you use xpath here? — Changed to id.
         assertTrue(driver.findElement(By.id("epam_logo")).isDisplayed());
         // 12. Switch to the main window.
         driver.switchTo().parentFrame();
@@ -117,9 +107,11 @@ public class TestForExcercise1 extends RunTestsForHomework2 {
         assertEquals(ref, "https://github.com/epam/JDI");
         // 15. Verify there is left section.
         // TODO Why do you use xpath here? — To shorten code I use the returnElementByXpath, which requires xpath.
+        // TODO Please read requirements for the HW
         assertTrue(returnElementByXpath("//div[@name='navigation-sidebar']").isDisplayed());
         // 16. Verify there is footer.
         // TODO Why do you use xpath here? — Same as above.
+        // TODO Please read requirements for the HW
         assertTrue(returnElementByXpath("//div[@class='footer-content overflow']").isDisplayed());
         // 17. Close browser. — see test teardown.
     }
