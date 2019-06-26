@@ -145,4 +145,43 @@ public class HomePageSteps {
         assertTrue(homePage.isFooterDisplayed());
     }
 
+    public void clickServiceSubcategoryInHeader() {
+        homePage.clickServiceItemInHeader();
+    }
+
+    public void serviceDropdownHasCorrectOptions() {
+
+        ArrayList<String> actualTopServiceDropdownLabels = homePage.getServiceMenuItemsLabels();
+        ArrayList<String> expectedTopServiceDropdownLabels = new ArrayList<>();
+
+        for (HeaderServiceDropdownItems item : HeaderServiceDropdownItems.values()) {
+            expectedTopServiceDropdownLabels.add(item.getHeaderServiceDropDownItem());
+        }
+
+        assertEquals(actualTopServiceDropdownLabels, expectedTopServiceDropdownLabels);
+
+    }
+
+    public void clickServiceSubcategoryInLeftSection() {
+        homePage.clickServiceMenu();
+    }
+
+    public void serviceMenuInLeftSectionHasCorrectOptions() {
+
+        ArrayList<String> actualLeftSideServiceMenuLabels = homePage.getLeftServiceMenuItemsLabels();
+        ArrayList<String> expectedLeftSideServiceMenuLabels = new ArrayList<>();
+
+        for (ServicesLeftSidePanelMenuLabels item : ServicesLeftSidePanelMenuLabels.values()) {
+            expectedLeftSideServiceMenuLabels.add(item.getServiceLeftSidePanelMenuItem());
+        }
+
+        assertEquals(actualLeftSideServiceMenuLabels, expectedLeftSideServiceMenuLabels);
+
+    }
+
+    public void openDifferentElementsPageViaTopServiceMenu() {
+        homePage.clickServiceItemInHeader();
+        homePage.clickTopPanelServicesMenuItem(ServicesTopPanelMenu.valueOf("DIFFERENT_ELEMENTS"));
+    }
+
 }

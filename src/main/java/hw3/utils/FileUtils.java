@@ -70,4 +70,37 @@ public class FileUtils {
 
         return linkFile;
     }
+
+    public Properties readRadioButtonToSelectFromFile() {
+        Properties radioFile = new Properties();
+
+        try (InputStream input = this.getClass().getClassLoader()
+                .getResourceAsStream("properties/radiobutton.properties")) {
+            if (input == null) {
+                System.out.println("Sorry, unable to find properties file.");
+            }
+            radioFile.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return radioFile;
+
+    }
+
+    public Properties readDropdownItemToSelectFromFile() {
+        Properties drdFile = new Properties();
+
+        try (InputStream input = this.getClass().getClassLoader()
+                .getResourceAsStream("properties/dropdown.properties")) {
+            if (input == null) {
+                System.out.println("Sorry, unable to find properties file.");
+            }
+            drdFile.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return drdFile;
+    }
 }

@@ -1,6 +1,6 @@
 package hw3.enums;
 
-public enum ServicesLeftSidePanelMenu {
+public enum ServicesLeftSidePanelMenuXpathes {
 
     SUPPORT("//ul[@class='sub']//a[@href='support.html']"),
     DATES("//ul[@class='sub']//a[@href='dates.html']"),
@@ -14,7 +14,7 @@ public enum ServicesLeftSidePanelMenu {
 
     final String leftSidePanelMenuItem;
 
-    ServicesLeftSidePanelMenu(String item) {
+    ServicesLeftSidePanelMenuXpathes(String item) {
         leftSidePanelMenuItem = item;
     }
 

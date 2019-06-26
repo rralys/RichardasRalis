@@ -4,8 +4,12 @@ import hw3.enums.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomePage {
 
@@ -49,6 +53,16 @@ public class HomePage {
     @FindBy (tagName = "footer")
     private WebElement footer;
 
+    @FindAll({
+           @FindBy(xpath = "//ul[@class='dropdown-menu']//a[@href]")
+    })
+    List<WebElement> topServiceMenuItems;
+
+    @FindAll({
+            @FindBy(xpath = "//ul[@class='sub']//li[@ui='label']")
+    })
+    List<WebElement> leftSideMenuItems;
+
     public void login(String uName, String uPass) {
         userIcon.click();
         userNameInput.sendKeys(uName);
@@ -58,6 +72,11 @@ public class HomePage {
 
     public String getUserName() {
         return userNameLabel.getText().trim();
+    }
+
+    public void clickServiceItemInHeader() {
+        String topPanelItem = TopPanelMenuXpathes.valueOf("SERVICE").getTopPanelMenuItemXpath();
+        driver.findElement(By.xpath(topPanelItem)).click();
     }
 
     public void clickServiceMenu() {
@@ -113,7 +132,32 @@ public class HomePage {
         return footer.isDisplayed();
     }
 
-    public void clickLeftSideServicesMenuItem(ServicesLeftSidePanelMenu item) {
-        driver.findElement(By.xpath(item.getLeftSidePanelMenuItem())).click();
+    public ArrayList<String> getServiceMenuItemsLabels() {
+
+        ArrayList<String> serviceMenuItemsLabels = new ArrayList<>();
+
+        for(WebElement element : topServiceMenuItems) {
+            serviceMenuItemsLabels.add(element.getText().trim());
+        }
+
+        return serviceMenuItemsLabels;
+
+    }
+
+    public ArrayList<String> getLeftServiceMenuItemsLabels() {
+
+        ArrayList<String> serviceMenuItemsLabels = new ArrayList<>();
+
+        for(WebElement element : leftSideMenuItems) {
+            serviceMenuItemsLabels.add(element.getText().trim());
+        }
+
+        return serviceMenuItemsLabels;
+
+    }
+
+
+    public void clickTopPanelServicesMenuItem(ServicesTopPanelMenu item) {
+        driver.findElement(By.xpath(item.getTopPanelMenuItem())).click();
     }
 }

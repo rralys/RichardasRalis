@@ -41,6 +41,15 @@
                 <suite2.xml>src/test/resources/hw2_profile.xml</suite2.xml>
             </properties>
         </profile>
+        <profile>
+            <id>hw3</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite3.xml>src/test/resources/hw3_profile.xml</suite3.xml>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>
@@ -91,6 +100,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite1.xml}</suiteXmlFile>
                         <suiteXmlFile>${suite2.xml}</suiteXmlFile>
+                        <suiteXmlFile>${suite3.xml}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
                 <!-- TODO Where is configuration block ??? — Added the block.-->
