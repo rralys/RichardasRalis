@@ -1,9 +1,7 @@
 package hw3.steps;
 
 import hw3.HomePage;
-import hw3.enums.HeaderSectionImagesXpathes;
-import hw3.enums.TopPanelMenuLabels;
-import hw3.enums.TopPanelMenuXpathes;
+import hw3.enums.*;
 import hw3.utils.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -64,7 +62,9 @@ public class HomePageSteps {
         for (HeaderSectionImagesXpathes item : HeaderSectionImagesXpathes.values()) {
             Boolean isImageVisible = homePage.isHeaderSectionImageVisible(item);
             assertTrue(isImageVisible);
-            isImagesDisplayed.add(isImageVisible);
+            if (isImageVisible) {
+                isImagesDisplayed.add(isImageVisible);
+            }
         }
 
         assertEquals(isImagesDisplayed.size(),
@@ -72,6 +72,77 @@ public class HomePageSteps {
                 propertiesFile.readElementsCountsFromFile().
                         getProperty("index.page.images.count")));
 
+    }
+
+    public void verifyIndexTextLabels() {
+
+        ArrayList<String> actualIndexTextLabels = new ArrayList<>();
+        ArrayList<String> expectedIndexTextLabels = new ArrayList<>();
+
+        for (HeaderSectionTextsXpathes xpath : HeaderSectionTextsXpathes.values()) {
+            actualIndexTextLabels.add(homePage.getHeaderSectionTextActualLabel(xpath));
+        }
+
+        for (HeaderSectionTextsLabels label : HeaderSectionTextsLabels.values()) {
+            expectedIndexTextLabels.add(label.getHeaderSectionTextLabel());
+        }
+
+        assertEquals(actualIndexTextLabels, expectedIndexTextLabels);
+
+    }
+
+    public void verifyMainHeadersText() {
+
+        ArrayList<String> actualMainHeaderLabels = new ArrayList<>();
+        ArrayList<String> expectedMainHeaderLabels = new ArrayList<>();
+
+        for (MainHeaderTextXpathes xpath : MainHeaderTextXpathes.values()) {
+            actualMainHeaderLabels.add(homePage.getMainHeaderTextActualLabel(xpath));
+        }
+
+        for (MainHeaderTextLabels label : MainHeaderTextLabels.values()) {
+            expectedMainHeaderLabels.add(label.getMainHeaderTextLabel());
+        }
+    }
+
+    public void verifyIframeIsVisible() {
+        assertTrue(homePage.isIframePresent());
+    }
+
+    public void switchToIframe() {
+        homePage.switchToFrame();
+    }
+
+    public void verifyFrameHasEpamLogo() {
+        homePage.isLogoDisplayed();
+    }
+
+    public void switchBackToMainFrame() {
+        homePage.switchToMainFrame();
+    }
+
+    public void verifyTextInSubHeader() {
+
+        String actualSubHeaderText = homePage.getSubHeaderLabel();
+        String expectedSubHeaderText = SubHeaderTextLabels.valueOf("SUB_HEADER_TEXT_LABEL").getSubHeaderTextLabel();
+
+        assertEquals(actualSubHeaderText, expectedSubHeaderText);
+    }
+
+    public void verifySubHeaderHasProperLink() {
+
+        String expectedLink = propertiesFile.readSubHeaderLinkFromFile().getProperty("subheader.link");
+        String actualLink = homePage.getSubHeaderLink();
+
+        assertEquals(actualLink, expectedLink);
+    }
+
+    public void verifyLeftSectionIsDisplayed() {
+        assertTrue(homePage.isLeftSectionDisplayed());
+    }
+
+    public void verifyFooterIsDisplayed() {
+        assertTrue(homePage.isFooterDisplayed());
     }
 
 }

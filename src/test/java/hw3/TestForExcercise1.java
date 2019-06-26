@@ -21,5 +21,15 @@ public class TestForExcercise1 extends RunTestsForHomework3 {
         hps.verifyHomePageTitle();
         hps.verifyHeaderSectionItems();
         hps.verifyIndexImages();
+        hps.verifyIndexTextLabels();
+        hps.verifyMainHeadersText();
+        hps.verifyIframeIsVisible();
+        hps.switchToIframe();
+        hps.verifyFrameHasEpamLogo();
+        hps.switchBackToMainFrame();
+        hps.verifyTextInSubHeader();
+        hps.verifySubHeaderHasProperLink();
+        hps.verifyLeftSectionIsDisplayed();
+        hps.verifyFooterIsDisplayed();
     }
 }

@@ -7,14 +7,14 @@ public enum HeaderSectionImagesXpathes {
     MULTI("//span[contains(@class,'icon-multi')]"),
     BASE("//span[contains(@class,'icon-base')]");
 
-    final String leftSideMenuItem;
+    final String headerSectionImage;
 
     HeaderSectionImagesXpathes(String item) {
-        leftSideMenuItem = item;
+        headerSectionImage = item;
     }
 
     public String getHeaderSectionImageXpath() {
-        return leftSideMenuItem;
+        return headerSectionImage;
     }
 
 }

@@ -54,4 +54,20 @@ public class FileUtils {
         return pageCounts;
 
     }
+
+    public Properties readSubHeaderLinkFromFile() {
+        Properties linkFile = new Properties();
+
+        try (InputStream input = this.getClass().getClassLoader()
+                .getResourceAsStream("properties/subheaderlink.properties")) {
+            if (input == null) {
+                System.out.println("Sorry, unable to find properties file.");
+            }
+            linkFile.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return linkFile;
+    }
 }

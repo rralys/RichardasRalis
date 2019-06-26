@@ -1,0 +1,24 @@
+package hw3.enums;
+
+public enum HeaderSectionTextsXpathes {
+
+    PRACTICE_TEXT("//span[contains(@class,'icon-practise')]" +
+            "//ancestor::div[@class='benefit']//span[@class='benefit-txt']"),
+    CUSTOM_TEXT("//span[contains(@class,'icon-custom')]" +
+            "//ancestor::div[@class='benefit']//span[@class='benefit-txt']"),
+    MULTI_TEXT("//span[contains(@class,'icon-multi')]" +
+            "//ancestor::div[@class='benefit']//span[@class='benefit-txt']"),
+    BASE_TEXT("//span[contains(@class,'icon-base')]" +
+            "//ancestor::div[@class='benefit']//span[@class='benefit-txt']");
+
+    final String headerSectionText;
+
+    HeaderSectionTextsXpathes(String item) {
+        headerSectionText = item;
+    }
+
+    public String getHeaderSectionTextXpath() {
+        return headerSectionText;
+    }
+
+}
