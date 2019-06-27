@@ -4,17 +4,14 @@
 
 <test name="homework2">
     <classes>
-<!--        TODO Why is this class here? — Removed the class.-->
 
         <class name="hw2.TestForExcercise1">
             <methods>
-                <!--                TODO Why all these method declared here? — Left only test method.-->
                 <include name="TestScenario1"/>
             </methods>
         </class>
         <class name="hw2.TestForExcercise2">
             <methods>
-                <!--                TODO Why all these method declared here? — Left only test method.-->
                 <include name="TestScenario2"/>
             </methods>
         </class>
