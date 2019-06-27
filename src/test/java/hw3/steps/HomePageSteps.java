@@ -13,10 +13,12 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class HomePageSteps {
 
+    // TODO It could be extracted to the BaseStep class
     private WebDriver driver;
-
+    // TODO It could be extracted to the BaseStep class
     private HomePage homePage;
 
+    // TODO It could be extracted to the BaseStep class
     private FileUtils propertiesFile = new FileUtils();
 
     public HomePageSteps(WebDriver dr) {
@@ -40,15 +42,18 @@ public class HomePageSteps {
     }
 
     public void verifyHeaderSectionItems() {
+        // TODO Why do you decide use ArrayList instead of List?
         ArrayList<String> expectedTopPanelItemsLabels = new ArrayList<>();
 
         ArrayList<String> actualTopPanelItemsLabels = new ArrayList<>();
 
         for (TopPanelMenuLabels item : TopPanelMenuLabels.values()) {
+            // TODO it will be better if you have static method in TopPanelMenuLabels which return List<String>
             expectedTopPanelItemsLabels.add(item.getTopPanelMenuItemLabel());
         }
 
         for (TopPanelMenuXpathes item : TopPanelMenuXpathes.values()) {
+            // TODO I think that these two loops could be combined into one
             actualTopPanelItemsLabels.add(homePage.getTopPanelMenuItemElementLabel(item));
         }
 
@@ -62,6 +67,7 @@ public class HomePageSteps {
         for (HeaderSectionImagesXpathes item : HeaderSectionImagesXpathes.values()) {
             Boolean isImageVisible = homePage.isHeaderSectionImageVisible(item);
             assertTrue(isImageVisible);
+            // TODO this if is redundant here. Test will failed in the previous line
             if (isImageVisible) {
                 isImagesDisplayed.add(isImageVisible);
             }
@@ -79,7 +85,9 @@ public class HomePageSteps {
         ArrayList<String> actualIndexTextLabels = new ArrayList<>();
         ArrayList<String> expectedIndexTextLabels = new ArrayList<>();
 
+        // TODO I think that these two loops could be combined into one
         for (HeaderSectionTextsXpathes xpath : HeaderSectionTextsXpathes.values()) {
+            // TODO it will be better if you have static method in HeaderSectionTextsXpathes which return List<String>
             actualIndexTextLabels.add(homePage.getHeaderSectionTextActualLabel(xpath));
         }
 
@@ -91,6 +99,7 @@ public class HomePageSteps {
 
     }
 
+    // TODO What is the purpose of the current method
     public void verifyMainHeadersText() {
 
         ArrayList<String> actualMainHeaderLabels = new ArrayList<>();
@@ -105,10 +114,12 @@ public class HomePageSteps {
         }
     }
 
+    // TODO verifyIFrameIsVisible
     public void verifyIframeIsVisible() {
         assertTrue(homePage.isIframePresent());
     }
 
+    // TODO switchToIFrame
     public void switchToIframe() {
         homePage.switchToFrame();
     }
@@ -155,6 +166,7 @@ public class HomePageSteps {
         ArrayList<String> expectedTopServiceDropdownLabels = new ArrayList<>();
 
         for (HeaderServiceDropdownItems item : HeaderServiceDropdownItems.values()) {
+            // TODO it will be better if you have static method in HeaderServiceDropdownItems which return List<String>
             expectedTopServiceDropdownLabels.add(item.getHeaderServiceDropDownItem());
         }
 
@@ -172,6 +184,7 @@ public class HomePageSteps {
         ArrayList<String> expectedLeftSideServiceMenuLabels = new ArrayList<>();
 
         for (ServicesLeftSidePanelMenuLabels item : ServicesLeftSidePanelMenuLabels.values()) {
+            // TODO it will be better if you have static method in ServicesLeftSidePanelMenuLabels which return List<String>
             expectedLeftSideServiceMenuLabels.add(item.getServiceLeftSidePanelMenuItem());
         }
 

@@ -13,10 +13,13 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class DifferentServicesSteps {
+    // TODO It could be extracted to the BaseStep class
     private WebDriver driver;
 
+    // TODO It could be extracted to the BaseStep class
     private DifferentServices difServ;
 
+    // TODO It could be extracted to the BaseStep class
     private FileUtils propertiesFile = new FileUtils();
 
     private ArrayList<String> checkBoxesToSelect = new ArrayList<>();
