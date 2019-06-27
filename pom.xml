@@ -22,7 +22,6 @@
     </properties>
 
     <profiles>
-        <!-- TODO What is the requirements to the profiles — added profile for hw2.-->
         <profile>
             <id>hw1</id>
             <activation>
@@ -98,20 +97,16 @@
                 <version>${sure.fire.version}</version>
                 <configuration>
                     <suiteXmlFiles>
+                        <!-- TODO Why all suites are listed here? -->
+                        <!-- TODO Tests should run only for the specified maven profile -->
                         <suiteXmlFile>${suite1.xml}</suiteXmlFile>
                         <suiteXmlFile>${suite2.xml}</suiteXmlFile>
                         <suiteXmlFile>${suite3.xml}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
-                <!-- TODO Where is configuration block ??? — Added the block.-->
             </plugin>
         </plugins>
     </build>
 
 </project>
 
-<!-- TODO Project does not compiled — Removed the stack trace as it did not allow to install locally :-(.
-
-
-
--->
