@@ -12,8 +12,10 @@ import java.util.List;
 
 public class DifferentServices {
 
+    // TODO Could be extracted to thew BasePage class
     private WebDriver driver;
 
+    // TODO Could be extracted to thew BasePage class
     public DifferentServices(WebDriver wd) {
         driver = wd;
         PageFactory.initElements(driver, this);

@@ -13,8 +13,10 @@ import java.util.List;
 
 public class HomePage {
 
+    // TODO Could be extracted to thew BasePage class
     private WebDriver driver;
 
+    // TODO Could be extracted to thew BasePage class
     public HomePage(WebDriver dr) {
         driver = dr;
         PageFactory.initElements(driver, this);
@@ -100,6 +102,7 @@ public class HomePage {
         return driver.findElement(By.xpath(headerItem.getMainHeaderTextXpath())).getText().trim();
     }
 
+    // TODO isIFramePresent
     public boolean isIframePresent() {
         return iframe.isDisplayed();
     }

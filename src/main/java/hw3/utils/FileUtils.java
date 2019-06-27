@@ -4,6 +4,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+
+/* TODO
+        As I could see from the class content there are no reasons create so much code duplication
+        There is could be one static method which take file path as parameter and read it
+ */
+
 public class FileUtils {
 
     public Properties readUserPropertiesFromFile() {
