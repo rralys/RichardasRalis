@@ -13,11 +13,6 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class DifferentServicesSteps extends BaseSteps{
-    // TODO It could be extracted to the BaseStep class — Done.
-
-    // TODO It could be extracted to the BaseStep class — Done.
-
-    // TODO It could be extracted to the BaseStep class — Declared static method, so do not need this declaration anymore.
 
     private ArrayList<String> checkBoxesToSelect = new ArrayList<>();
 

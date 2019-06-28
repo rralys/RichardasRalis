@@ -11,9 +11,6 @@ import java.util.List;
 
 public class DifferentServices extends BasePage{
 
-    // TODO Could be extracted to thew BasePage class — Done.
-
-    // TODO Could be extracted to thew BasePage class — Done.
     public DifferentServices(WebDriver wd) {
         super(wd);
     }
