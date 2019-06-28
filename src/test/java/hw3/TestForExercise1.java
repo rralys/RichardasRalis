@@ -3,7 +3,7 @@ package hw3;
 import hw3.steps.HomePageSteps;
 import org.testng.annotations.Test;
 
-public class TestForExcercise1 extends RunTestsForHomework3 {
+public class TestForExercise1 extends RunTestsForHomework3 {
 
     @Test
     public void TestScenario1() {
@@ -17,7 +17,7 @@ public class TestForExcercise1 extends RunTestsForHomework3 {
         hps.verifyIndexTextLabels();
         hps.verifyMainHeadersText();
         hps.verifyIframeIsVisible();
-        hps.switchToIframe();
+        hps.switchToIFrame();
         hps.verifyFrameHasEpamLogo();
         hps.switchBackToMainFrame();
         hps.verifyTextInSubHeader();

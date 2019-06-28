@@ -1,5 +1,8 @@
 package hw3.enums;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum HeaderSectionTextsXpathes {
 
     PRACTICE_TEXT("//span[contains(@class,'icon-practise')]" +
@@ -19,6 +22,16 @@ public enum HeaderSectionTextsXpathes {
 
     public String getHeaderSectionTextXpath() {
         return headerSectionText;
+    }
+
+    public static List<String> getListOfHeaderSectionTextXpathes() {
+        List<String> textXpathes = new ArrayList<>();
+
+        for (HeaderSectionTextsXpathes xpath : HeaderSectionTextsXpathes.values()) {
+            textXpathes.add(xpath.getHeaderSectionTextXpath());
+        }
+
+        return textXpathes;
     }
 
 }

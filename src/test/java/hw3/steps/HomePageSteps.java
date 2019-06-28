@@ -1,6 +1,6 @@
 package hw3.steps;
 
-import hw3.HomePage;
+import hw3.basepage.HomePage;
 import hw3.enums.*;
 import hw3.utils.FileUtils;
 import org.openqa.selenium.WebDriver;
@@ -11,14 +11,13 @@ import java.util.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
-public class HomePageSteps {
+public class HomePageSteps extends BaseSteps {
 
-    // TODO It could be extracted to the BaseStep class
-    private WebDriver driver;
-    // TODO It could be extracted to the BaseStep class
-    private HomePage homePage;
+    // TODO It could be extracted to the BaseStep class — Done.
 
-    // TODO It could be extracted to the BaseStep class
+    // TODO It could be extracted to the BaseStep class — Done.
+
+    // TODO It could be extracted to the BaseStep class — Declared static method, so do not need this declaration anymore.
     private FileUtils propertiesFile = new FileUtils();
 
     public HomePageSteps(WebDriver dr) {
@@ -28,99 +27,96 @@ public class HomePageSteps {
 
     public void verifyHomePageTitle() {
         assertEquals(driver.getTitle(),
-                propertiesFile.readPageTitleFromFile().getProperty("home.page.title"));
+                FileUtils.readPropertiesFile(propertiesPath + "/pageTitles.properties")
+                .getProperty("home.page.title"));
     }
 
     public void loginToHomePage() {
-        homePage.login(propertiesFile.readUserPropertiesFromFile().getProperty("user.name"),
-                propertiesFile.readUserPropertiesFromFile().getProperty("user.password"));
+        Properties userProperties = FileUtils.readPropertiesFile(propertiesPath + "/user.properties");
+
+        homePage.login(userProperties.getProperty("user.name"),
+                userProperties.getProperty("user.password"));
     }
 
     public void verifyUserName() {
-        assertEquals(homePage.getUserName(), propertiesFile.readUserPropertiesFromFile()
+        assertEquals(homePage.getUserName(), FileUtils
+                .readPropertiesFile(propertiesPath + "/user.properties")
                 .getProperty("user.user.name"));
     }
 
     public void verifyHeaderSectionItems() {
-        // TODO Why do you decide use ArrayList instead of List?
-        ArrayList<String> expectedTopPanelItemsLabels = new ArrayList<>();
+        // TODO Why do you decide use ArrayList instead of List? — Changed to List.
 
-        ArrayList<String> actualTopPanelItemsLabels = new ArrayList<>();
+        List<String> expectedTopPanelItemsLabels = TopPanelMenuLabels
+                .getListOfTopPanelMenuItems();
 
-        for (TopPanelMenuLabels item : TopPanelMenuLabels.values()) {
-            // TODO it will be better if you have static method in TopPanelMenuLabels which return List<String>
-            expectedTopPanelItemsLabels.add(item.getTopPanelMenuItemLabel());
-        }
+        List<String> topPanelItemsXpathes = TopPanelMenuXpathes.getTopPanelMenuXpathesList();
 
-        for (TopPanelMenuXpathes item : TopPanelMenuXpathes.values()) {
-            // TODO I think that these two loops could be combined into one
-            actualTopPanelItemsLabels.add(homePage.getTopPanelMenuItemElementLabel(item));
-        }
+        List<String> actualTopPanelItemsLabels = homePage.getTopPanelMenuItemsLabelsAsList(topPanelItemsXpathes);
+
+        //for (TopPanelMenuLabels item : TopPanelMenuLabels.values()) {
+            // TODO it will be better if you have static method in TopPanelMenuLabels which return List<String> — extracted to static method.
+        //    expectedTopPanelItemsLabels.add(item.getTopPanelMenuItemLabel());
+        //}
+
+        //for (TopPanelMenuXpathes item : TopPanelMenuXpathes.values()) {
+            // TODO I think that these two loops could be combined into one — now using a separate method.
+        //    actualTopPanelItemsLabels.add(homePage.getTopPanelMenuItemElementLabel(item));
+        //}
 
         assertEquals(actualTopPanelItemsLabels, expectedTopPanelItemsLabels);
     }
 
     public void verifyIndexImages() {
 
-        ArrayList<Boolean> isImagesDisplayed = new ArrayList<>();
+        assertEquals(homePage.getNumberOfHeaderImages(),
+                Integer.parseInt(
+                        FileUtils.readPropertiesFile(propertiesPath + "/elements.properties")
+                                .getProperty("index.page.images.count")
+                ));
 
         for (HeaderSectionImagesXpathes item : HeaderSectionImagesXpathes.values()) {
             Boolean isImageVisible = homePage.isHeaderSectionImageVisible(item);
             assertTrue(isImageVisible);
-            // TODO this if is redundant here. Test will failed in the previous line
-            if (isImageVisible) {
-                isImagesDisplayed.add(isImageVisible);
-            }
+            // TODO this if is redundant here. Test will failed in the previous line — Removed.
         }
-
-        assertEquals(isImagesDisplayed.size(),
-                Integer.parseInt(
-                propertiesFile.readElementsCountsFromFile().
-                        getProperty("index.page.images.count")));
 
     }
 
     public void verifyIndexTextLabels() {
 
-        ArrayList<String> actualIndexTextLabels = new ArrayList<>();
-        ArrayList<String> expectedIndexTextLabels = new ArrayList<>();
+        List<String> indexTextXpathes = HeaderSectionTextsXpathes.getListOfHeaderSectionTextXpathes();
+        List<String> actualIndexTextLabels = homePage.getHeaderSectionTextActualLabels(indexTextXpathes);
+        List<String> expectedIndexTextLabels = HeaderSectionTextsLabels.getListOfHeaderSectionTextLabels();
 
-        // TODO I think that these two loops could be combined into one
-        for (HeaderSectionTextsXpathes xpath : HeaderSectionTextsXpathes.values()) {
-            // TODO it will be better if you have static method in HeaderSectionTextsXpathes which return List<String>
-            actualIndexTextLabels.add(homePage.getHeaderSectionTextActualLabel(xpath));
-        }
-
-        for (HeaderSectionTextsLabels label : HeaderSectionTextsLabels.values()) {
-            expectedIndexTextLabels.add(label.getHeaderSectionTextLabel());
-        }
+        // TODO I think that these two loops could be combined into one — Moved into different methods.
+        //for (HeaderSectionTextsXpathes xpath : HeaderSectionTextsXpathes.values()) {
+            // TODO it will be better if you have static method in HeaderSectionTextsXpathes which return List<String> — Done.
+        //    actualIndexTextLabels.add(homePage.getHeaderSectionTextActualLabel(xpath));
+        //}
 
         assertEquals(actualIndexTextLabels, expectedIndexTextLabels);
 
     }
 
-    // TODO What is the purpose of the current method
+    // TODO What is the purpose of the current method — this method verifies that main header texts are correct (step 9 from exercise 1).
+    // Forgot to add assertion :-(. Now added.
     public void verifyMainHeadersText() {
 
-        ArrayList<String> actualMainHeaderLabels = new ArrayList<>();
-        ArrayList<String> expectedMainHeaderLabels = new ArrayList<>();
+        List<String> mainHeaderLabelsXpathes = MainHeaderTextXpathes.getListOfMainHeaderTextXpathes();
+        List<String> actualMainHeaderTextLabels = homePage.getMainHeaderTextActualLabels(mainHeaderLabelsXpathes);
+        List<String> expectedMainHeaderLabels = MainHeaderTextLabels.getListOfMainHeaderTextLabels();
 
-        for (MainHeaderTextXpathes xpath : MainHeaderTextXpathes.values()) {
-            actualMainHeaderLabels.add(homePage.getMainHeaderTextActualLabel(xpath));
-        }
-
-        for (MainHeaderTextLabels label : MainHeaderTextLabels.values()) {
-            expectedMainHeaderLabels.add(label.getMainHeaderTextLabel());
-        }
+        assertEquals(actualMainHeaderTextLabels, expectedMainHeaderLabels);
     }
 
-    // TODO verifyIFrameIsVisible
+    // TODO verifyIFrameIsVisible — Done.
     public void verifyIframeIsVisible() {
-        assertTrue(homePage.isIframePresent());
+        assertTrue(homePage.isIFramePresent());
     }
 
-    // TODO switchToIFrame
-    public void switchToIframe() {
+    // TODO switchToIFrame — Done.
+    public void switchToIFrame() {
         homePage.switchToFrame();
     }
 
@@ -142,7 +138,7 @@ public class HomePageSteps {
 
     public void verifySubHeaderHasProperLink() {
 
-        String expectedLink = propertiesFile.readSubHeaderLinkFromFile().getProperty("subheader.link");
+        String expectedLink = FileUtils.readPropertiesFile(propertiesPath + "/subheaderlink.properties").getProperty("subheader.link");
         String actualLink = homePage.getSubHeaderLink();
 
         assertEquals(actualLink, expectedLink);
@@ -162,13 +158,13 @@ public class HomePageSteps {
 
     public void serviceDropdownHasCorrectOptions() {
 
-        ArrayList<String> actualTopServiceDropdownLabels = homePage.getServiceMenuItemsLabels();
-        ArrayList<String> expectedTopServiceDropdownLabels = new ArrayList<>();
+        List<String> actualTopServiceDropdownLabels = homePage.getServiceMenuItemsLabels();
+        List<String> expectedTopServiceDropdownLabels = HeaderServiceDropdownItems.getHeaderServiceDropdownAsList();
 
-        for (HeaderServiceDropdownItems item : HeaderServiceDropdownItems.values()) {
-            // TODO it will be better if you have static method in HeaderServiceDropdownItems which return List<String>
-            expectedTopServiceDropdownLabels.add(item.getHeaderServiceDropDownItem());
-        }
+        //for (HeaderServiceDropdownItems item : HeaderServiceDropdownItems.values()) {
+            // TODO it will be better if you have static method in HeaderServiceDropdownItems which return List<String> — Done.
+        //    expectedTopServiceDropdownLabels.add(item.getHeaderServiceDropDownItem());
+        //}
 
         assertEquals(actualTopServiceDropdownLabels, expectedTopServiceDropdownLabels);
 
@@ -180,13 +176,13 @@ public class HomePageSteps {
 
     public void serviceMenuInLeftSectionHasCorrectOptions() {
 
-        ArrayList<String> actualLeftSideServiceMenuLabels = homePage.getLeftServiceMenuItemsLabels();
-        ArrayList<String> expectedLeftSideServiceMenuLabels = new ArrayList<>();
+        List<String> actualLeftSideServiceMenuLabels = homePage.getLeftServiceMenuItemsLabels();
+        List<String> expectedLeftSideServiceMenuLabels = ServicesLeftSidePanelMenuLabels.getServiceLeftSidePanelMenuItemsList();
 
-        for (ServicesLeftSidePanelMenuLabels item : ServicesLeftSidePanelMenuLabels.values()) {
-            // TODO it will be better if you have static method in ServicesLeftSidePanelMenuLabels which return List<String>
-            expectedLeftSideServiceMenuLabels.add(item.getServiceLeftSidePanelMenuItem());
-        }
+        //for (ServicesLeftSidePanelMenuLabels item : ServicesLeftSidePanelMenuLabels.values()) {
+            // TODO it will be better if you have static method in ServicesLeftSidePanelMenuLabels which return List<String> — Done.
+        //    expectedLeftSideServiceMenuLabels.add(item.getServiceLeftSidePanelMenuItem());
+        //}
 
         assertEquals(actualLeftSideServiceMenuLabels, expectedLeftSideServiceMenuLabels);
 

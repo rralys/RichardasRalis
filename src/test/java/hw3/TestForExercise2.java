@@ -4,7 +4,7 @@ import hw3.steps.DifferentServicesSteps;
 import hw3.steps.HomePageSteps;
 import org.testng.annotations.Test;
 
-public class TestForExcercise2 extends RunTestsForHomework3 {
+public class TestForExercise2 extends RunTestsForHomework3 {
     @Test
     public void TestScenario2() {
         HomePageSteps hps = new HomePageSteps(driver);

@@ -1,4 +1,4 @@
-package hw3;
+package hw3.basepage;
 
 import hw3.enums.*;
 import org.openqa.selenium.By;
@@ -6,20 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomePage {
+public class HomePage extends BasePage{
 
-    // TODO Could be extracted to thew BasePage class
-    private WebDriver driver;
+    // TODO Could be extracted to thew BasePage class — Done.
 
-    // TODO Could be extracted to thew BasePage class
+    // TODO Could be extracted to thew BasePage class — Done.
     public HomePage(WebDriver dr) {
-        driver = dr;
-        PageFactory.initElements(driver, this);
+        super(dr);
     }
 
     @FindBy(id = "user-icon")
@@ -65,6 +62,11 @@ public class HomePage {
     })
     List<WebElement> leftSideMenuItems;
 
+    @FindAll({
+            @FindBy(className = "benefit-icon")
+    })
+    List<WebElement> headerImages;
+
     public void login(String uName, String uPass) {
         userIcon.click();
         userNameInput.sendKeys(uName);
@@ -85,25 +87,50 @@ public class HomePage {
         serviceMenu.click();
     }
 
-    public String getTopPanelMenuItemElementLabel(TopPanelMenuXpathes topPanelItem) {
-        return driver.findElement(By.xpath(topPanelItem.getTopPanelMenuItemXpath())).getText().trim();
+    public List<String> getTopPanelMenuItemsLabelsAsList(List<String> xpathes) {
+        List<String> topPanelMenuItemsLabels = new ArrayList<>();
+
+        for (String xpath : xpathes) {
+            topPanelMenuItemsLabels.add(driver.findElement(By.xpath(xpath)).getText().trim());
+        }
+
+        return topPanelMenuItemsLabels;
+    }
+
+    public int getNumberOfHeaderImages() {
+        return headerImages.size();
     }
 
     public boolean isHeaderSectionImageVisible(HeaderSectionImagesXpathes imageItem) {
         return driver.findElement(By.xpath(imageItem.getHeaderSectionImageXpath())).isDisplayed();
     }
 
-    public String getHeaderSectionTextActualLabel(HeaderSectionTextsXpathes textItem) {
-        return driver.findElement(By.xpath(textItem.getHeaderSectionTextXpath())).getText().trim();
+    public List<String> getHeaderSectionTextActualLabels(List<String> textXpathes) {
+        List<String> actualLabels = new ArrayList<>();
 
+        for (String xpath : textXpathes) {
+            actualLabels.add(driver.findElement(By.xpath(xpath)).getText().trim());
+        }
+
+        return actualLabels;
     }
 
     public String getMainHeaderTextActualLabel(MainHeaderTextXpathes headerItem) {
         return driver.findElement(By.xpath(headerItem.getMainHeaderTextXpath())).getText().trim();
     }
 
-    // TODO isIFramePresent
-    public boolean isIframePresent() {
+    public List<String> getMainHeaderTextActualLabels(List<String> headerTextXpathes) {
+        List<String> actualTextLabels = new ArrayList<>();
+
+        for (String xpath : headerTextXpathes) {
+            actualTextLabels.add(driver.findElement(By.xpath(xpath)).getText().trim());
+        }
+
+        return actualTextLabels;
+    }
+
+    // TODO isIFramePresent — Fixed.
+    public boolean isIFramePresent() {
         return iframe.isDisplayed();
     }
 

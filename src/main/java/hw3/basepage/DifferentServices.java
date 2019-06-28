@@ -1,24 +1,21 @@
-package hw3;
+package hw3.basepage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class DifferentServices {
+public class DifferentServices extends BasePage{
 
-    // TODO Could be extracted to thew BasePage class
-    private WebDriver driver;
+    // TODO Could be extracted to thew BasePage class — Done.
 
-    // TODO Could be extracted to thew BasePage class
+    // TODO Could be extracted to thew BasePage class — Done.
     public DifferentServices(WebDriver wd) {
-        driver = wd;
-        PageFactory.initElements(driver, this);
+        super(wd);
     }
 
     @FindAll({

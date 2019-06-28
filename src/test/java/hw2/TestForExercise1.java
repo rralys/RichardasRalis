@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-public class TestForExcercise1 extends RunTestsForHomework2 {
+public class TestForExercise1 extends RunTestsForHomework2 {
 
     public void verifyHeaderItems() {
         List<String> headerMenuItemsTextListExpected = Arrays.asList("HOME",

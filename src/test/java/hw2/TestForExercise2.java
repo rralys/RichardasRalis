@@ -13,7 +13,7 @@ import static org.testng.Assert.*;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertNotNull;
 
-public class TestForExcercise2 extends RunTestsForHomework2 {
+public class TestForExercise2 extends RunTestsForHomework2 {
 
     public void verifyHeaderMenuItems() {
         List<String> headerMenuItemsTextListExpected = Arrays.asList("SUPPORT",

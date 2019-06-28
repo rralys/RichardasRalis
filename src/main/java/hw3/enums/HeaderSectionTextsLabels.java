@@ -1,5 +1,8 @@
 package hw3.enums;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum HeaderSectionTextsLabels {
 
     PRACTICE_LABEL("To include good practices\nand ideas from successful\nEPAM project"),
@@ -15,5 +18,15 @@ public enum HeaderSectionTextsLabels {
 
     public String getHeaderSectionTextLabel() {
         return headerSectionTextLabel;
+    }
+
+    public static List<String> getListOfHeaderSectionTextLabels() {
+        List<String> labelsList = new ArrayList<>();
+
+        for (HeaderSectionTextsLabels label : HeaderSectionTextsLabels.values()) {
+            labelsList.add(label.getHeaderSectionTextLabel());
+        }
+
+        return labelsList;
     }
 }

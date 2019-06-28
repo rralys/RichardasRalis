@@ -1,5 +1,8 @@
 package hw3.enums;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum TopPanelMenuLabels {
 
     HOME("HOME"),
@@ -15,6 +18,18 @@ public enum TopPanelMenuLabels {
 
     public String getTopPanelMenuItemLabel() {
         return topPanelMenuItemLabel;
+    }
+
+    public static List<String> getListOfTopPanelMenuItems() {
+
+        List<String> topPanelMenuItems = new ArrayList<>();
+
+        for (TopPanelMenuLabels item : TopPanelMenuLabels.values()) {
+            topPanelMenuItems.add(item.getTopPanelMenuItemLabel());
+        }
+
+        return topPanelMenuItems;
+
     }
 
 }

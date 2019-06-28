@@ -1,112 +1,33 @@
 package hw3.utils;
 
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 
 /* TODO
         As I could see from the class content there are no reasons create so much code duplication
-        There is could be one static method which take file path as parameter and read it
+        There is could be one static method which take file path as parameter and read it — Done.
  */
 
 public class FileUtils {
 
-    public Properties readUserPropertiesFromFile() {
-        Properties userProperties = new Properties();
+    public static Properties readPropertiesFile(String fileName) {
 
-        try (InputStream input = this.getClass().getClassLoader()
-                .getResourceAsStream("properties/user.properties")) {
-            if (input == null) {
-                System.out.println("Sorry, unable to find config.properties");
-            }
-            userProperties.load(input);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Properties properties = new Properties();
 
-        return userProperties;
-    }
-
-    public Properties readPageTitleFromFile() {
-        Properties pageTitles = new Properties();
-
-        try (InputStream input = this.getClass().getClassLoader()
-                .getResourceAsStream("properties/pageTitles.properties")) {
-            if (input == null) {
-                System.out.println("Sorry, unable to find config.properties");
-            }
-            pageTitles.load(input);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return pageTitles;
-    }
-
-    public Properties readElementsCountsFromFile() {
-        Properties pageCounts = new Properties();
-
-        try (InputStream input = this.getClass().getClassLoader()
-                .getResourceAsStream("properties/elements.properties")) {
-            if (input == null) {
-                System.out.println("Sorry, unable to find config.properties");
-            }
-            pageCounts.load(input);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return pageCounts;
-
-    }
-
-    public Properties readSubHeaderLinkFromFile() {
-        Properties linkFile = new Properties();
-
-        try (InputStream input = this.getClass().getClassLoader()
-                .getResourceAsStream("properties/subheaderlink.properties")) {
+        try (FileInputStream input = new FileInputStream(fileName)) {
             if (input == null) {
                 System.out.println("Sorry, unable to find properties file.");
             }
-            linkFile.load(input);
+            properties.load(input);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return linkFile;
-    }
-
-    public Properties readRadioButtonToSelectFromFile() {
-        Properties radioFile = new Properties();
-
-        try (InputStream input = this.getClass().getClassLoader()
-                .getResourceAsStream("properties/radiobutton.properties")) {
-            if (input == null) {
-                System.out.println("Sorry, unable to find properties file.");
-            }
-            radioFile.load(input);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return radioFile;
+        return properties;
 
     }
 
-    public Properties readDropdownItemToSelectFromFile() {
-        Properties drdFile = new Properties();
 
-        try (InputStream input = this.getClass().getClassLoader()
-                .getResourceAsStream("properties/dropdown.properties")) {
-            if (input == null) {
-                System.out.println("Sorry, unable to find properties file.");
-            }
-            drdFile.load(input);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return drdFile;
-    }
 }

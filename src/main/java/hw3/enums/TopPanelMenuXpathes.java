@@ -1,5 +1,8 @@
 package hw3.enums;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum TopPanelMenuXpathes {
 
     HOME("//a[@href='index.html']"),
@@ -15,6 +18,17 @@ public enum TopPanelMenuXpathes {
 
     public String getTopPanelMenuItemXpath() {
         return topPanelMenuItemXpath;
+    }
+
+    public static List<String> getTopPanelMenuXpathesList() {
+        List<String> topPanelMenuItemsXpathes = new ArrayList<>();
+
+        for (TopPanelMenuXpathes item : TopPanelMenuXpathes.values()) {
+            topPanelMenuItemsXpathes.add(item.getTopPanelMenuItemXpath());
+        }
+
+        return topPanelMenuItemsXpathes;
+
     }
 
 }

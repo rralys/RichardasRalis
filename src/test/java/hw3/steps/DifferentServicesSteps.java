@@ -1,6 +1,6 @@
 package hw3.steps;
 
-import hw3.DifferentServices;
+import hw3.basepage.DifferentServices;
 import hw3.enums.CheckBoxesToCheck;
 import hw3.utils.FileUtils;
 import org.openqa.selenium.WebDriver;
@@ -12,15 +12,12 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-public class DifferentServicesSteps {
-    // TODO It could be extracted to the BaseStep class
-    private WebDriver driver;
+public class DifferentServicesSteps extends BaseSteps{
+    // TODO It could be extracted to the BaseStep class — Done.
 
-    // TODO It could be extracted to the BaseStep class
-    private DifferentServices difServ;
+    // TODO It could be extracted to the BaseStep class — Done.
 
-    // TODO It could be extracted to the BaseStep class
-    private FileUtils propertiesFile = new FileUtils();
+    // TODO It could be extracted to the BaseStep class — Declared static method, so do not need this declaration anymore.
 
     private ArrayList<String> checkBoxesToSelect = new ArrayList<>();
 
@@ -31,33 +28,36 @@ public class DifferentServicesSteps {
     }
 
     public void verifyDifferentElementsPageTitle() {
+
         assertEquals(driver.getTitle(),
-                propertiesFile.readPageTitleFromFile().getProperty("different.elements.title"));
+                FileUtils.readPropertiesFile(propertiesPath + "/pageTitles.properties")
+                        .getProperty("different.elements.title"));
+
     }
 
     public void verifyDifferentElementsPageItems() {
 
         assertEquals(difServ.getNumberOfCheckBoxes(),
                 Integer.parseInt(
-                        propertiesFile.readElementsCountsFromFile().
-                                getProperty("check.boxes.count")));
+                        FileUtils.readPropertiesFile(propertiesPath + "/elements.properties")
+                        .getProperty("check.boxes.count")));
 
         assertEquals(difServ.getNumberOfRadioButtons(),
                 Integer.parseInt(
-                        propertiesFile.readElementsCountsFromFile()
+                        FileUtils.readPropertiesFile(propertiesPath + "/elements.properties")
                                 .getProperty("radiobuttons.count")
                 ));
 
         assertEquals(difServ.getNumberOfDropDowns(),
                 Integer.parseInt(
-                        propertiesFile.readElementsCountsFromFile()
+                        FileUtils.readPropertiesFile(propertiesPath + "/elements.properties")
                                 .getProperty("dropdowns.count")
                 ));
 
         assertEquals(difServ.getNumberOfButtons(),
                 Integer.parseInt(
-                        propertiesFile.readElementsCountsFromFile().
-                                getProperty("buttons.count")));
+                        FileUtils.readPropertiesFile(propertiesPath + "/elements.properties")
+                                .getProperty("buttons.count")));
 
 
     }
@@ -93,26 +93,29 @@ public class DifferentServicesSteps {
 
     public void selectRadioButton() {
 
-        difServ.setRadioButton(propertiesFile.readRadioButtonToSelectFromFile().
-                getProperty("radiobutton"));
+        difServ.setRadioButton(FileUtils.readPropertiesFile(propertiesPath + "/radiobutton.properties")
+        .getProperty("radiobutton"));
+
     }
 
     public void verifyLogCorrespondsToRadioButtonSelected() {
 
-       assertTrue( difServ.isLogUpdatedForRadioButton(propertiesFile.
-               readRadioButtonToSelectFromFile().
-               getProperty("radiobutton")));
+       assertTrue( difServ.isLogUpdatedForRadioButton(FileUtils
+               .readPropertiesFile(propertiesPath + "/radiobutton.properties")
+               .getProperty("radiobutton")));
 
     }
 
     public void setDropDownValue() {
-        difServ.setColorDropDown(propertiesFile.readDropdownItemToSelectFromFile()
+
+        difServ.setColorDropDown(FileUtils
+                .readPropertiesFile(propertiesPath + "/dropdown.properties")
                 .getProperty("dropdown.selected"));
     }
 
     public void verifyLogCorrespondsToDropdownItemSelected() {
-        assertTrue(difServ.isLogUpdatedForDropdown(propertiesFile.
-                readDropdownItemToSelectFromFile()
+        assertTrue(difServ.isLogUpdatedForDropdown(FileUtils
+                .readPropertiesFile(propertiesPath + "/dropdown.properties")
                 .getProperty("dropdown.selected")));
     }
 

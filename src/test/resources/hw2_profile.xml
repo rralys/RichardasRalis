@@ -5,12 +5,12 @@
 <test name="homework2">
     <classes>
 
-        <class name="hw2.TestForExcercise1">
+        <class name="hw2.TestForExercise1">
             <methods>
                 <include name="TestScenario1"/>
             </methods>
         </class>
-        <class name="hw2.TestForExcercise2">
+        <class name="hw2.TestForExercise2">
             <methods>
                 <include name="TestScenario2"/>
             </methods>

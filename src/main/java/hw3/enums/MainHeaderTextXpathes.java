@@ -1,5 +1,8 @@
 package hw3.enums;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum MainHeaderTextXpathes {
 
     MAIN_TITLE_XPATH("//h3[@ui='title']"),
@@ -13,6 +16,16 @@ public enum MainHeaderTextXpathes {
 
     public String getMainHeaderTextXpath() {
         return mainHeaderTextXpath;
+    }
+
+    public static List<String> getListOfMainHeaderTextXpathes() {
+        List<String> textXpathes = new ArrayList<>();
+
+        for (MainHeaderTextXpathes xpath : MainHeaderTextXpathes.values()) {
+            textXpathes.add(xpath.getMainHeaderTextXpath());
+        }
+
+        return textXpathes;
     }
 
 }
