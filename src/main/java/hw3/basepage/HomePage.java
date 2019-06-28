@@ -12,9 +12,6 @@ import java.util.List;
 
 public class HomePage extends BasePage{
 
-    // TODO Could be extracted to thew BasePage class — Done.
-
-    // TODO Could be extracted to thew BasePage class — Done.
     public HomePage(WebDriver dr) {
         super(dr);
     }
@@ -129,7 +126,6 @@ public class HomePage extends BasePage{
         return actualTextLabels;
     }
 
-    // TODO isIFramePresent — Fixed.
     public boolean isIFramePresent() {
         return iframe.isDisplayed();
     }
