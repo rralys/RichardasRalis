@@ -19,6 +19,7 @@
         <maven.compiler.forceJavacCompilerUse>true</maven.compiler.forceJavacCompilerUse>
         <maven.compiler.fork>true</maven.compiler.fork>
         <encoding>UTF-8</encoding>
+        <selenide.version>5.2.4</selenide.version>
     </properties>
 
     <profiles>
@@ -74,6 +75,11 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${web.driver.manager}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>${selenide.version}</version>
         </dependency>
     </dependencies>
 

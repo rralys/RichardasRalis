@@ -2,7 +2,7 @@ package hw3.steps;
 
 import hw3.basepage.HomePage;
 import hw3.enums.*;
-import hw3.utils.FileUtils;
+import utils.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
