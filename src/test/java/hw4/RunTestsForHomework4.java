@@ -1,19 +1,23 @@
 package hw4;
 
-import com.codeborne.selenide.Browsers;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.SelenideElement;
 import hw4.enums.HeaderServiceDropdownItems;
 import hw4.enums.ServicesLeftSidePanelMenuLabels;
-import utils.FileUtils;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import utils.FileUtils;
 
 import java.util.List;
 import java.util.Properties;
 
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static com.codeborne.selenide.WebDriverRunner.setWebDriver;
 import static hw4.basepage.HomePage.*;
 import static hw4.basepage.TableWithPagesPage.*;
 
@@ -108,24 +112,28 @@ public class RunTestsForHomework4 {
     }
 
     public void verifySearchHits() {
-        getTableElements().shouldHave(CollectionCondition.texts(
-                FileUtils.readPropertiesFile(propertiesPath + "/search.properties")
-                        .getProperty("search.input.value")
-        ));
+
+        for (SelenideElement element : getTableElements()) {
+            element.shouldHave(Condition.matchesText(
+                    FileUtils.readPropertiesFile(propertiesPath + "/search.properties")
+                            .getProperty("search.input.value")
+            ));
+        }
     }
 
     @BeforeMethod
     public void setUp() {
         options = new ChromeOptions();
         options.addArguments("--no-sandbox");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        Configuration.browserCapabilities = capabilities;
-        Configuration.browser = Browsers.CHROME;
-        Configuration.startMaximized = true;
-        Configuration.pollingInterval = 500;
-        Configuration.timeout = 5000;
-        Configuration.reportsFolder = "target/selenide/reports/test";
-        Configuration.screenshots = true;
+        options.addArguments("start-maximized");
+        WebDriverManager.chromedriver().setup();
+        WebDriver webDriver = new ChromeDriver(options);
+        setWebDriver(webDriver);
     }
+
+    @AfterMethod
+    public void tearDown() {
+        getWebDriver().close();
+    }
+
 }

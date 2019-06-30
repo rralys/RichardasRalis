@@ -33,7 +33,7 @@ public class HomePage {
             xpath("//ul[@class='sub']//li[@ui='label']"));
 
     private static SelenideElement tableWithPages = element(By.
-            linkText("table-pages.html"));
+            xpath("//a[@href='table-pages.html']"));
 
     public static SelenideElement getUserNameLabel() {
         return userNameLabel;
