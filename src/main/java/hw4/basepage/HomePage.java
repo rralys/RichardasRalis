@@ -20,6 +20,8 @@ public class HomePage {
 
     private static SelenideElement userNameLabel = element(By.id("user-name"));
 
+    private static SelenideElement logoutButton = element(By.className("logout"));
+
     private static SelenideElement topServiceMenu = element(By.
             xpath("//a[@class='dropdown-toggle']"));
 
@@ -34,6 +36,9 @@ public class HomePage {
 
     private static SelenideElement tableWithPages = element(By.
             xpath("//a[@href='table-pages.html']"));
+
+    private static SelenideElement metalsAndColors = element(By.
+            xpath("//a[@href='metals-colors.html']"));
 
     public static SelenideElement getUserNameLabel() {
         return userNameLabel;
@@ -59,11 +64,20 @@ public class HomePage {
         return tableWithPages;
     }
 
+    public static SelenideElement getMetalsAndColors() {
+        return metalsAndColors;
+    }
+
     public static void login(String userName, String userPass) {
         userIcon.click();
         userNameInput.sendKeys(userName);
         userPasswordInput.sendKeys(userPass);
         submitLoginButton.click();
+    }
+
+    public static void logout() {
+        userNameLabel.click();
+        logoutButton.click();
     }
 }
 

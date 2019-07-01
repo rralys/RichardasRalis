@@ -1,15 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite for the homework2">
+<suite name="Suite for the homework4">
 
-    <test name="homework2">
+    <test name="homework4">
         <classes>
-            <class name="hw2.TestForExercise1">
+            <class name="hw4.TestForExercise1">
                 <methods>
                     <include name="TestScenario1"/>
                 </methods>
             </class>
-            <class name="hw2.TestForExercise2">
+            <class name="hw4.TestForExercise2">
                 <methods>
                     <include name="TestScenario2"/>
                 </methods>

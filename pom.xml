@@ -20,6 +20,7 @@
         <maven.compiler.fork>true</maven.compiler.fork>
         <encoding>UTF-8</encoding>
         <selenide.version>5.2.4</selenide.version>
+        <lombok.version>1.18.8</lombok.version>
     </properties>
 
     <profiles>
@@ -29,7 +30,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suite1.xml>src/test/resources/hw1_profile.xml</suite1.xml>
+                <suite.xml>src/test/resources/hw1_profile.xml</suite.xml>
             </properties>
         </profile>
         <profile>
@@ -38,7 +39,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suite2.xml>src/test/resources/hw2_profile.xml</suite2.xml>
+                <suite.xml>src/test/resources/hw2_profile.xml</suite.xml>
             </properties>
         </profile>
         <profile>
@@ -47,7 +48,16 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suite3.xml>src/test/resources/hw3_profile.xml</suite3.xml>
+                <suite.xml>src/test/resources/hw3_profile.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw4</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite2.xml>src/test/resources/hw4_profile.xml</suite2.xml>
             </properties>
         </profile>
     </profiles>
@@ -81,6 +91,12 @@
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -103,11 +119,7 @@
                 <version>${sure.fire.version}</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <!-- TODO Why all suites are listed here? -->
-                        <!-- TODO Tests should run only for the specified maven profile -->
-                        <suiteXmlFile>${suite1.xml}</suiteXmlFile>
-                        <suiteXmlFile>${suite2.xml}</suiteXmlFile>
-                        <suiteXmlFile>${suite3.xml}</suiteXmlFile>
+                        <suiteXmlFile>${suite.xml}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
