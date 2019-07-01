@@ -6,7 +6,8 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.elements;
-
+// TODO Why this Page has only static member?
+// TODO Did you have a chance to read requirements of the home task?
 public class TableWithPagesPage {
 
     private static SelenideElement showEntriesDropdown = element(By.
