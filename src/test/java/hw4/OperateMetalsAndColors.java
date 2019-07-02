@@ -62,7 +62,6 @@ public class OperateMetalsAndColors extends RunTestsForHomework4 {
     }
 
     public void verifySubmittedForm(MetalsAndColorsBuilder build) {
-        // TODO Could be used static import for the Condition.matchesText — Fixed.
         if (build.getSummaryRadio() != null) {
             mcp.getSummaryLog().shouldHave(matchesText(calculateSummary(build.getSummaryRadio())));
         }
