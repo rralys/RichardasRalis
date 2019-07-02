@@ -20,6 +20,8 @@ import static hw4.basepage.HomePage.*;
 import static hw4.basepage.MetalsAndColorsPage.*;
 import static hw4.basepage.TableWithPagesPage.*;
 
+// TODO This class contains a lot of page specific methods
+// TODO Please reorganize it
 public class RunTestsForHomework4 {
     protected String propertiesPath = this.getClass().getClassLoader().getResource("properties").getPath();
 
@@ -37,6 +39,7 @@ public class RunTestsForHomework4 {
     }
 
     public void verifyBrowserTitle(String title) {
+        // TODO What do you expect from the current method?
         title().equals(title);
     }
 
@@ -180,6 +183,7 @@ public class RunTestsForHomework4 {
     }
 
     public void verifySubmittedForm(MetalsAndColorsBuilder build) {
+        // TODO Could be used static import for the Condition.matchesText
         getSummaryLog().shouldHave(Condition.matchesText(calculateSummary(build.getSummaryRadio())));
         if (build.getElements() != null) {
             for (Elements elementItem : build.getElements()) {
