@@ -3,7 +3,7 @@ package hw4;
 import hw4.builder.MetalsAndColorsBuilder;
 import org.testng.annotations.Test;
 
-public class TestForExercise2 extends RunTestsForHomework4 {
+public class TestForExercise2 extends OperateMetalsAndColors {
     @Test(dataProviderClass = DataProviders.class, dataProvider = "testData")
     public void TestScenario2(MetalsAndColorsBuilder build) {
         openMetalsAndColorsPage();

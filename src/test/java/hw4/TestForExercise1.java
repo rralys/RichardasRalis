@@ -2,7 +2,7 @@ package hw4;
 
 import org.testng.annotations.Test;
 
-public class TestForExercise1 extends RunTestsForHomework4 {
+public class TestForExercise1 extends OperateTableWithPages {
 
     @Test
     public void TestScenario1() {

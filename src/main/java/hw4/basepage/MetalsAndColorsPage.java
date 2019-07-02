@@ -10,42 +10,42 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.elements;
 
-// TODO Why this Page has only static member?
+// TODO Why this Page has only static member? — Fixed.
 // TODO Did you have a chance to read requirements of the home task?
 public class MetalsAndColorsPage {
     protected String propertiesPath = this.getClass().getClassLoader().getResource("properties").getPath();
 
-    private static ElementsCollection elementsCheckbox = elements(By
+    private ElementsCollection elementsCheckbox = elements(By
             .xpath("//section[@id='elements-checklist']//label"));
 
-    private static SelenideElement colorsDropdown = element(By
+    private SelenideElement colorsDropdown = element(By
             .id("colors"));
 
-    private static SelenideElement metalsDropdown = element(By
+    private SelenideElement metalsDropdown = element(By
             .xpath("//div[@id='metals']/input"));
 
-    private static SelenideElement vegetablesDropdown = element(By
+    private SelenideElement vegetablesDropdown = element(By
             .id("vegetables"));
 
-    private static SelenideElement submitButton = element(By
+    private SelenideElement submitButton = element(By
             .id("submit-button"));
 
-    private static SelenideElement summaryLog = element(By
+    private SelenideElement summaryLog = element(By
             .className("summ-res"));
 
-    private static SelenideElement elementsLog = element(By
+    private SelenideElement elementsLog = element(By
             .className("elem-res"));
 
-    private static SelenideElement colorLog = element(By
+    private SelenideElement colorLog = element(By
             .className("col-res"));
 
-    private static SelenideElement metalLog = element(By
+    private SelenideElement metalLog = element(By
             .className("met-res"));
 
-    private static SelenideElement vegetablesLog = element(By
+    private SelenideElement vegetablesLog = element(By
             .className("sal-res"));
 
-    public static void setSummary(List<String> labels) {
+    public void setSummary(List<String> labels) {
         if (labels == null) {
             return;
         }
@@ -54,7 +54,7 @@ public class MetalsAndColorsPage {
         }
     }
 
-    public static void setElementsCheckbox(List<Elements> elementsList) {
+    public void setElementsCheckbox(List<Elements> elementsList) {
         if (elementsList == null) {
             return;
         }
@@ -68,7 +68,7 @@ public class MetalsAndColorsPage {
         }
     }
 
-    public static void setColorsDropdown(String color) {
+    public void setColorsDropdown(String color) {
         if (color == null) {
             return;
         }
@@ -77,7 +77,7 @@ public class MetalsAndColorsPage {
         element(By.xpath("//span[text()='" + color + "']")).click();
     }
 
-    public static void setMetalsDropdown(String metal) {
+    public void setMetalsDropdown(String metal) {
         if (metal == null) {
             return;
         }
@@ -86,7 +86,7 @@ public class MetalsAndColorsPage {
         metalsDropdown.sendKeys(metal);
     }
 
-    public static void setVegetablesDropdown(List<String> vegs) {
+    public void setVegetablesDropdown(List<String> vegs) {
         vegetablesDropdown.click();
         element(By.xpath("//label[text()='Vegetables']")).click();
         vegetablesDropdown.click();
@@ -95,27 +95,27 @@ public class MetalsAndColorsPage {
         }
     }
 
-    public static void submitClick() {
+    public void submitClick() {
         submitButton.click();
     }
 
-    public static SelenideElement getSummaryLog() {
+    public SelenideElement getSummaryLog() {
         return summaryLog;
     }
 
-    public static SelenideElement getElementsLog() {
+    public SelenideElement getElementsLog() {
         return elementsLog;
     }
 
-    public static SelenideElement getColorLog() {
+    public SelenideElement getColorLog() {
         return colorLog;
     }
 
-    public static SelenideElement getMetalLog() {
+    public SelenideElement getMetalLog() {
         return metalLog;
     }
 
-    public static SelenideElement getVegetablesLog() {
+    public SelenideElement getVegetablesLog() {
         return vegetablesLog;
     }
 }

@@ -7,77 +7,81 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.element;
 import static com.codeborne.selenide.Selenide.elements;
 
-// TODO Why this Page has only static member?
+// TODO Why this Page has only static member? — Fixed.
 // TODO Did you have a chance to read requirements of the home task?
 public class HomePage {
 
-    private static SelenideElement userIcon = element(By.id("user-icon"));
+    private SelenideElement userIcon = element(By.id("user-icon"));
 
-    private static SelenideElement userNameInput = element(By.id("name"));
+    private SelenideElement userNameInput = element(By.id("name"));
 
-    private static SelenideElement userPasswordInput = element(By.id("password"));
+    private SelenideElement userPasswordInput = element(By.id("password"));
 
-    private static SelenideElement submitLoginButton = element(By.
+    private SelenideElement submitLoginButton = element(By.
             xpath("//button[@type='submit']"));
 
-    private static SelenideElement userNameLabel = element(By.id("user-name"));
+    private SelenideElement userNameLabel = element(By.id("user-name"));
 
-    private static SelenideElement logoutButton = element(By.className("logout"));
+    private SelenideElement logoutButton = element(By.className("logout"));
 
-    private static SelenideElement topServiceMenu = element(By.
+    private SelenideElement topServiceMenu = element(By.
             xpath("//a[@class='dropdown-toggle']"));
 
-    private static SelenideElement serviceMenu = element(By.
+    private SelenideElement serviceMenu = element(By.
             xpath("//span[text()='Service']"));
 
-    private static ElementsCollection topServiceMenuItems = elements(By.
+    private ElementsCollection topServiceMenuItems = elements(By.
             xpath("//ul[@class='dropdown-menu']//a[@href]"));
 
-    private static ElementsCollection leftServiceMenuItems = elements(By.
+    private ElementsCollection leftServiceMenuItems = elements(By.
             xpath("//ul[@class='sub']//li[@ui='label']"));
 
-    private static SelenideElement tableWithPages = element(By.
+    private SelenideElement tableWithPages = element(By.
             xpath("//a[@href='table-pages.html']"));
 
-    private static SelenideElement metalsAndColors = element(By.
+    private SelenideElement metalsAndColors = element(By.
             xpath("//a[@href='metals-colors.html']"));
 
-    public static SelenideElement getUserNameLabel() {
+    public SelenideElement getUserNameLabel() {
         return userNameLabel;
     }
 
-    public static SelenideElement getTopServiceMenu() {
+    public SelenideElement getTopServiceMenu() {
         return topServiceMenu;
     }
 
-    public static SelenideElement getServiceMenu() {
+    public SelenideElement getServiceMenu() {
         return serviceMenu;
     }
 
-    public static ElementsCollection getTopServiceMenuItems() {
+    public ElementsCollection getTopServiceMenuItems() {
         return topServiceMenuItems;
     }
 
-    public static ElementsCollection getLeftServiceMenuItems() {
+    public ElementsCollection getLeftServiceMenuItems() {
         return leftServiceMenuItems;
     }
 
-    public static SelenideElement getTableWithPages() {
+    public SelenideElement getTableWithPages() {
         return tableWithPages;
     }
 
-    public static SelenideElement getMetalsAndColors() {
+    public SelenideElement getMetalsAndColors() {
         return metalsAndColors;
     }
 
-    public static void login(String userName, String userPass) {
+    public SelenideElement getPageTitle() {
+        return element("title");
+    }
+
+    public void login(String userName, String userPass) {
         userIcon.click();
         userNameInput.sendKeys(userName);
         userPasswordInput.sendKeys(userPass);
         submitLoginButton.click();
     }
 
-    public static void logout() {
+    public void logout() {
         userNameLabel.click();
         logoutButton.click();
     }
