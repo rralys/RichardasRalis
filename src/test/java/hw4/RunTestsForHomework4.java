@@ -16,8 +16,6 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
-// TODO This class contains a lot of page specific methods — Fixed.
-// TODO Please reorganize it
 public class RunTestsForHomework4 {
 
     protected String propertiesPath = this.getClass().getClassLoader().getResource("properties").getPath();
@@ -37,7 +35,6 @@ public class RunTestsForHomework4 {
     }
 
     public void verifyBrowserTitle(String title) {
-        // TODO What do you expect from the current method? — Updated.
         hp.getPageTitle().shouldHave(attribute("text", title));
     }
 
