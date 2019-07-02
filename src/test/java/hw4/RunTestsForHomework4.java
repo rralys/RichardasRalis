@@ -1,17 +1,10 @@
 package hw4;
 
 import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.SelenideElement;
 import hw4.basepage.HomePage;
-import hw4.basepage.MetalsAndColorsPage;
-import hw4.basepage.TableWithPagesPage;
-import hw4.builder.MetalsAndColorsBuilder;
-import hw4.enums.Elements;
 import hw4.enums.HeaderServiceDropdownItems;
 import hw4.enums.ServicesLeftSidePanelMenuLabels;
-import hw4.enums.Vegetables;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.FileUtils;
@@ -19,12 +12,14 @@ import utils.FileUtils;
 import java.util.List;
 import java.util.Properties;
 
+import static com.codeborne.selenide.Condition.attribute;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
 // TODO This class contains a lot of page specific methods — Fixed.
 // TODO Please reorganize it
 public class RunTestsForHomework4 {
-    
+
     protected String propertiesPath = this.getClass().getClassLoader().getResource("properties").getPath();
 
     HomePage hp;
@@ -43,11 +38,11 @@ public class RunTestsForHomework4 {
 
     public void verifyBrowserTitle(String title) {
         // TODO What do you expect from the current method? — Updated.
-        hp.getPageTitle().shouldHave(Condition.attribute("text", title));
+        hp.getPageTitle().shouldHave(attribute("text", title));
     }
 
     public void verifyUserNameLabel() {
-        hp.getUserNameLabel().shouldHave(Condition.text(
+        hp.getUserNameLabel().shouldHave(text(
                 FileUtils.readPropertiesFile(propertiesPath + "/user.properties")
                         .getProperty("user.user.name")
         ));

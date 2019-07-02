@@ -1,6 +1,5 @@
 package hw4;
 
-import com.codeborne.selenide.Condition;
 import hw4.basepage.MetalsAndColorsPage;
 import hw4.builder.MetalsAndColorsBuilder;
 import hw4.enums.Elements;
@@ -10,7 +9,9 @@ import utils.FileUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OperateMetalsAndColors extends RunTestsForHomework4{
+import static com.codeborne.selenide.Condition.matchesText;
+
+public class OperateMetalsAndColors extends RunTestsForHomework4 {
 
     MetalsAndColorsPage mcp = new MetalsAndColorsPage();
 
@@ -31,7 +32,9 @@ public class OperateMetalsAndColors extends RunTestsForHomework4{
     }
 
     public void setMetalsAndColorsVegetables(List<Vegetables> vegetables) {
-        if (vegetables == null) { return; }
+        if (vegetables == null) {
+            return;
+        }
 
         List<String> vegetablesLabels = new ArrayList<>();
 
@@ -47,9 +50,6 @@ public class OperateMetalsAndColors extends RunTestsForHomework4{
     }
 
     public String calculateSummary(List<String> summaries) {
-        if (summaries == null) { return FileUtils.
-                readPropertiesFile(propertiesPath + "/summary.properties").
-                getProperty("summary.default"); }
 
         int sum = 0;
 
@@ -62,36 +62,39 @@ public class OperateMetalsAndColors extends RunTestsForHomework4{
     }
 
     public void verifySubmittedForm(MetalsAndColorsBuilder build) {
-        // TODO Could be used static import for the Condition.matchesText — I'm not sure I understand what to do here.
-        mcp.getSummaryLog().shouldHave(Condition.matchesText(calculateSummary(build.getSummaryRadio())));
+        // TODO Could be used static import for the Condition.matchesText — Fixed.
+        if (build.getSummaryRadio() != null) {
+            mcp.getSummaryLog().shouldHave(matchesText(calculateSummary(build.getSummaryRadio())));
+        }
+
         if (build.getElements() != null) {
             for (Elements elementItem : build.getElements()) {
-                mcp.getElementsLog().shouldHave(Condition.matchesText(elementItem.getElementValue()));
+                mcp.getElementsLog().shouldHave(matchesText(elementItem.getElementValue()));
             }
         }
 
         if (build.getColors() != null) {
-            mcp.getColorLog().shouldHave(Condition.matchesText(build.getColors()));
+            mcp.getColorLog().shouldHave(matchesText(build.getColors()));
         } else {
-            mcp.getColorLog().shouldHave(Condition.matchesText(FileUtils.
+            mcp.getColorLog().shouldHave(matchesText(FileUtils.
                     readPropertiesFile(propertiesPath + "/log.properties").
                     getProperty("default.color")));
         }
 
         if (build.getMetal() != null) {
-            mcp.getMetalLog().shouldHave(Condition.matchesText(build.getMetal()));
+            mcp.getMetalLog().shouldHave(matchesText(build.getMetal()));
         } else {
-            mcp.getMetalLog().shouldHave(Condition.matchesText(FileUtils.
+            mcp.getMetalLog().shouldHave(matchesText(FileUtils.
                     readPropertiesFile(propertiesPath + "/log.properties").
                     getProperty("default.metal")));
         }
 
         if (build.getVegetables() != null) {
             for (Vegetables veg : build.getVegetables()) {
-                mcp.getVegetablesLog().shouldHave(Condition.matchesText(veg.getVegetableValue()));
+                mcp.getVegetablesLog().shouldHave(matchesText(veg.getVegetableValue()));
             }
         } else {
-            mcp.getVegetablesLog().shouldHave(Condition.matchesText(FileUtils.
+            mcp.getVegetablesLog().shouldHave(matchesText(FileUtils.
                     readPropertiesFile(propertiesPath + "/log.properties").
                     getProperty("default.vegetable")));
         }

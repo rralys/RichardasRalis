@@ -1,16 +1,17 @@
 package hw4;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import hw4.basepage.TableWithPagesPage;
 import utils.FileUtils;
+
+import static com.codeborne.selenide.Condition.*;
 
 public class OperateTableWithPages extends RunTestsForHomework4 {
     TableWithPagesPage twp = new TableWithPagesPage();
 
     public void verifySelectedShowDropdown() {
 
-        twp.getShowEntriesDropdown().getSelectedOption().shouldHave(Condition.text(
+        twp.getShowEntriesDropdown().getSelectedOption().shouldHave(text(
                 FileUtils.readPropertiesFile(propertiesPath + "/show.properties")
                         .getProperty("show.dropdown.visible")
         ));
@@ -18,11 +19,11 @@ public class OperateTableWithPages extends RunTestsForHomework4 {
     }
 
     public void verifyRightSectionIsPresent() {
-        twp.getRightSection().shouldBe(Condition.visible);
+        twp.getRightSection().shouldBe(visible);
     }
 
     public void verifyLeftSectionIsPresent() {
-        twp.getLeftSection().shouldBe(Condition.visible);
+        twp.getLeftSection().shouldBe(visible);
     }
 
     public void selectShowValue() {
@@ -33,7 +34,7 @@ public class OperateTableWithPages extends RunTestsForHomework4 {
     }
 
     public void verifyLogContainsNewShowValueInfo() {
-        twp.getLogSection().shouldHave(Condition.text(
+        twp.getLogSection().shouldHave(text(
                 FileUtils.readPropertiesFile(propertiesPath + "/log.properties")
                         .getProperty("length.new.value")
         ));
@@ -55,7 +56,7 @@ public class OperateTableWithPages extends RunTestsForHomework4 {
     public void verifySearchHits() {
 
         for (SelenideElement element : twp.getTableElements()) {
-            element.shouldHave(Condition.matchesText(
+            element.shouldHave(matchesText(
                     FileUtils.readPropertiesFile(propertiesPath + "/search.properties")
                             .getProperty("search.input.value")
             ));
