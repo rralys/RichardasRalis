@@ -9,6 +9,11 @@
                     <include name="TestScenario1"/>
                 </methods>
             </class>
+            <class name="hw5.TestForExercise2">
+                <methods>
+                    <include name="TestScenario2"/>
+                </methods>
+            </class>
         </classes>
     </test>
 

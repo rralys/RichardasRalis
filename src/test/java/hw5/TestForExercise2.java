@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 @Listeners(AttachmentListener.class)
 public class TestForExercise2 extends RunTestsForHomework5 {
     @Test
-    public void TestScenario1() {
+    public void TestScenario2() {
         HomePageSteps hps = new HomePageSteps(driver);
         hps.verifyHomePageTitle();
         hps.loginToHomePage();
