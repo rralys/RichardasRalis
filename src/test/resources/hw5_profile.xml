@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite for the homework3">
+
+    <test name="homework5">
+        <classes>
+            <class name="hw5.TestForExercise1">
+                <methods>
+                    <include name="TestScenario1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

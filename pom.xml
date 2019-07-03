@@ -36,7 +36,7 @@
         <profile>
             <id>hw2</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <suite.xml>src/test/resources/hw2_profile.xml</suite.xml>
@@ -45,7 +45,7 @@
         <profile>
             <id>hw3</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <suite.xml>src/test/resources/hw3_profile.xml</suite.xml>
@@ -54,10 +54,19 @@
         <profile>
             <id>hw4</id>
             <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>src/test/resources/hw4_profile.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <suite2.xml>src/test/resources/hw4_profile.xml</suite2.xml>
+                <suite.xml>src/test/resources/hw5_profile.xml</suite.xml>
             </properties>
         </profile>
     </profiles>
@@ -121,6 +130,11 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite.xml}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+                        <allure.link.issue.pattern>https://example.org/browse/{}</allure.link.issue.pattern>
+                        <allure.link.tms.pattern>https://example.org/browse/{}</allure.link.tms.pattern>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
