@@ -1,7 +1,9 @@
 package hw5;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(AttachmentListener.class)
 public class TestForExercise1 extends RunTestsForHomework5 {
 
     @Test
@@ -22,6 +24,6 @@ public class TestForExercise1 extends RunTestsForHomework5 {
         hps.verifyTextInSubHeader();
         hps.verifySubHeaderHasProperLink();
         hps.verifyLeftSectionIsDisplayed();
-        hps.verifyFooterIsDisplayed();
+        hps.verifyFooterIsNotDisplayed();
     }
 }

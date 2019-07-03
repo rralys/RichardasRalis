@@ -10,12 +10,14 @@ import java.util.List;
 import java.util.Properties;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class HomePageSteps extends BaseSteps {
 
     public HomePageSteps(WebDriver dr) {
         driver = dr;
+        TestProvider.getInstance().setDriver(driver);
         homePage = PageFactory.initElements(driver, HomePage.class);
     }
 
@@ -26,7 +28,7 @@ public class HomePageSteps extends BaseSteps {
                 .getProperty("home.page.title"));
     }
 
-    @Step("Login to home page as user.")
+    @Step("Login to home page as user: {0}.")
     public void loginToHomePage() {
         Properties userProperties = FileUtils.readPropertiesFile(propertiesPath + "/user.properties");
 
@@ -137,6 +139,11 @@ public class HomePageSteps extends BaseSteps {
     @Step("Check the footer is displayed.")
     public void verifyFooterIsDisplayed() {
         assertTrue(homePage.isFooterDisplayed());
+    }
+
+    @Step("Check the footer is not displayed.")
+    public void verifyFooterIsNotDisplayed() {
+        assertFalse(homePage.isFooterDisplayed());
     }
 
     public void clickServiceSubcategoryInHeader() {
