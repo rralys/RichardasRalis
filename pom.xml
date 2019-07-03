@@ -22,7 +22,7 @@
         <selenide.version>5.2.4</selenide.version>
         <lombok.version>1.18.8</lombok.version>
         <aspectj.version>1.8.10</aspectj.version>
-        <allure.version>2.12.1</allure.version>
+        <allure.version>2.12.0</allure.version>
     </properties>
 
     <profiles>
