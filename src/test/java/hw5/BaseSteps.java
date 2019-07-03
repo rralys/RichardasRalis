@@ -1,7 +1,5 @@
 package hw5;
 
-import hw3.basepage.DifferentServices;
-import hw3.basepage.HomePage;
 import org.openqa.selenium.WebDriver;
 
 public class BaseSteps {

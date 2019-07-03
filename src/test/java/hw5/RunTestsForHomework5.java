@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-public class RunTestsForHomework3 {
+public class RunTestsForHomework5 {
     protected WebDriver driver;
     protected ChromeOptions options;
 

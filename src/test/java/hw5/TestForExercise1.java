@@ -2,7 +2,7 @@ package hw5;
 
 import org.testng.annotations.Test;
 
-public class TestForExercise1 extends RunTestsForHomework3 {
+public class TestForExercise1 extends RunTestsForHomework5 {
 
     @Test
     public void TestScenario1() {
@@ -15,7 +15,7 @@ public class TestForExercise1 extends RunTestsForHomework3 {
         hps.verifyIndexImages();
         hps.verifyIndexTextLabels();
         hps.verifyMainHeadersText();
-        hps.verifyIframeIsVisible();
+        hps.verifyIFrameIsVisible();
         hps.switchToIFrame();
         hps.verifyFrameHasEpamLogo();
         hps.switchBackToMainFrame();

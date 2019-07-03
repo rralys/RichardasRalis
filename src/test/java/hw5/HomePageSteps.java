@@ -1,7 +1,7 @@
 package hw5;
 
-import hw3.basepage.HomePage;
-import hw3.enums.*;
+import hw5.enums.*;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import utils.FileUtils;
@@ -14,19 +14,19 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class HomePageSteps extends BaseSteps {
 
-    private FileUtils propertiesFile = new FileUtils();
-
     public HomePageSteps(WebDriver dr) {
         driver = dr;
         homePage = PageFactory.initElements(driver, HomePage.class);
     }
 
+    @Step("Check the home page title.")
     public void verifyHomePageTitle() {
         assertEquals(driver.getTitle(),
                 FileUtils.readPropertiesFile(propertiesPath + "/pageTitles.properties")
                 .getProperty("home.page.title"));
     }
 
+    @Step("Login to home page as user.")
     public void loginToHomePage() {
         Properties userProperties = FileUtils.readPropertiesFile(propertiesPath + "/user.properties");
 
@@ -34,12 +34,14 @@ public class HomePageSteps extends BaseSteps {
                 userProperties.getProperty("user.password"));
     }
 
+    @Step("Check the name of the logged in user.")
     public void verifyUserName() {
         assertEquals(homePage.getUserName(), FileUtils
                 .readPropertiesFile(propertiesPath + "/user.properties")
                 .getProperty("user.user.name"));
     }
 
+    @Step("Check the items present in the header section.")
     public void verifyHeaderSectionItems() {
         List<String> expectedTopPanelItemsLabels = TopPanelMenuLabels
                 .getListOfTopPanelMenuItems();
@@ -51,6 +53,7 @@ public class HomePageSteps extends BaseSteps {
         assertEquals(actualTopPanelItemsLabels, expectedTopPanelItemsLabels);
     }
 
+    @Step("Check that the certain images are present in the page.")
     public void verifyIndexImages() {
 
         assertEquals(homePage.getNumberOfHeaderImages(),
@@ -66,6 +69,7 @@ public class HomePageSteps extends BaseSteps {
 
     }
 
+    @Step("Check text in the index.")
     public void verifyIndexTextLabels() {
 
         List<String> indexTextXpathes = HeaderSectionTextsXpathes.getListOfHeaderSectionTextXpathes();
@@ -77,6 +81,7 @@ public class HomePageSteps extends BaseSteps {
 
     }
 
+    @Step("Check the main header contents.")
     public void verifyMainHeadersText() {
 
         List<String> mainHeaderLabelsXpathes = MainHeaderTextXpathes.getListOfMainHeaderTextXpathes();
@@ -86,22 +91,27 @@ public class HomePageSteps extends BaseSteps {
         assertEquals(actualMainHeaderTextLabels, expectedMainHeaderLabels);
     }
 
-    public void verifyIframeIsVisible() {
+    @Step("Check frame is present in the page.")
+    public void verifyIFrameIsVisible() {
         assertTrue(homePage.isIFramePresent());
     }
 
+    @Step("Switch to the frame.")
     public void switchToIFrame() {
         homePage.switchToFrame();
     }
 
+    @Step("The frame should contain logo.")
     public void verifyFrameHasEpamLogo() {
         homePage.isLogoDisplayed();
     }
 
+    @Step("Switch back to the main frame.")
     public void switchBackToMainFrame() {
         homePage.switchToMainFrame();
     }
 
+    @Step("Check the sub-header contents.")
     public void verifyTextInSubHeader() {
 
         String actualSubHeaderText = homePage.getSubHeaderLabel();
@@ -110,6 +120,7 @@ public class HomePageSteps extends BaseSteps {
         assertEquals(actualSubHeaderText, expectedSubHeaderText);
     }
 
+    @Step("Check the sub-header has the correct link.")
     public void verifySubHeaderHasProperLink() {
 
         String expectedLink = FileUtils.readPropertiesFile(propertiesPath + "/subheaderlink.properties").getProperty("subheader.link");
@@ -118,10 +129,12 @@ public class HomePageSteps extends BaseSteps {
         assertEquals(actualLink, expectedLink);
     }
 
+    @Step("Check the left section is displayed.")
     public void verifyLeftSectionIsDisplayed() {
         assertTrue(homePage.isLeftSectionDisplayed());
     }
 
+    @Step("Check the footer is displayed.")
     public void verifyFooterIsDisplayed() {
         assertTrue(homePage.isFooterDisplayed());
     }
