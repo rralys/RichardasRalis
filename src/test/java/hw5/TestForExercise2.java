@@ -1,10 +1,15 @@
 package hw5;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(AttachmentListener.class)
 public class TestForExercise2 extends RunTestsForHomework5 {
+
+    @Feature("JDI site workflows.")
+    @Story("JDI home page.")
     @Test
     public void TestScenario2() {
         HomePageSteps hps = new HomePageSteps(driver);
