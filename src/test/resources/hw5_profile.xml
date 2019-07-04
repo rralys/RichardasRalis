@@ -14,6 +14,11 @@
                     <include name="TestScenario2"/>
                 </methods>
             </class>
+            <class name="hw5.TestForExercise3">
+                <methods>
+                    <include name="TestScenario3"/>
+                </methods>
+            </class>
         </classes>
     </test>
 

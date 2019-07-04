@@ -1,5 +1,7 @@
-package hw5;
+package hw5.steps;
 
+import hw5.HomePage;
+import hw5.TestProvider;
 import hw5.enums.*;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -142,5 +144,42 @@ public class HomePageSteps extends BaseSteps {
     public void verifyFooterIsNotDisplayed() {
         assertFalse(homePage.isFooterDisplayed());
     }
+
+    @Step("Click the Service menu items in the top.")
+    public void clickServiceSubcategoryInHeader() {
+        homePage.clickServiceItemInHeader();
+    }
+
+    @Step("Check the top Service menu has correct items.")
+    public void serviceDropdownHasCorrectOptions() {
+
+        List<String> actualTopServiceDropdownLabels = homePage.getServiceMenuItemsLabels();
+        List<String> expectedTopServiceDropdownLabels = HeaderServiceDropdownItems.getHeaderServiceDropdownAsList();
+
+        assertEquals(actualTopServiceDropdownLabels, expectedTopServiceDropdownLabels);
+
+    }
+
+    @Step("Click the Service menu items in the left section.")
+    public void clickServiceSubcategoryInLeftSection() {
+        homePage.clickServiceMenu();
+    }
+
+    @Step("Check the left Service menu has correct items.")
+    public void serviceMenuInLeftSectionHasCorrectOptions() {
+
+        List<String> actualLeftSideServiceMenuLabels = homePage.getLeftServiceMenuItemsLabels();
+        List<String> expectedLeftSideServiceMenuLabels = ServicesLeftSidePanelMenuLabels.getServiceLeftSidePanelMenuItemsList();
+
+        assertEquals(actualLeftSideServiceMenuLabels, expectedLeftSideServiceMenuLabels);
+
+    }
+
+    @Step("Open Different Elements page via the top menu.")
+    public void openDifferentElementsPageViaTopServiceMenu() {
+        homePage.clickServiceItemInHeader();
+        homePage.clickTopPanelServicesMenuItem(ServicesTopPanelMenu.valueOf("DIFFERENT_ELEMENTS"));
+    }
+
 
 }
