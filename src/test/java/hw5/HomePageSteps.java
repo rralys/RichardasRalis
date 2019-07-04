@@ -145,36 +145,5 @@ public class HomePageSteps extends BaseSteps {
     public void verifyFooterIsNotDisplayed() {
         assertFalse(homePage.isFooterDisplayed());
     }
-
-    public void clickServiceSubcategoryInHeader() {
-        homePage.clickServiceItemInHeader();
-    }
-
-    public void serviceDropdownHasCorrectOptions() {
-
-        List<String> actualTopServiceDropdownLabels = homePage.getServiceMenuItemsLabels();
-        List<String> expectedTopServiceDropdownLabels = HeaderServiceDropdownItems.getHeaderServiceDropdownAsList();
-
-        assertEquals(actualTopServiceDropdownLabels, expectedTopServiceDropdownLabels);
-
-    }
-
-    public void clickServiceSubcategoryInLeftSection() {
-        homePage.clickServiceMenu();
-    }
-
-    public void serviceMenuInLeftSectionHasCorrectOptions() {
-
-        List<String> actualLeftSideServiceMenuLabels = homePage.getLeftServiceMenuItemsLabels();
-        List<String> expectedLeftSideServiceMenuLabels = ServicesLeftSidePanelMenuLabels.getServiceLeftSidePanelMenuItemsList();
-
-        assertEquals(actualLeftSideServiceMenuLabels, expectedLeftSideServiceMenuLabels);
-
-    }
-
-    public void openDifferentElementsPageViaTopServiceMenu() {
-        homePage.clickServiceItemInHeader();
-        homePage.clickTopPanelServicesMenuItem(ServicesTopPanelMenu.valueOf("DIFFERENT_ELEMENTS"));
-    }
-
+    
 }
