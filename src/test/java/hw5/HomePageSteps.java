@@ -145,5 +145,5 @@ public class HomePageSteps extends BaseSteps {
     public void verifyFooterIsNotDisplayed() {
         assertFalse(homePage.isFooterDisplayed());
     }
-    
+
 }
