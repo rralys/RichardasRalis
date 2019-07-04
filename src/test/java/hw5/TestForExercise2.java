@@ -14,7 +14,7 @@ public class TestForExercise2 extends RunTestsForHomework5 {
     public void TestScenario2() {
         HomePageSteps hps = new HomePageSteps(driver);
         hps.verifyHomePageTitle();
-        hps.loginToHomePage();
+        hps.loginToHomePage(uName, uPass);
         hps.verifyUserName();
         hps.verifyHomePageTitle();
         hps.verifyHeaderSectionItems();
