@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import utils.FileUtils;
 
 import java.util.List;
-import java.util.Properties;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
@@ -15,10 +14,24 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class HomePageSteps extends BaseSteps {
 
+    private String uName;
+    private String uPass;
+
+    private void getUserProperties() {
+
+        uName = FileUtils.readPropertiesFile(propertiesPath + "/user.properties")
+                .getProperty("user.name");
+
+        uPass = FileUtils.readPropertiesFile(propertiesPath + "/user.properties")
+                .getProperty("user.password");
+
+    }
+
     public HomePageSteps(WebDriver dr) {
         driver = dr;
         TestProvider.getInstance().setDriver(driver);
         homePage = PageFactory.initElements(driver, HomePage.class);
+        getUserProperties();
     }
 
     @Step("Check the home page title.")
@@ -28,12 +41,9 @@ public class HomePageSteps extends BaseSteps {
                 .getProperty("home.page.title"));
     }
 
-    @Step("Login to home page as user: {0}.")
+    @Step("Login to home page as user: {0}")
     public void loginToHomePage() {
-        Properties userProperties = FileUtils.readPropertiesFile(propertiesPath + "/user.properties");
-
-        homePage.login(userProperties.getProperty("user.name"),
-                userProperties.getProperty("user.password"));
+        homePage.login(uName, uPass);
     }
 
     @Step("Check the name of the logged in user.")
