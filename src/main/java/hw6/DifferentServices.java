@@ -91,17 +91,19 @@ public class DifferentServices extends BasePage {
 
     public boolean isLogUpdatedForCheckBox(String checkBoxName, boolean state) {
         return driver.findElement(By.xpath("//li[text()[contains(.,'" + checkBoxName +
-                ": condition changed to " + String.valueOf(state) +"')]]")).isDisplayed();
+                ": condition changed to " + String.valueOf(state) + "')]]")).isDisplayed();
     }
 
     public void setRadioButton(String item) {
 
-        driver.findElement(By.xpath("//label[contains(.,'"+item+"')]")).click();
+        driver.findElement(By.xpath("//label[contains(.,'" + item + "')]")).click();
 
     }
 
     public boolean isLogUpdatedForRadioButton(String radio) {
-        return driver.findElement(By.xpath("//li[text()[contains(.,'metal: value changed to  " + radio + "')]]")).isDisplayed();
+        return driver.findElement(By
+                .xpath("//li[text()[contains(.,'metal: value changed to  " + radio + "')]]"))
+                .isDisplayed();
     }
 
     public void setColorDropDown(String item) {
@@ -109,7 +111,9 @@ public class DifferentServices extends BasePage {
     }
 
     public boolean isLogUpdatedForDropdown(String item) {
-        return driver.findElement(By.xpath("//li[text()[contains(.,'Colors: value changed to " + item + "')]]")).isDisplayed();
+        return driver.findElement(By
+                .xpath("//li[text()[contains(.,'Colors: value changed to " + item + "')]]"))
+                .isDisplayed();
     }
 }
 

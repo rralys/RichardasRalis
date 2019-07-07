@@ -28,7 +28,7 @@ public class ThenSteps extends BaseStep {
 
     @Then("There are '(.+)' pictures")
     public void verifyThePresentPictures(int pics) {
-       assertEquals( hp.getNumberOfHeaderImages(), pics);
+        assertEquals(hp.getNumberOfHeaderImages(), pics);
     }
 
     @Then("There are '(.+)' text labels under the pictures")

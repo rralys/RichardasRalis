@@ -15,7 +15,7 @@ public class CucumberHooks {
     public void setUp() {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox",  "start-maximized");
+        options.addArguments("--no-sandbox", "start-maximized");
 
         WebDriverManager.chromedriver().setup();
 

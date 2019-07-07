@@ -41,7 +41,7 @@ public class HomePage extends BasePage {
     private WebElement userNameLabel;
 
     @FindAll({
-           @FindBy(xpath = "//ul[@class='dropdown-menu']//a[@href]")
+            @FindBy(xpath = "//ul[@class='dropdown-menu']//a[@href]")
     })
     List<WebElement> topServiceMenuItems;
 
@@ -108,7 +108,7 @@ public class HomePage extends BasePage {
 
         ArrayList<String> serviceMenuItemsLabels = new ArrayList<>();
 
-        for(WebElement element : topServiceMenuItems) {
+        for (WebElement element : topServiceMenuItems) {
             serviceMenuItemsLabels.add(element.getText().trim());
         }
 
@@ -120,7 +120,7 @@ public class HomePage extends BasePage {
 
         ArrayList<String> serviceMenuItemsLabels = new ArrayList<>();
 
-        for(WebElement element : leftSideMenuItems) {
+        for (WebElement element : leftSideMenuItems) {
             serviceMenuItemsLabels.add(element.getText().trim());
         }
 

@@ -126,7 +126,7 @@ public class UserTablePage extends BasePage {
 
     public List<String> getDropDownOptionsForUser(String userName) {
         List<WebElement> options = driver.findElements(By
-        .xpath("//a[text()='" + userName + "']//ancestor::td//preceding::td//option"));
+                .xpath("//a[text()='" + userName + "']//ancestor::td//preceding::td//option"));
 
         List<String> optionLabels = new ArrayList<>();
 
