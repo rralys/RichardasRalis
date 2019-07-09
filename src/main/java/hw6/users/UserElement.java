@@ -21,6 +21,4 @@ public class UserElement {
         return description;
     }
 
-    // TODO These methods looks like some utils method which does not work with the current object — moved to another class
-
 }
