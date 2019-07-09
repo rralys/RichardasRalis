@@ -24,6 +24,7 @@ public class UserElement {
         return description;
     }
 
+    // TODO These methods looks like some utils method which does not work with the current object
     public static List<String> getNamesList(List<UserElement> users) {
         List<String> names = new ArrayList<>();
 
