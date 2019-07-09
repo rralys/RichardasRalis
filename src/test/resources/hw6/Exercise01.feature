@@ -5,17 +5,17 @@ Feature: Home page and Different Elements Page
     Given I am on the index page
     Then The index page has the 'Home Page' title
     When I login as the user 'epam'/'1234'
-    # TODO It iw better 'User name should be '...''
-    Then I see the user 'PITER CHAILOVSKII'
-    # TODO There are - it is where?
-    And There are '4' pictures
-    # TODO There are - it is where?
-    And There are '4' text labels under the pictures
-    # TODO There are - it is where?
-    And There are '2' text labels above the pictures
+    # TODO It iw better 'User name should be '...'' — fixed
+    Then User name should be 'PITER CHAILOVSKII'
+    # TODO There are - it is where? — fixed
+    And Home Page contains '4' pictures
+    # TODO There are - it is where? — fixed
+    And Home Page contains '4' text labels under the pictures
+    # TODO There are - it is where? — fixed
+    And Home Page contains '2' text labels above the pictures
     When I click the top menu item 'Service'
-    # TODO There are - it is where?
-    Then There are the following top service items
+    # TODO There are - it is where? — fixed
+    Then Top service menu contains the following items
       | SUPPORT            |
       | DATES              |
       | SEARCH             |
@@ -26,8 +26,8 @@ Feature: Home page and Different Elements Page
       | DIFFERENT ELEMENTS |
       | PERFORMANCE        |
     When I click the left menu item 'Service'
-    # TODO There are - it is where?
-    Then There are the following left service items
+    # TODO There are - it is where? — fixed
+    Then The left service menu contains the following items
       | Support            |
       | Dates              |
       | Complex Table      |
@@ -40,18 +40,18 @@ Feature: Home page and Different Elements Page
     When I click the top menu item 'Service'
     And I open Different Elements Page via top Services menu
     Then The page has 'Different Elements' title
-    # TODO There are - it is where?
-    And There are '4' checkboxes
-    # TODO There are - it is where?
-    And There are '4' radio buttons
-    # TODO There are - it is where?
-    And There are '1' dropdowns
-    # TODO There are - it is where?
-    And There are '2' buttons
-    # TODO There are - it is where?
-    And There is right section
-    # TODO There are - it is where?
-    And There is left section
+    # TODO There are - it is where? — fixed
+    And The Different Elements page contains '4' checkboxes
+    # TODO There are - it is where? — fixed
+    And The Different Elements page contains '4' radio buttons
+    # TODO There are - it is where? — fixed
+    And The Different Elements page contains '1' dropdowns
+    # TODO There are - it is where? — fixed
+    And The Different Elements page contains '2' buttons
+    # TODO There are - it is where? — fixed
+    And The Different Elements page contains right section
+    # TODO There are - it is where? — fixed
+    And The Different Elements page contains left section
     When I set the following checkboxes
       | Water |
       | Wind  |

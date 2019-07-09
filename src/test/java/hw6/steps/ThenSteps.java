@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static hw6.users.UserElement.getDescriptionsList;
-import static hw6.users.UserElement.getIDsList;
-import static hw6.users.UserElement.getNamesList;
+import static hw6.users.UserElementList.getDescriptionsList;
+import static hw6.users.UserElementList.getIDsList;
+import static hw6.users.UserElementList.getNamesList;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -21,32 +21,32 @@ public class ThenSteps extends BaseStep {
         assertEquals(TestContext.getDriver().getTitle(), expectedTitle);
     }
 
-    @Then("I see the user '(.*)'")
+    @Then("User name should be '(.*)'")
     public void verifyUserName(String userName) {
         assertEquals(hp.getUserName(), userName);
     }
 
-    @Then("There are '(.+)' pictures")
+    @Then("Home Page contains '(.+)' pictures")
     public void verifyThePresentPictures(int pics) {
         assertEquals(hp.getNumberOfHeaderImages(), pics);
     }
 
-    @Then("There are '(.+)' text labels under the pictures")
+    @Then("Home Page contains '(.+)' text labels under the pictures")
     public void verifyThePresentLabelsUnderPictures(int labels) {
         assertEquals(hp.getNumberOfLabelsBelowPictures(), labels);
     }
 
-    @Then("There are '(.+)' text labels above the pictures")
+    @Then("Home Page contains '(.+)' text labels above the pictures")
     public void verifyLabelsAbovePictures(int labels) {
         assertEquals(hp.getNumberOfHeaderLabels(), labels);
     }
 
-    @Then("There are the following top service items")
+    @Then("Top service menu contains the following items")
     public void verifyTheTopServiceMenuItems(List<String> expectedItems) {
         assertEquals(hp.getServiceMenuItemsLabels(), expectedItems);
     }
 
-    @Then("There are the following left service items")
+    @Then("The left service menu contains the following items")
     public void verifyTheLeftServicemenuItems(List<String> expectedItems) {
         assertEquals(hp.getLeftServiceMenuItemsLabels(), expectedItems);
     }
@@ -56,32 +56,32 @@ public class ThenSteps extends BaseStep {
         assertEquals(TestContext.getDriver().getTitle(), expectedTitle);
     }
 
-    @Then("There are '(.*)' checkboxes")
+    @Then("The Different Elements page contains '(.*)' checkboxes")
     public void verifyTheNumberOfCheckboxes(int checkboxes) {
         assertEquals(dsp.getNumberOfCheckBoxes(), checkboxes);
     }
 
-    @Then("There are '(.*)' radio buttons")
+    @Then("The Different Elements page contains '(.*)' radio buttons")
     public void verifyTheNumberOfRadioButtons(int radios) {
         assertEquals(dsp.getNumberOfRadioButtons(), radios);
     }
 
-    @Then("There are '(.*)' dropdowns")
+    @Then("The Different Elements page contains '(.*)' dropdowns")
     public void verifyTheNumberOfDropdowns(int dropdowns) {
         assertEquals(dsp.getNumberOfDropDowns(), dropdowns);
     }
 
-    @Then("There are '(.*)' buttons")
+    @Then("The Different Elements page contains '(.*)' buttons")
     public void verifyTheNumberOfButtons(int buttons) {
         assertEquals(dsp.getNumberOfButtons(), buttons);
     }
 
-    @Then("There is right section")
+    @Then("The Different Elements page contains right section")
     public void verifyThereIsTheRightSection() {
         assertTrue(dsp.isRightSectionVisible());
     }
 
-    @Then("There is left section")
+    @Then("The Different Elements page contains left section")
     public void verifyThereIsTheLeftSection() {
         assertTrue(dsp.isLeftSectionVisible());
     }

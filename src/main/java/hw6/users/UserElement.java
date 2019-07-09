@@ -1,8 +1,5 @@
 package hw6.users;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class UserElement {
     private String number;
     private String user;
@@ -24,34 +21,6 @@ public class UserElement {
         return description;
     }
 
-    // TODO These methods looks like some utils method which does not work with the current object
-    public static List<String> getNamesList(List<UserElement> users) {
-        List<String> names = new ArrayList<>();
+    // TODO These methods looks like some utils method which does not work with the current object — moved to another class
 
-        for (UserElement user : users) {
-            names.add(user.getUser());
-        }
-
-        return names;
-    }
-
-    public static List<String> getIDsList(List<UserElement> users) {
-        List<String> IDs = new ArrayList<>();
-
-        for (UserElement user : users) {
-            IDs.add(user.getNumber());
-        }
-
-        return IDs;
-    }
-
-    public static List<String> getDescriptionsList(List<UserElement> users) {
-        List<String> descs = new ArrayList<>();
-
-        for (UserElement user : users) {
-            descs.add(user.getDescription());
-        }
-
-        return descs;
-    }
 }
