@@ -15,7 +15,7 @@
         <testng.version>6.8</testng.version>
         <selenium.java>3.141.59</selenium.java>
         <maven.compiler>3.8.1</maven.compiler>
-        <web.driver.manager>3.6.1</web.driver.manager>
+        <web.driver.manager>6.1.0</web.driver.manager>
         <maven.compiler.forceJavacCompilerUse>true</maven.compiler.forceJavacCompilerUse>
         <maven.compiler.fork>true</maven.compiler.fork>
         <encoding>UTF-8</encoding>
